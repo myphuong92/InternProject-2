@@ -1,3 +1,126 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer components{
+    .shade{
+        @apply absolute w-full top-0 bottom-0 opacity-30 bg-black
+    }
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+:root {
+    --nav-height: 80px;
+    --nav-mobile-height: 60px;
+
+}
+
+body {
+    line-height: 1.5;
+    background-color: white;
+    
+    /* min-width: 100vh; */
+    width: 100%;
+    /* prevent the user from scrolling horizontally */
+    max-width: 100%;
+    overflow-x: hidden;
+    /* overflow-y:scroll; */
+}
+
+html {
+    font-family: 'Oswald', sans-serif;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+button,
+textarea,
+input,
+select {
+    outline: none;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+.container {
+    width: 100%;
+    max-width: 1440px !important;
+    margin: 0 auto
+}
+.text-heading {
+	font-size: 44px;
+	font-weight: 700;
+	line-height: calc(57.2 / 44);
+	color: black;
+}
+.text-title{
+    font-size: 35px;
+    font-weight: 700;
+}
+.text-desc {
+	font-size: 18px;
+	font-weight: 500;
+	line-height: calc(32.4 / 18);
+	color: #afadb5;
+}
+/* HOMEPAGE */
+.home-intro .content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+	.container {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+
+	.text-heading {
+		font-size: 38px;
+	}
+}
+@media screen and (max-width: 1023px) {
+  .container {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+}
+
+.fadeUp {
+	animation: fadeUp 0.5s ease-in;
+	transition: all 0.5s ease-in;
+}
+@media screen and (max-width: 768px) {
+	.container {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.text-heading {
+		font-size: 38px;
+	}
+	/* .text-desc {
+		font-size: 20px;
+	} */
+}
