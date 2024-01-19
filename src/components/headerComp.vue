@@ -13,8 +13,9 @@
 
     </div>  
 </div>
-<div class="bg-[#E4ECFA] py-8 px-24" v-if="isMenuClicked">
-        <ul class="navigation relative flex flex-col gap-[1rem] ">
+<Transition :duration="550" name="nested">
+    <div class="outer navigation bg-[#E4ECFA] py-8 px-24" v-if="isMenuClicked" :class="{'active' : isMenuClicked}">
+        <ul class="inner relative flex flex-col gap-[1rem] ">
         <li class="flex justify-between w-[60%]" :key="link.name" v-for="link in links"  @mouseover="handleMouseOver(link)" @mouseout="handleMouseOut(link)">
             <div class="nav-title" :class="{'pl-[20px]': link.isHover.value}">
                 <div class="flex items-center" :style="{'color' : link.isHover.value ? '#003366': ''}">
@@ -25,6 +26,7 @@
                     
                 </div>
             </div>
+            
             <ul class="sub-title flex flex-col gap-[1rem]" v-if="link.sublinks.length>0" :class="{'hidden': !link.sublinks.length>0 || !link.isHover.value}">
                 <li v-for="sublink in link.sublinks" :key="sublink.name">
                     <div>
@@ -41,6 +43,8 @@
         </li>
     </ul>
     </div>
+  </Transition>
+
 </template>
 
 <script setup>
@@ -59,7 +63,7 @@
 
     function toggleMenu(){
         isMenuClicked.value=!isMenuClicked.value;
-        console.log(isMenuClicked.value)
+        // console.log(isMenuClicked.value)
     }
     function setHover(link){
         link.isHover.value=true;
@@ -83,6 +87,23 @@
 </script>
 
 <style>
+/* delay enter of nested element for staggered effect */
+.nested-enter-active .inner {
+  transition-delay: 0.25s;
+}
+/* rules that target nested elements */
+.nested-enter-active .inner,
+.nested-leave-active .inner {
+  transition: all 0.3s ease-in-out;
+}
+
+.nested-enter-from .inner,
+.nested-leave-to .inner {
+  transform: translateX(30px);
+  opacity: 0;
+}
+
+/* ... other necessary CSS omitted */
     header{
         width: 100%;
         left: 0;
@@ -92,6 +113,16 @@
         position:sticky;
         background-color: white;
         
+    }
+    .navigation{
+        /* transform: translateY(-110%); */
+        /* position: fixed;
+        left: 0;
+        right: 0;
+        transition: 0.5s ease-in-out; */
+    }
+    .navigation.active{
+        /* transform: translateY(0); */
     }
     .navigation .text-title{
         font-weight: 500;

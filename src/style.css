@@ -25,7 +25,7 @@
 
 body {
     line-height: 1.5;
-    background-color: white;
+    background-color: #F4F4F1;
     
     /* min-width: 100vh; */
     width: 100%;
@@ -68,20 +68,25 @@ h6 {
     margin: 0 auto
 }
 .text-heading {
-	font-size: 44px;
-	font-weight: 700;
+    font-family: 'Big Shoulders Stencil Text', sans-serif;
+	font-size: 4.5rem;
+	font-weight: 600;
 	line-height: calc(57.2 / 44);
-	color: black;
+}
+.text-sub-heading {
+    font-family: 'Big Shoulders Stencil Text', sans-serif;
+	font-size: 3rem;
+	font-weight: 600;
+	line-height: calc(57.2 / 44);
 }
 .text-title{
     font-size: 35px;
-    font-weight: 700;
+    font-weight: 600;
 }
 .text-desc {
-	font-size: 18px;
-	font-weight: 500;
+	font-size: 1.125rem;
+	font-weight: 400;
 	line-height: calc(32.4 / 18);
-	color: #afadb5;
 }
 /* HOMEPAGE */
 .home-intro .content{

@@ -1,0 +1,118 @@
+<script setup>
+import { ref } from 'vue'
+import headerComp from "../components/headerComp.vue";
+import sliderNganh from "../components/sliderNganh.vue"
+import buttonComp from "../components/buttonComp.vue"
+import footerComp from "../components/footerComp.vue";
+import newscard from "../components/newsCard.vue";
+const iconArrow = "arrow_forward"
+
+// NEWS CARD
+const newsData = ref([
+  {img:"/src/assets/img/news-card-1.png", title:"Phú Tài (PTB) nhận tín dụng xanh gần 200 tỷ từ Ngân Hàng Anh Quốc HSBC",date:"11-11-2023"},
+  {img:"/src/assets/img/news-card-2.png", title:"CBTT báo cáo tài chính riêng công ty mẹ Quý II năm 2023",date:"11-11-2023"},
+  {img:"/src/assets/img/news-card-3.png", title:"Nghị quyết số :124/NQ-HĐQT về thống nhất và đống ý các Phương án mua lại trái phiếu trước hạ",date:"11-11-2023"},
+])
+</script>
+
+<template>
+  <header>
+    <headerComp/>
+  </header>
+   <main class="container flex flex-col">
+      <section>
+        <div class="home-intro relative">
+
+            <div class="w-full home-img-shade relative">
+              <div class="w-full">
+                <img class="object-cover" src="../assets/img/home-banner.png" alt="">
+              </div>
+              <div class="shade"></div>
+            </div>
+
+            <div class="content text-center flex flex-col gap-4 items-center">
+              <p class="text-heading text-white">Khám Phá Vẻ Đẹp Và Bền Vững:</p>
+              <p class="text-heading text-[#F16336]">Nội Thất Đá Tự Nhiên Và Gỗ Cao Cấp</p>
+              <p class="text-xl text-white">Xây dựng không gian sống và giá trị thẩm mỹ vượt thời gian</p>
+              
+             <buttonComp :icon="iconArrow" changeColor="orange"/>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="flex flex-col p-[100px]">
+          <div class="flex justify-between mb-20">
+            <p class="text-sub-heading w-1/2 text-[#003366]">LĨNH VỰC <span class="text-[#F16336]">HOẠT ĐỘNG</span></p>
+            <p class="text-desc w-[40%]">Với khát vọng lan tỏa giá trị thịnh vượng, chúng tôi nghiên cứu và phát triển những sản phẩm từ đá tự nhiên và đồ gỗ nội thất độc đáo, mang lại sự khác biệt trong không gian sống cho cộng đồng mà chúng tôi phục vụ.</p>
+          </div>
+          <sliderNganh/>
+        </div>
+      </section>
+      <section>
+        <div class="p-[100px] bg-white flex flex-col gap-10">
+          <div class="content">
+            <p class="uppercase text-sub-heading w-1/2 text-[#003366]">QUAN HỆ <span class="text-[#F16336]">CỔ ĐÔNG</span></p>
+          </div>
+          <div class="set-img-text flex flex-wrap gap-5">
+            <div class="w-[60%]">
+              <p class="text uppercase">BÁO CÁO TÀI CHÍNH</p>
+              <div class="img">
+                <img src="../assets/img/set-img-1.png" alt="">
+
+              </div>
+            </div>
+            <div class="w-[35%]">
+              <p class="text uppercase">BÁO CÁO THUẾ</p>
+              <div class="img">
+                <img src="../assets/img/set-img-2.png" alt="">
+
+              </div>
+            </div>
+            <div class="w-[35%]">
+              <p class="text uppercase">CÔNG BỐ THÔNG TIN</p>
+              <div class="img">
+                <img src="../assets/img/set-img-3.png" alt="">
+
+              </div>
+            </div>
+            <div class="w-[60%]">
+              <p class="text uppercase">TÀI LIỆU KHÁC</p>
+              <div class="img">
+                <img src="../assets/img/set-img-4.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="p-[100px] flex flex-col gap-10">
+          <div class="content">
+            <p class="uppercase text-sub-heading w-1/2 text-[#003366]">TIN TỨC VÀ <span class="text-[#F16336]">SỰ KIỆN</span></p>
+          </div>
+          <div class="card flex flex-wrap gap-4">
+            <newscard :cards="newsData"/>
+          </div>
+        </div>
+      </section>
+    </main>
+   <footerComp/>
+</template>
+
+<style scoped>
+.set-img-text p.text{
+  background-color: #003366;
+    padding: 1.5rem;
+    color: white;
+    font-size: 24px;
+}
+.set-img-text > div{
+  max-height: 376px;
+  overflow: hidden;
+}
+.set-img-text .img img{
+  object-fit: cover;
+  overflow: hidden;
+  min-height: 300px;
+}
+</style>

@@ -1,6 +1,7 @@
 import { createApp } from "vue";
 import "./style.css";
-import App from "./App.vue";
-import header from "/src/components/header.vue";
-createApp(App).mount("#app");
-createApp(header).mount("#header");
+import home from "./vue-comp/home.vue";
+import aboutUs from "./vue-comp/about-us.vue";
+
+createApp(home).mount("#home");
+createApp(aboutUs).mount("#about-us");
