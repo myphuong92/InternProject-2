@@ -11,7 +11,7 @@
                 </div>
                 <div class="desc bg-slate-50 flex flex-col justify-between gap-4">
                     <p class="text-[#526D88]">{{ content.desc }}</p>
-                    <buttonComp class=" w-1/2" changeColor="blue"/>
+                    <buttonComp title="Xem thêm" class=" w-1/2" changeColor="blue"/>
                 </div>
                 
             </div>

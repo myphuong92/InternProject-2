@@ -17,7 +17,7 @@
 <script setup>
 import { ref } from 'vue'
 
-import texticon from "./textWithIcon.vue";
+import texticon from "./colFooter.vue";
 let col1=[
   {icon: "location_on", content:"278 Nguyễn Thị Định - Phường Nguyễn Văn Cừ - TP. Quy Nhơn - Tỉnh Bình Định"},
   {icon:"call", content:"+(84) 256 3847668"},
