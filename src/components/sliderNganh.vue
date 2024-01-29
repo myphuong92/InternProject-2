@@ -5,7 +5,7 @@
             <div>
                 <img class="w-full" :src="content.bgimg" alt="">
                 <div class="content flex flex-col">
-                <div class="title flex flex-col text-[#F16336] text-title ">
+                <div style="font-family: 'Big Shoulders Stencil Text', sans-serif;" class="title flex flex-col text-[#F16336] text-title ">
                     <p>{{ content.id }}</p>
                     <p>{{ content.title }}</p>
                 </div>

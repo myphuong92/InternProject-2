@@ -7,7 +7,7 @@
         <div :class="[item.icon ? 'flex gap-3': '']" v-for="item in items" :key="item">
             <div v-if="item.icon" class="icon"><span class="material-symbols-outlined">{{ item.icon }}</span></div>
             <a  v-if="item.link" :href="item.link" >
-                <p class="font-light hover:font-normal" >{{ item.content }}</p>
+                <p class="font-light hover:font-semibold" >{{ item.content }}</p>
             </a>
             <p v-else>{{ item.content }}</p>
         </div>
@@ -23,5 +23,10 @@
 </script >
 
 <style scoped>
-
+.title p{
+    font-family: 'Big Shoulders Display', sans-serif;
+}
+.content p{
+    font-family: 'Inter', sans-serif;
+}
 </style>

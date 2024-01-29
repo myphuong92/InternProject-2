@@ -1,7 +1,4 @@
 <template>
-  <header>
-    <headerComp/>
-  </header>
   <main>
     <section>
         <div class="home-intro relative">
@@ -22,9 +19,9 @@
                 <p class="w-1/2 text-heading text-[#F16336] uppercase">GIỚI THIỆU</p>
                 <p class="w-1/2 text-desc text-[#003366]">Tiền thân của Công ty cổ phần Phú Tài (Phu Tai SJC) là Công ty sản xuất vật liệu xây dựng Phú Tài gọi tắt là Công ty Phú Tài (Quyết định số: 124/QĐ-QK). Trên cơ sở hợp nhất 03 đơn vị: Xí nghiệp 380; Xí nghiệp 224; Xí nghiệp sản xuất vật liệu xây dựng An Trường. Đến năm 2004, Bộ Trưởng Bộ Quốc phòng quyết định chuyển đổi Công ty Phú Tài thuộc Quân khu 5 thành Công ty cổ phần phú Tài. Đầu tháng 1/2005, Công ty cổ phần Phú Tài chính thức đi vào hoạt động theo mô hình công ty cổ phần tập trung đầu tư vào lĩnh vực chế biến gỗ và sản xuất đá ốp lát. Đến nay công ty đã sở hữu 11 chi nhánh bao gồm văn phòng đại diện tại TP Hồ Chí Minh và nhà máy chế biến đá, gỗ  tại khắp các tỉnh thành và 10 công ty thành viên trực thuộc tổng công ty.</p>
             </div>
-            <div class="grid grid-cols-2 bg-[#00264D] p-[4rem] absolute w-[87%] right-0 top-[20%]">
-                <div class="grid grid-rows-2 w-[60%]">
-                    <div class="flex flex-col gap-5 text-white">
+            <div class="grid grid-cols-2 bg-[rgb(0,38,77)] p-[4rem] absolute w-[87%] right-0 top-[25%]">
+                <div class="grid grid-rows-2">
+                    <div class="flex flex-col gap-5 text-white w-[80%]">
                         <p class="text-[2rem]">4 lĩnh vực hoạt động trọng tâm của Phu Tai SJC </p>
                         <p class="font-light">Với mong muốn đem đến cho thị trường những sản phẩm  tiêu chuẩn quốc tế với tính thẩm mỹ cao và độ bền cùng thời gian, Công ty Cổ phần Phú Tài (Phú Tài JSC) luôn tiên phong và không ngừng đầu tư phát triển những sản phẩm mới, xây dựng thương hiệu, mở rộng nhà máy sản xuất, mạng lưới phân phối và quan trọng nhất là nguồn nhân lực để vươn đến vị thế dẫn đầu thị trường trong từng lĩnh vực</p>
                     </div>
@@ -40,7 +37,7 @@
       </section>
       <section>
         <div class="p-[100px]">
-          <p class="uppercase text-title text-[#003366] mb-20" style="font-size: 70px;">lịch sử công ty</p>
+          <p class="uppercase text-title text-[#003366] mb-20" style="font-size: 70px;font-family: 'Big Shoulders Display', sans-serif;">lịch sử công ty</p>
           <div class="history flex flex-row flex-wrap gap-20">
             <cardHistory :cards="timeline"/>
           </div>
@@ -48,19 +45,19 @@
       </section>
       <section>
         <div class="p-[100px] bg-white">
-          <p class="uppercase text-title text-[#003366] mb-20" style="font-size: 70px;">Chi nhánh công ty</p>
-          <div class="flex flex-row">
+          <p class="uppercase text-title text-[#003366] mb-20" style="font-size: 70px;font-family: 'Big Shoulders Display', sans-serif;">Chi nhánh công ty</p>
+          <div class="grid grid-cols-2">
             <div class="img">
               <img src="../assets/img/map.png" alt="">
             </div>
             <div class="flex flex-col gap-10">
               <p class="text-[#F16336] text-title" style="font-weight: 500;">Bình Định</p>
-              <div class="flex gap-8">
-              <div class="flex flex-col gap-12">
-                <cardTextIcon changeColor="blue" class="" :cards="xiNghiep"/>
-                <cardTextIcon changeColor="blue" :cards="xiNghiep"/>
-              </div>
-              <div class="divider"></div>
+              <div class="grid grid-cols-2 divide-x-2 divide-cyan-950">
+                <div class="flex flex-col gap-12">
+                  <cardTextIcon changeColor="blue" class="" :cards="xiNghiep"/>
+                  <cardTextIcon changeColor="blue" :cards="xiNghiep"/>
+                </div>
+              <!-- <div class="divider"></div> -->
               <div class="flex flex-col gap-12">
                 <cardTextIcon changeColor="blue" :cards="nhaMay"/>
                 <cardTextIcon changeColor="blue" :cards="nhaMay"/>
@@ -74,14 +71,14 @@
       <section>
         <div class="p-[100px]">
           <div class="ctyTv flex flex-col gap-10">
-            <p class="uppercase text-title text-[#003366]" style="font-size: 70px;">Công ty thành viên</p>
+            <p class="uppercase text-title text-[#003366]" style="font-size: 70px;font-family: 'Big Shoulders Display', sans-serif;">Công ty thành viên</p>
             <div class="flex">
               <div class="img">
                 <img src="../assets/img/branchCompany.png" alt="">
               </div>
-              <div class="relative w-[40%]">
+              <div class="relative w-1/2">
                   <div class="content h-full firstLayer bg-[#001933] w-full">
-                      <div class="flex flex-col  text-white gap-4 px-12 pt-16 pb-5 h-full">
+                      <div class="flex flex-col  text-white gap-4 px-12 pt-6 h-full">
                         <p class="uppercase font-medium	text-2xl leading-8">CÔNG TY CỔ PHẦN VẬT LIỆU XÂY DỰNG PHÚ YÊN</p>
                         <div class="desc font-light flex flex-col gap-6">
                           <p>Khai thác chế biến đá ốp lát, đá xây dựng, cát xây</p>
@@ -104,24 +101,42 @@
         </div>
       </section>
       <section>
-        <div class="grid grid-cols-2">
-          <div class="col-span-2">
-            <img src="" alt="">
+        <div class="target grid grid-cols-2 pt-[100px]">
+          <div class="col-span-2 relative">
+            <div class="content bg-[#003366]">
+              <p class="text-heading mb-4 uppercase" style="color: white; font-family: 'Big Shoulders Display', sans-serif;">ĐỘI NGŨ NHÂN VIÊN</p>
+              <p class="text-desc" style="color: white;">Lorem ipsum dolor sit amet consectetur. Dolor interdum ipsum donec aliquet rhoncus pellentesque scelerisque. Habitant turpis commodo facilisis tellus at facilisis vitae et. Sem commodo adipiscing vestibulum massa sit porta. Quam rhoncus a risus mauris amet faucibus.</p>
+            </div>
+            <img class="w-full" src="/src/assets/img/business-meeting.png" alt="">
           </div>
+          <div class="col-span-1 relative">
+            <div class="content">
+              <p class="text-heading mb-4 uppercase" style="color: white; font-family: 'Big Shoulders Display', sans-serif;">TẦM NHÌN</p>
+              <p class="text-desc" style="color: white;">Lorem ipsum dolor sit amet consectetur. Dolor interdum ipsum donec aliquet rhoncus pellentesque scelerisque. Habitant turpis commodo facilisis tellus at facilisis vitae et. Sem commodo adipiscing vestibulum massa sit porta. Quam rhoncus a risus mauris amet faucibus.</p>
+            </div>
+            <img class="w-full" src="/src/assets/img/vision.png" alt="">
+            <div class="blue-shade"></div>
+          </div>
+          <div class="col-span-1 relative">
+            <div class="content">
+              <p class="text-heading mb-4 uppercase" style="color: white; font-family: 'Big Shoulders Display', sans-serif;">GIÁ TRỊ CỐT LÕI</p>
+              <p class="text-desc" style="color: white;">Lorem ipsum dolor sit amet consectetur. Dolor interdum ipsum donec aliquet rhoncus pellentesque scelerisque. Habitant turpis commodo facilisis tellus at facilisis vitae et. Sem commodo adipiscing vestibulum massa sit porta. Quam rhoncus a risus mauris amet faucibus.</p>
+            </div>
+            <img  class="w-full" src="/src/assets/img/core-value.png" alt="">
+            <div class="dark-blue-shade"></div>
+          </div>
+          <div></div>
         </div>
       </section>
   </main>
-  <footerComp/>
 </template>
 
 <script setup>
-import headerComp from "../components/headerComp.vue";
-import footerComp from "../components/footerComp.vue";
 import cardAboutUs from "../components/cardFields.vue"
 import cardHistory from "../components/cardHistory.vue";
 import cardTextIcon from "../components/cardTextIcon.vue"
 import buttonComp from "../components/buttonComp.vue"
-
+import setCardBranch from "../components/cardBranch.vue"
 import { ref } from 'vue'
 let id=ref(1);
 
@@ -149,6 +164,9 @@ const timeline= ref([
   {date:"2018", desc:"Thành lập công ty TNHH MTV Bất Động Sản Phú Tài. Nhận chuyển nhượng vốn góp do công ty TNHH đá Granite Thành Châu Phú Yên ( tỉ lệ 100% vốn điều lệ ). Thành lập Công ty Cổ phần Đá Phú Tài Ninh Thuận Thành lập chi nhánh công ty cổ phần Phú Tài - Xí nghiệp khai thác đá Khánh Hòa. Thành lập chi nhánh công ty cổ phần Phú Tài - Xí nghiệp khai thác đá Bình Định. Thành lập chi nhánh công ty cổ phần Phú Tài - Nhà máy chế biến đá Long Mỹ. Thành lập Công ty TNHH MTV Đá thạch anh cao cấp Phú Tài"},
   
 ])
+const cardBranch= ref([
+  // {img:"/src/assets/img"}
+])
 // Theo như trong giao diện thì có rows, và mỗi row sẽ có nhiều item
 const xiNghiep = ref([
   {title: "XÍ NGHIỆP 380", rows:[{items:[{icon: "apartment", desc:"Sản xuất, kinh doanh các sản phẩm đá"}]}, {items:[{icon: "location_on", desc:"Khu vực 5, đường Trần Quang Diệu, Quy Nhơn, Bình Định"}]}, {items:[{icon:"mail", desc:"info@phutai380.com"}]}, {items:[{icon: "call", desc:"(0256) 3741 699"}, {icon: "fax", desc:"(0256) 3841 301"}]}]}
@@ -164,7 +182,7 @@ const ctyThanhVien=ref([
 <style scoped>
 .vertical-text{
   writing-mode:vertical-lr;
-  font-size: 12rem;
+  font-size: 9rem;
   text-transform: uppercase;
   opacity: 0.5;
   transform: rotate(180deg);
@@ -203,5 +221,37 @@ const ctyThanhVien=ref([
   position: absolute;
   top:0;
   z-index: 0;
+}
+.blue-shade{
+  background-color: #003366;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  opacity: 0.5;
+}
+.dark-blue-shade{
+  background-color: #001122;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  opacity: 0.7;
+}
+.target .col-span-1 .content{
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    text-align: center;
+    z-index: 1;
+}
+.target .col-span-2 .content{
+ position: absolute;
+ top: -8rem;
+  left: 0;
+  width: 45%;
+  padding: 3rem 8rem
 }
 </style>

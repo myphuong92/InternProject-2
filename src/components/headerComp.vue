@@ -1,5 +1,6 @@
 <template>
-  <div class="header-line flex justify-between px-24">
+    <header>
+        <div class="header-line flex justify-between px-24">
     <a class="flex items-center">
         <img src="/src/assets/img/logo.png" alt="">
         <p class="text-2xl font-medium	text-[#FF4300] drop-shadow-xl">Công ty cổ phần phú tài</p>
@@ -21,7 +22,7 @@
                 <div class="flex items-center" :style="{'color' : link.isHover.value ? '#003366': ''}">
                     <div>
                         <span class="star material-symbols-outlined">star</span>
-                        <a class="text-title" :href="link.link" @mouseover="setHover(link)" @mouseout="clearHover(link)" :style="{'font-size' : link.isHover.value ? '38px': ''}" >{{ link.name }}</a>
+                        <router-link class="text-title" :to="link.link" @mouseover="setHover(link)" @mouseout="clearHover(link)" :style="{'font-size' : link.isHover.value ? '38px': ''}" >{{ link.name }}</router-link>
                     </div>
                     
                 </div>
@@ -32,9 +33,9 @@
                     <div>
                         <div class="flex items-center">
                             <span class="material-symbols-outlined" :class="{'hidden' : !sublink.isHover.value}">arrow_forward_ios</span>
-                            <a class="text-title hover:text-[#003366]" :href="sublink.link" @mouseover="setHover(sublink)" @mouseout="clearHover(sublink)">
+                            <router-link class="text-title hover:text-[#003366]" :to="sublink.link" @mouseover="setHover(sublink)" @mouseout="clearHover(sublink)">
                                 {{ sublink.name }}
-                            </a>
+                            </router-link>
                         </div>
                     </div>
                     
@@ -44,15 +45,17 @@
     </ul>
     </div>
   </Transition>
+    </header>
+  
 
 </template>
 
 <script setup>
     import { ref } from 'vue'
     let links=[
-        {name: "Trang chủ", link: "#", sublinks:[], isHover : ref(false)},
-        {name: "Giới thiệu", link: "#", sublinks:[], isHover : ref(false)},
-        {name: "Lĩnh vực hoạt động", link: "#", sublinks:[{name:"Ngành đá", link:"#", isHover : ref(false)},{name: "Ngành gỗ", link:"#", isHover : ref(false)}, {name:"Ngành ô tô", link:"#", isHover : ref(false)},{name:"Ngành bất động sản", link:"#", isHover : ref(false)}], isHover : ref(false)},
+        {name: "Trang chủ", link: "/", sublinks:[], isHover : ref(false)},
+        {name: "Giới thiệu", link: "/about", sublinks:[], isHover : ref(false)},
+        {name: "Lĩnh vực hoạt động", link: "/field-da-op", sublinks:[{name:"Ngành đá", link:"#", isHover : ref(false)},{name: "Ngành gỗ", link:"#", isHover : ref(false)}, {name:"Ngành ô tô", link:"#", isHover : ref(false)},{name:"Ngành bất động sản", link:"#", isHover : ref(false)}], isHover : ref(false)},
         {name: "Sản phẩm nổi bật", link: "#", sublinks:[], isHover : ref(false)},
         {name: "Quan hệ cổ đông", link: "#", sublinks:[], isHover : ref(false)},
         {name: "Tin tức và sự kiện", link: "#", sublinks:[], isHover : ref(false)},

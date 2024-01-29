@@ -1,6 +1,6 @@
 <template>
   <button class="justify-center flex gap-3 items-center  py-2.5 px-5 rounded-md" :class="[changeColor === 'orange' ? orangeButton:'',changeColor === 'blue' ? blueButton:'',changeColor === 'white' ? whiteButton:'']" >
-        <p :class="[changeColor ==='blue' ? 'text-[#003366]' : '']">{{ title }}</p>
+        <p class="text-[14px]" :class="[changeColor ==='blue' ? 'text-[#003366]' : '']">{{ title }}</p>
         <span v-if="icon" class=" material-symbols-outlined">{{ icon }}</span>
     </button>
 </template>

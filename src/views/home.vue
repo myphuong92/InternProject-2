@@ -16,9 +16,7 @@ const newsData = ref([
 </script>
 
 <template>
-  <header>
-    <headerComp/>
-  </header>
+  
    <main class="container flex flex-col">
       <section>
         <div class="home-intro relative">
@@ -105,7 +103,8 @@ const newsData = ref([
   background-color: #003366;
     padding: 1.5rem;
     color: white;
-    font-size: 24px;
+    font-size: 36px;
+    font-family: 'Big Shoulders Display', sans-serif;
 }
 .set-img-text > div{
   max-height: 376px;
@@ -115,5 +114,12 @@ const newsData = ref([
   object-fit: cover;
   overflow: hidden;
   min-height: 300px;
+}
+.home-intro .content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
 }
 </style>

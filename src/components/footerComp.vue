@@ -24,7 +24,7 @@ let col1=[
   {icon:"print", content:"+(84) 256 3847556"},
   {icon:"mail", content:"sale@phutai.com.vn"}
 ]
-const title2 = ref("Giới thiệu")
+const title2 = ref("GIỚI THIỆU")
 let col2=[
   {content:"Giới Thiệu Chung", link:"#"},
   {content:"Đội Ngũ Nhân Sự", link:"#"},
