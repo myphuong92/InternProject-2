@@ -7,7 +7,7 @@ import FieldDoGo from "../views/comp-views/field-do-go.vue";
 
 const routes = [
   {
-    path: "/InternProject-2",
+    path: "/InternProject-2/",
     name: "Home",
     component: Home,
   },

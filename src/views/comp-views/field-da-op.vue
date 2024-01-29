@@ -147,16 +147,16 @@ import { ref } from 'vue'
 
 import cardBranch from '/src/components/cardBranch.vue';
 const card= ref([
-    {img:"/src/assets/img/card-branch-1.png", title:"NHÀ MÁY CHẾ BIẾN ĐÁ ỐP LÁT TẠI TỈNH BÌNH ĐỊNH", content:"Lorem ipsum dolor sit amet consectetur. Neque vestibulum mauris aliquam enim nulla at orci. Turpis sollicitudin elementum in donec."},
-    {img:"/src/assets/img/card-branch-2.png", title:"XÍ NGHIỆP THẮNG LỢI", content:"Lorem ipsum dolor sit amet consectetur. Neque vestibulum mauris aliquam enim nulla at orci. Turpis sollicitudin elementum in donec."},
-    {img:"/src/assets/img/card-branch-3.png", title:"NHÀ MÁY CHẾ BIẾN GỖ PHÙ CÁT", content:"Lorem ipsum dolor sit amet consectetur. Neque vestibulum mauris aliquam enim nulla at orci. Turpis sollicitudin elementum in donec."},
-    {img:"/src/assets/img/card-branch-4.png", title:"XÍ NGHIỆP SẢN XUẤT VẬT LIỆU XÂY DỰNG NHƠN HÒA", content:"Lorem ipsum dolor sit amet consectetur. Neque vestibulum mauris aliquam enim nulla at orci. Turpis sollicitudin elementum in donec."},
-    {img:"/src/assets/img/card-branch-5.png", title:"NHÀ MÁY CHẾ BIẾN ĐÁ GRANITE-BASALT", content:"Lorem ipsum dolor sit amet consectetur. Neque vestibulum mauris aliquam enim nulla at orci. Turpis sollicitudin elementum in donec."},
-    {img:"/src/assets/img/card-branch-6.png", title:"NHÀ MÁY CHẾ BIẾN ĐÁ ỐP LÁT TẠI TỈNH ĐỒNG NAI", content:"Lorem ipsum dolor sit amet consectetur. Neque vestibulum mauris aliquam enim nulla at orci. Turpis sollicitudin elementum in donec."},
-    {img:"/src/assets/img/card-branch-7.png", title:"NHÀ MÁY CHẾ BIẾN ĐÁ GRANITE TẠI TỈNH KHÁNH HÒA", content:"Lorem ipsum dolor sit amet consectetur. Neque vestibulum mauris aliquam enim nulla at orci. Turpis sollicitudin elementum in donec."},
-    {img:"/src/assets/img/card-branch-8.png", title:"NHÀ MÁY CHẾ BIẾN ĐÁ ỐP LÁT TẠI DIÊN TÂN - KHÁNH HOÀ", content:"Lorem ipsum dolor sit amet consectetur. Neque vestibulum mauris aliquam enim nulla at orci. Turpis sollicitudin elementum in donec."},
-    {img:"/src/assets/img/card-branch-9.png", title:"NHÀ MÁY CHẾ BIẾN ĐÁ ỐP LÁT TẠI TỈNH HƯNG YÊN", content:"Lorem ipsum dolor sit amet consectetur. Neque vestibulum mauris aliquam enim nulla at orci. Turpis sollicitudin elementum in donec."},
-    {img:"/src/assets/img/card-branch-10.png", title:"VĂN PHÒNG TẠI TP HỒ CHÍ MINH", content:"Lorem ipsum dolor sit amet consectetur. Neque vestibulum mauris aliquam enim nulla at orci. Turpis sollicitudin elementum in donec."},
+    {img:"InternProject-2/src/assets/img/card-branch-1.png", title:"NHÀ MÁY CHẾ BIẾN ĐÁ ỐP LÁT TẠI TỈNH BÌNH ĐỊNH", content:"Lorem ipsum dolor sit amet consectetur. Neque vestibulum mauris aliquam enim nulla at orci. Turpis sollicitudin elementum in donec."},
+    {img:"InternProject-2/src/assets/img/card-branch-2.png", title:"XÍ NGHIỆP THẮNG LỢI", content:"Lorem ipsum dolor sit amet consectetur. Neque vestibulum mauris aliquam enim nulla at orci. Turpis sollicitudin elementum in donec."},
+    {img:"InternProject-2/src/assets/img/card-branch-3.png", title:"NHÀ MÁY CHẾ BIẾN GỖ PHÙ CÁT", content:"Lorem ipsum dolor sit amet consectetur. Neque vestibulum mauris aliquam enim nulla at orci. Turpis sollicitudin elementum in donec."},
+    {img:"InternProject-2/src/assets/img/card-branch-4.png", title:"XÍ NGHIỆP SẢN XUẤT VẬT LIỆU XÂY DỰNG NHƠN HÒA", content:"Lorem ipsum dolor sit amet consectetur. Neque vestibulum mauris aliquam enim nulla at orci. Turpis sollicitudin elementum in donec."},
+    {img:"InternProject-2/src/assets/img/card-branch-5.png", title:"NHÀ MÁY CHẾ BIẾN ĐÁ GRANITE-BASALT", content:"Lorem ipsum dolor sit amet consectetur. Neque vestibulum mauris aliquam enim nulla at orci. Turpis sollicitudin elementum in donec."},
+    {img:"InternProject-2/src/assets/img/card-branch-6.png", title:"NHÀ MÁY CHẾ BIẾN ĐÁ ỐP LÁT TẠI TỈNH ĐỒNG NAI", content:"Lorem ipsum dolor sit amet consectetur. Neque vestibulum mauris aliquam enim nulla at orci. Turpis sollicitudin elementum in donec."},
+    {img:"InternProject-2/src/assets/img/card-branch-7.png", title:"NHÀ MÁY CHẾ BIẾN ĐÁ GRANITE TẠI TỈNH KHÁNH HÒA", content:"Lorem ipsum dolor sit amet consectetur. Neque vestibulum mauris aliquam enim nulla at orci. Turpis sollicitudin elementum in donec."},
+    {img:"InternProject-2/src/assets/img/card-branch-8.png", title:"NHÀ MÁY CHẾ BIẾN ĐÁ ỐP LÁT TẠI DIÊN TÂN - KHÁNH HOÀ", content:"Lorem ipsum dolor sit amet consectetur. Neque vestibulum mauris aliquam enim nulla at orci. Turpis sollicitudin elementum in donec."},
+    {img:"InternProject-2/src/assets/img/card-branch-9.png", title:"NHÀ MÁY CHẾ BIẾN ĐÁ ỐP LÁT TẠI TỈNH HƯNG YÊN", content:"Lorem ipsum dolor sit amet consectetur. Neque vestibulum mauris aliquam enim nulla at orci. Turpis sollicitudin elementum in donec."},
+    {img:"InternProject-2/src/assets/img/card-branch-10.png", title:"VĂN PHÒNG TẠI TP HỒ CHÍ MINH", content:"Lorem ipsum dolor sit amet consectetur. Neque vestibulum mauris aliquam enim nulla at orci. Turpis sollicitudin elementum in donec."},
 
 ])
 </script>
