@@ -8,10 +8,10 @@ import { ref } from 'vue'
 let id=ref(1);
 
 const cardField = ref([
-    {id: '0' + id.value++, title:"Khai thác chế biến đá ốp lát",img:"InternProject-2/src/assets/img/card-field-1.png"},
-    {id: '0' + id.value++, title:"Sản xuất kinh doanh đồ gỗ nội thất và ngoài trời",img:"InternProject-2/src/assets/img/card-field-2.png"},
-    {id: '0' + id.value++, title:"Phân phối xe ô tô Toyota",img:"InternProject-2/src/assets/img/card-field-3.png"},
-    {id: '0' + id.value++, title:"Kinh doanh bất động sản",img:"InternProject-2/src/assets/img/card-field-4.png"},
+    {id: '0' + id.value++, title:"Khai thác chế biến đá ốp lát",img:"/src/assets/img/card-field-1.png"},
+    {id: '0' + id.value++, title:"Sản xuất kinh doanh đồ gỗ nội thất và ngoài trời",img:"/src/assets/img/card-field-2.png"},
+    {id: '0' + id.value++, title:"Phân phối xe ô tô Toyota",img:"/src/assets/img/card-field-3.png"},
+    {id: '0' + id.value++, title:"Kinh doanh bất động sản",img:"/src/assets/img/card-field-4.png"},
 ])
 const timeline= ref([
   {date:"10/12/1994", desc:"Tư lệnh Quân khu 5 quyết định thành lập Công ty sản xuất vật liệu xây dựng Phú Tài gọi tắt là Công ty Phú Tài (Quyết định số: 124/QĐ-QK). Trên cơ sở hợp nhất 03 đơn vị: Xí nghiệp 380; Xí nghiệp 224; Xí nghiệp sản xuất vật liệu xây dựng An Trường."},
