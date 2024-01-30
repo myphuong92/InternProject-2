@@ -35,7 +35,7 @@ const routes = [
   },
 ];
 const router = createRouter({
-  history: createWebHistory("/"), // Provide the base URL directly
+  history: createWebHistory("/InternProject-2/"), // Provide the base URL directly
   routes,
 });
 export default router;
