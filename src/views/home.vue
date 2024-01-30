@@ -9,18 +9,18 @@ const iconArrow = "arrow_forward";
 // NEWS CARD
 const newsData = ref([
   {
-    img: "src/assets/img/news-card-1.png",
+    img: "assets/img/news-card-1.png",
     title:
       "Phú Tài (PTB) nhận tín dụng xanh gần 200 tỷ từ Ngân Hàng Anh Quốc HSBC",
     date: "11-11-2023",
   },
   {
-    img: "src/assets/img/news-card-2.png",
+    img: "assets/img/news-card-2.png",
     title: "CBTT báo cáo tài chính riêng công ty mẹ Quý II năm 2023 ",
     date: "11-11-2023",
   },
   {
-    img: "src/assets/img/news-card-3.png",
+    img: "assets/img/news-card-3.png",
     title:
       "Nghị quyết số :124/NQ-HĐQT về thống nhất và đống ý các Phương án mua lại trái phiếu trước hạ",
     date: "11-11-2023",
