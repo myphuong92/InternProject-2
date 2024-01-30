@@ -5,35 +5,43 @@
         <img src="/assets/img/logo.png" alt="">
         <p class="text-2xl font-medium text-[#FF4300] drop-shadow-xl hidden md:block">Công ty cổ phần phú tài</p>
     </a>
-    <div class="flex items-center">
-        <p>EN | VN</p>
-        <div class="searchBox mx-2">
-            <input type="text">
+    <div class="flex items-center gap-5">
+        <div class="items-center hidden md:flex">
+            <p>EN | VN</p>
+            <div class="searchBox mx-2">
+                <input type="text">
+            </div>
+        </div>
+        <div class="flex items-center searchBoxMobile md:hidden">
+            <transition name="fade">
+                <input v-show="isSearchClicked" type="text">
+            </transition>
+            <span @click="toggleSearch()" class="material-symbols-outlined">search</span>
         </div>
         <span @click="toggleMenu()" class="material-symbols-outlined">menu</span>
 
     </div>  
 </div>
 <Transition :duration="550" name="nested">
-    <div class="outer navigation bg-[#E4ECFA] py-8 px-24" v-if="isMenuClicked" :class="{'active' : isMenuClicked}">
-        <ul class="inner relative flex flex-col gap-[1rem] ">
-        <li class="flex justify-between w-[60%]" :key="link.name" v-for="link in links"  @mouseover="handleMouseOver(link)" @mouseout="handleMouseOut(link)">
+    <div class="h-screen outer navigation bg-[#E4ECFA] md:py-8 md:px-24" v-if="isMenuClicked" :class="{'active' : isMenuClicked}">
+        <ul class="inner relative flex flex-col gap-[2rem] ">
+        <li class="md:flex md:w-[60%]" :key="link.name" v-for="link in links"  @mouseover="handleMouseOver(link)" @mouseout="handleMouseOut(link)">
             <div class="nav-title" :class="{'pl-[20px]': link.isHover.value}">
                 <div class="flex items-center" :style="{'color' : link.isHover.value ? '#003366': ''}">
                     <div>
                         <span class="star material-symbols-outlined">star</span>
-                        <router-link class="text-title" :to="link.link" @mouseover="setHover(link)" @mouseout="clearHover(link)" :style="{'font-size' : link.isHover.value ? '38px': ''}" >{{ link.name }}</router-link>
+                        <router-link class="text-3xl md:text-title" :to="link.link" @mouseover="setHover(link)" @mouseout="clearHover(link)" :style="{'font-size' : link.isHover.value ? '38px': ''}" >{{ link.name }}</router-link>
                     </div>
                     
                 </div>
             </div>
             
-            <ul class="sub-title flex flex-col gap-[1rem]" v-if="link.sublinks.length>0" :class="{'hidden': !link.sublinks.length>0 || !link.isHover.value}">
+            <ul class="ml-24 sub-title flex flex-col gap-[2rem]" v-if="link.sublinks.length>0" >
                 <li v-for="sublink in link.sublinks" :key="sublink.name">
                     <div>
-                        <div class="flex items-center">
+                        <div class="md:flex items-center">
                             <span class="material-symbols-outlined" :class="{'hidden' : !sublink.isHover.value}">arrow_forward_ios</span>
-                            <router-link class="text-title hover:text-[#003366]" :to="sublink.link" @mouseover="setHover(sublink)" @mouseout="clearHover(sublink)">
+                            <router-link class="text-xl md:text-3xl hover:text-[#003366]" :to="sublink.link" @mouseover="setHover(sublink)" @mouseout="clearHover(sublink)">
                                 {{ sublink.name }}
                             </router-link>
                         </div>
@@ -63,10 +71,13 @@
         {name: "Liên hệ", link: "#", sublinks:[], isHover : ref(false)},
     ]
     const isMenuClicked = ref(false);
-
+    const isSearchClicked = ref(false);
     function toggleMenu(){
         isMenuClicked.value=!isMenuClicked.value;
         // console.log(isMenuClicked.value)
+    }
+    function toggleSearch(){
+        isSearchClicked.value = !isSearchClicked.value;
     }
     function setHover(link){
         link.isHover.value=true;
@@ -90,6 +101,14 @@
 </script>
 
 <style>
+/* Define the fade animation */
+    .fade-enter-active, .fade-leave-active {
+    transition: 0.5s ease-in-out;
+    }
+    .fade-enter, .fade-leave-to {
+        transition: 0.5s ease-in-out;
+        opacity: 0;
+    }
 /* delay enter of nested element for staggered effect */
 .nested-enter-active .inner {
   transition-delay: 0.25s;
@@ -113,7 +132,7 @@
         right: 0;
         top: 0px;
         z-index: 50;
-        position:sticky;
+        position:fixed;
         background-color: white;
         
     }
@@ -145,5 +164,9 @@
         border: 1px solid rgba(0,0,0,0.5);
         border-radius: 20px;
         padding: 5px 10px;
+    }
+    .searchBoxMobile input{
+        border-bottom: solid black 1px;
+        transition: 0.5s ease-in-out;
     }
 </style>
