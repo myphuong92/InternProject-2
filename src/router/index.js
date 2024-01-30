@@ -12,12 +12,12 @@ const routes = [
     component: Home,
   },
   {
-    path: "/about/",
+    path: "/about",
     name: "About",
     component: About,
   },
   {
-    path: "/linhvuc/",
+    path: "/linhvuc",
     name: "LinhVuc",
     component: LinhVuc,
     children: [
