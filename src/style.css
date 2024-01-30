@@ -64,7 +64,7 @@ h6 {
 
 .container {
     width: 100%;
-    max-width: 1440px !important;
+    max-width: 1933px !important;
     margin: 0 auto
 }
 .text-heading {
@@ -90,7 +90,7 @@ h6 {
 }
 /* HOMEPAGE */
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1024px) {
 	.container {
 		padding-left: 40px;
 		padding-right: 40px;
@@ -99,17 +99,6 @@ h6 {
 	.text-heading {
 		font-size: 38px;
 	}
-}
-@media screen and (max-width: 1023px) {
-  .container {
-    padding-left: 10px !important;
-    padding-right: 10px !important;
-  }
-}
-
-.fadeUp {
-	animation: fadeUp 0.5s ease-in;
-	transition: all 0.5s ease-in;
 }
 @media screen and (max-width: 768px) {
 	.container {

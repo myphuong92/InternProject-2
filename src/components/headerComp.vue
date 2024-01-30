@@ -3,7 +3,7 @@
         <div class="header-line flex justify-between px-24">
     <a class="flex items-center">
         <img src="/assets/img/logo.png" alt="">
-        <p class="text-2xl font-medium	text-[#FF4300] drop-shadow-xl">Công ty cổ phần phú tài</p>
+        <p class="text-2xl font-medium text-[#FF4300] drop-shadow-xl">Công ty cổ phần phú tài</p>
     </a>
     <div class="flex items-center">
         <p>EN | VN</p>
