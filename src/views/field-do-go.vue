@@ -51,9 +51,9 @@
             <p class="text-sub-heading text-[#003366] uppercase">các sản phẩm gỗ chính của phú tài</p>
             <div class="grid grid-cols-2 gap-10">
                 <div class="img grid grid-cols-2 gap-5">
-                    <div class=""><img class="object-cover w-full h-full rounded-md" src="/src/assets/img/go-1.png" alt=""></div>
-                    <div><img class="object-cover w-full h-full rounded-md" src="/src/assets/img/go-2.png" alt=""></div>
-                    <div class="col-span-2"><img class="object-cover w-full h-full rounded-md" src="/src/assets/img/go-3.png" alt=""></div>
+                    <div class=""><img class="object-cover w-full h-full rounded-md" src="/assets/img/go-1.png" alt=""></div>
+                    <div><img class="object-cover w-full h-full rounded-md" src="/assets/img/go-2.png" alt=""></div>
+                    <div class="col-span-2"><img class="object-cover w-full h-full rounded-md" src="/assets/img/go-3.png" alt=""></div>
                 </div>
                 <div class="flex flex-col gap-10 justify-center">
                     <p class="title text-4xl font-medium uppercase">ĐỒ GỖ NGOÀI TRỜI</p>
@@ -66,9 +66,9 @@
                     <p class="content text-[#526D88]">Lorem ipsum dolor sit amet consectetur. Lectus diam amet malesuada etiam. Ac auctor nulla elementum turpis. Donec dignissim sed elementum vivamus sagittis enim consectetur. Pellentesque dictumst porta nulla aliquam at integer adipiscing. Morbi elementum ipsum lacinia quam fermentum. Sollicitudin sed ac in sit pulvinar. Fermentum nibh feugiat nunc velit tellus. </p>
                 </div>
                 <div class="img grid grid-cols-2 gap-5">
-                    <div class=""><img class="object-cover w-full h-full rounded-md" src="/src/assets/img/go-4.png" alt=""></div>
-                    <div><img class="object-cover w-full h-full rounded-md" src="/src/assets/img/go-5.png" alt=""></div>
-                    <div class="col-span-2"><img class="object-cover w-full h-full rounded-md" src="/src/assets/img/go-6.png" alt=""></div>
+                    <div class=""><img class="object-cover w-full h-full rounded-md" src="/assets/img/go-4.png" alt=""></div>
+                    <div><img class="object-cover w-full h-full rounded-md" src="/assets/img/go-5.png" alt=""></div>
+                    <div class="col-span-2"><img class="object-cover w-full h-full rounded-md" src="/assets/img/go-6.png" alt=""></div>
                 </div>
                 
             </div>
@@ -85,8 +85,8 @@
 <script setup>
     import { ref } from 'vue'
 
-    import donutChart from "/src/components/donutChart.vue"
-    import barChart from "/src/components/barChart.vue"
+    import donutChart from "../components/donutChart.vue"
+    import barChart from "../components/barChart.vue"
 
     // Product
     const dataProducts = ref({

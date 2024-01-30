@@ -2,7 +2,7 @@
     <main>
         <section>
             <div class="h-[52rem] overflow-hidden">
-                <img class="object-cover w-full" src="../assets/img/da-op-banner.png" alt="">
+                <img class="object-cover w-full" src="/assets/img/da-op-banner.png" alt="">
             </div>
         </section>
         <section>

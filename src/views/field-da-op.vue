@@ -11,12 +11,12 @@
         <div class="daop grid grid-cols-3">
           <div class="flex flex-col gap-14">
             <div class="flex flex-row gap-x-4 items-center">
-              <img src="/src/assets/img/da-op-lat.png" alt="" />
+              <img src="/assets/img/da-op-lat.png" alt="" />
               <p class="title">Đá ốp lát</p>
             </div>
             <div class="content flex flex-col gap-8">
               <div>
-                <img src="/src/assets/img/da-op-lat-ex.png" alt="" />
+                <img src="/assets/img/da-op-lat-ex.png" alt="" />
               </div>
               <div>
                 <p class="content">
@@ -27,12 +27,12 @@
           </div>
           <div class="flex flex-col gap-14">
             <div class="flex flex-row gap-4 items-center">
-              <img src="/src/assets/img/da-thu-cong.png" alt="" />
+              <img src="/assets/img/da-thu-cong.png" alt="" />
               <p class="title">Đá thủ công</p>
             </div>
             <div class="content flex flex-col gap-8">
               <div>
-                <img src="/src/assets/img/da-thu-cong-ex.png" alt="" />
+                <img src="/assets/img/da-thu-cong-ex.png" alt="" />
               </div>
               <div>
                 <p class="content">
@@ -43,12 +43,12 @@
           </div>
           <div class="flex flex-col gap-14">
             <div class="flex flex-row gap-4 items-center">
-              <img src="/src/assets/img/da-nghien-sang.png" alt="" />
+              <img src="/assets/img/da-nghien-sang.png" alt="" />
               <p class="title">Đá nghiền sàng</p>
             </div>
             <div class="content flex flex-col gap-8">
               <div>
-                <img src="/src/assets/img/da-nghien-sang-ex.png" alt="" />
+                <img src="/assets/img/da-nghien-sang-ex.png" alt="" />
               </div>
               <div>
                 <p class="content">
@@ -71,7 +71,7 @@
         <div class="relative">
           <div class="flex justify-center">
             <div class="map-location">
-              <img src="/src/assets/img/map-location.png" alt="" />
+              <img src="/assets/img/map-location.png" alt="" />
             </div>
           </div>
           <div class="flex flex-col gap-14 absolute top-52 left-0">
@@ -205,64 +205,64 @@
 <script setup>
 import { ref } from "vue";
 
-import cardBranch from "/src/components/cardBranch.vue";
+import cardBranch from "../components/cardBranch.vue";
 const card = ref([
   {
-    img: "/InternProject-2/src/assets/img/card-branch-1.png",
+    img: "assets/img/card-branch-1.png",
     title: "NHÀ MÁY CHẾ BIẾN ĐÁ ỐP LÁT TẠI TỈNH BÌNH ĐỊNH",
     content:
       "Lorem ipsum dolor sit amet consectetur. Neque vestibulum mauris aliquam enim nulla at orci. Turpis sollicitudin elementum in donec.",
   },
   {
-    img: "/InternProject-2/src/assets/img/card-branch-2.png",
+    img: "assets/img/card-branch-2.png",
     title: "XÍ NGHIỆP THẮNG LỢI",
     content:
       "Lorem ipsum dolor sit amet consectetur. Neque vestibulum mauris aliquam enim nulla at orci. Turpis sollicitudin elementum in donec.",
   },
   {
-    img: "/InternProject-2/src/assets/img/card-branch-3.png",
+    img: "assets/img/card-branch-3.png",
     title: "NHÀ MÁY CHẾ BIẾN GỖ PHÙ CÁT",
     content:
       "Lorem ipsum dolor sit amet consectetur. Neque vestibulum mauris aliquam enim nulla at orci. Turpis sollicitudin elementum in donec.",
   },
   {
-    img: "/InternProject-2/src/assets/img/card-branch-4.png",
+    img: "assets/img/card-branch-4.png",
     title: "XÍ NGHIỆP SẢN XUẤT VẬT LIỆU XÂY DỰNG NHƠN HÒA",
     content:
       "Lorem ipsum dolor sit amet consectetur. Neque vestibulum mauris aliquam enim nulla at orci. Turpis sollicitudin elementum in donec.",
   },
   {
-    img: "/InternProject-2/src/assets/img/card-branch-5.png",
+    img: "assets/img/card-branch-5.png",
     title: "NHÀ MÁY CHẾ BIẾN ĐÁ GRANITE-BASALT",
     content:
       "Lorem ipsum dolor sit amet consectetur. Neque vestibulum mauris aliquam enim nulla at orci. Turpis sollicitudin elementum in donec.",
   },
   {
-    img: "/InternProject-2/src/assets/img/card-branch-6.png",
+    img: "assets/img/card-branch-6.png",
     title: "NHÀ MÁY CHẾ BIẾN ĐÁ ỐP LÁT TẠI TỈNH ĐỒNG NAI",
     content:
       "Lorem ipsum dolor sit amet consectetur. Neque vestibulum mauris aliquam enim nulla at orci. Turpis sollicitudin elementum in donec.",
   },
   {
-    img: "/InternProject-2/src/assets/img/card-branch-7.png",
+    img: "assets/img/card-branch-7.png",
     title: "NHÀ MÁY CHẾ BIẾN ĐÁ GRANITE TẠI TỈNH KHÁNH HÒA",
     content:
       "Lorem ipsum dolor sit amet consectetur. Neque vestibulum mauris aliquam enim nulla at orci. Turpis sollicitudin elementum in donec.",
   },
   {
-    img: "/InternProject-2/src/assets/img/card-branch-8.png",
+    img: "assets/img/card-branch-8.png",
     title: "NHÀ MÁY CHẾ BIẾN ĐÁ ỐP LÁT TẠI DIÊN TÂN - KHÁNH HOÀ",
     content:
       "Lorem ipsum dolor sit amet consectetur. Neque vestibulum mauris aliquam enim nulla at orci. Turpis sollicitudin elementum in donec.",
   },
   {
-    img: "/InternProject-2/src/assets/img/card-branch-9.png",
+    img: "assets/img/card-branch-9.png",
     title: "NHÀ MÁY CHẾ BIẾN ĐÁ ỐP LÁT TẠI TỈNH HƯNG YÊN",
     content:
       "Lorem ipsum dolor sit amet consectetur. Neque vestibulum mauris aliquam enim nulla at orci. Turpis sollicitudin elementum in donec.",
   },
   {
-    img: "/InternProject-2/src/assets/img/card-branch-10.png",
+    img: "assets/img/card-branch-10.png",
     title: "VĂN PHÒNG TẠI TP HỒ CHÍ MINH",
     content:
       "Lorem ipsum dolor sit amet consectetur. Neque vestibulum mauris aliquam enim nulla at orci. Turpis sollicitudin elementum in donec.",

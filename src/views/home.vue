@@ -36,7 +36,7 @@ const newsData = ref([
           <div class="w-full">
             <img
               class="object-cover w-full"
-              src="../assets/img/home-banner.png"
+              src="/assets/img/home-banner.png"
               alt=""
             />
           </div>
@@ -83,26 +83,26 @@ const newsData = ref([
           <div class="col-span-2">
             <p class="text uppercase">BÁO CÁO TÀI CHÍNH</p>
             <div class="img">
-              <img class="w-full" src="../assets/img/set-img-1.png" alt="" />
+              <img class="w-full" src="/assets/img/set-img-1.png" alt="" />
             </div>
           </div>
 
           <div class="col-span-1">
             <p class="text uppercase">BÁO CÁO THUẾ</p>
             <div class="img">
-              <img class="w-full" src="../assets/img/set-img-2.png" alt="" />
+              <img class="w-full" src="/assets/img/set-img-2.png" alt="" />
             </div>
           </div>
           <div class="col-span-1">
             <p class="text uppercase">CÔNG BỐ THÔNG TIN</p>
             <div class="img">
-              <img class="w-full" src="../assets/img/set-img-3.png" alt="" />
+              <img class="w-full" src="/assets/img/set-img-3.png" alt="" />
             </div>
           </div>
           <div class="col-span-2">
             <p class="text uppercase">TÀI LIỆU KHÁC</p>
             <div class="img">
-              <img class="w-full" src="../assets/img/set-img-4.png" alt="" />
+              <img class="w-full" src="/assets/img/set-img-4.png" alt="" />
             </div>
           </div>
         </div>

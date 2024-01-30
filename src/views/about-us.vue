@@ -6,7 +6,7 @@
           <div class="w-full">
             <img
               class="object-cover w-full"
-              src="../assets/img/home-banner.png"
+              src="/assets/img/home-banner.png"
               alt=""
             />
           </div>
@@ -90,7 +90,7 @@
         </p>
         <div class="grid grid-cols-2">
           <div class="img">
-            <img src="../assets/img/map.png" alt="" />
+            <img src="/assets/img/map.png" alt="" />
           </div>
           <div class="flex flex-col gap-10">
             <p class="text-[#F16336] text-title" style="font-weight: 500">
@@ -125,7 +125,7 @@
           </p>
           <div class="flex">
             <div class="img">
-              <img src="../assets/img/branchCompany.png" alt="" />
+              <img src="/assets/img/branchCompany.png" alt="" />
             </div>
             <div class="relative w-1/2">
               <div class="content h-full firstLayer bg-[#001933] w-full">
@@ -186,7 +186,7 @@
           </div>
           <img
             class="w-full"
-            src="/src/assets/img/business-meeting.png"
+            src="/assets/img/business-meeting.png"
             alt=""
           />
         </div>
@@ -209,7 +209,7 @@
               faucibus.
             </p>
           </div>
-          <img class="w-full" src="/src/assets/img/vision.png" alt="" />
+          <img class="w-full" src="/assets/img/vision.png" alt="" />
           <div class="blue-shade"></div>
         </div>
         <div class="col-span-1 relative">
@@ -231,7 +231,7 @@
               faucibus.
             </p>
           </div>
-          <img class="w-full" src="/src/assets/img/core-value.png" alt="" />
+          <img class="w-full" src="/assets/img/core-value.png" alt="" />
           <div class="dark-blue-shade"></div>
         </div>
         <div></div>
@@ -253,22 +253,22 @@ const cardField = ref([
   {
     id: "0" + id.value++,
     title: "Khai thác chế biến đá ốp lát",
-    img: "src/assets/img/card-field-1.png",
+    img: "assets/img/card-field-1.png",
   },
   {
     id: "0" + id.value++,
     title: "Sản xuất kinh doanh đồ gỗ nội thất và ngoài trời",
-    img: "src/assets/img/card-field-2.png",
+    img: "assets/img/card-field-2.png",
   },
   {
     id: "0" + id.value++,
     title: "Phân phối xe ô tô Toyota",
-    img: "src/assets/img/card-field-3.png",
+    img: "assets/img/card-field-3.png",
   },
   {
     id: "0" + id.value++,
     title: "Kinh doanh bất động sản",
-    img: "src/assets/img/card-field-4.png",
+    img: "assets/img/card-field-4.png",
   },
 ]);
 const timeline = ref([
