@@ -67,16 +67,40 @@
                 </div>
                 <div class="img grid grid-cols-2 gap-5">
                     <div class=""><img class="object-cover w-full h-full rounded-md" src="/assets/img/go-4.png" alt=""></div>
-                    <div><img class="object-cover w-full h-full rounded-md" src="/assets/img/go-5.png" alt=""></div>
-                    <div class="col-span-2"><img class="object-cover w-full h-full rounded-md" src="/assets/img/go-6.png" alt=""></div>
+                    <div><img class="object-cover w-full h-full rounded-md" src="/assets/img/go-6.png" alt=""></div>
+                    <div class="col-span-2"><img class="object-cover w-full h-full rounded-md" src="/assets/img/go-5.png" alt=""></div>
                 </div>
                 
             </div>
         </div>
     </section>
     <section>
-        <div>
+        <div class="p-[100px]">
             <p class="text-sub-heading text-[#003366] uppercase">công suất hiện hữu</p>
+            <div class="relative">
+                <img src="/assets/img/scott-webb.png" alt="">
+                <div class="flex flex-col gap-3 text-white absolute top-32 left-16">
+                    <p class="text-3xl font-medium">Nhà Máy Thắng lợi</p>
+                    <cardTextIcon class="font-light" :cards="thangloi"/>
+                    <p class="font-medium">Đang hoạt động tối đa công suất</p>
+                </div>
+                <div class="flex flex-col gap-3 text-white absolute top-[15rem] left-[30rem]">
+                    <p class="text-3xl font-medium">Nhà Máy Đồng Nai</p>
+                    <cardTextIcon class="font-light" :cards="dongnai"/>
+                    <p class="font-medium">Đang hoạt động tối đa công suất</p>
+                </div>
+                <div class="flex flex-col gap-3 text-white absolute bottom-20 right-16">
+                    <p class="text-3xl font-medium">Nhà Máy VINAG7</p>
+                    <cardTextIcon class="font-light" :cards="vinag7"/>
+                    <p class="font-medium">Đang hoạt động 70% công suất thiết kế</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="p-[100px]">
+            <p class="text-sub-heading text-[#003366] uppercase">Công ty con ngành gỗ</p>
 
         </div>
     </section>
@@ -84,7 +108,7 @@
 
 <script setup>
     import { ref } from 'vue'
-
+    import cardTextIcon from '../components/cardTextIcon.vue';
     import donutChart from "../components/donutChart.vue"
     import barChart from "../components/barChart.vue"
 
@@ -184,16 +208,71 @@
                     stepSize: 3, // Bước giữa các tick
                 }
             },
-            yAxes: [{
-            scaleLabel: {
-                display: true,
-                labelString: 'probability'
-            }
-            }]
+            
         },
         responsive: true,
         maintainAspectRatio: false
     }
+    const thangloi = ref([
+  {
+    rows: [
+      {
+        items: [
+          { icon: "stacks", desc: "91.000 m2" },
+        ],
+      },
+      {
+        items: [
+          {
+            icon: "event_seat",
+            desc: "Bàn ghế ngoài trời",
+          },
+        ],
+      },
+      { items: [{ icon: "bolt", desc: "110 containers/tháng" }] },
+    ],
+  },
+]);
+const dongnai = ref([
+  {
+    rows: [
+      {
+        items: [
+          { icon: "stacks", desc: "24.000 m2" },
+        ],
+      },
+      {
+        items: [
+          {
+            icon: "event_seat",
+            desc: "Bàn, ghế, giường, tủ các loại",
+          },
+        ],
+      },
+      { items: [{ icon: "bolt", desc: "30 containers/tháng" }] },
+    ],
+  },
+]);
+const vinag7 = ref([
+  {
+    rows: [
+      {
+        items: [
+          { icon: "stacks", desc: "65.000 m2" },
+        ],
+      },
+      {
+        items: [
+          {
+            icon: "event_seat",
+            desc: "Gỗ nội thất",
+          },
+        ],
+      },
+      { items: [{ icon: "bolt", desc: "80 containers/tháng" }] },
+    ],
+  },
+]);
 </script>
 
 <style scoped>

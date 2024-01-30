@@ -122,7 +122,6 @@ const newsData = ref([
       </div>
     </section>
   </main>
-  <footerComp />
 </template>
 
 <style scoped>

@@ -55,7 +55,7 @@
     let links=[
         {name: "Trang chủ", link: "/", sublinks:[], isHover : ref(false)},
         {name: "Giới thiệu", link: "/about", sublinks:[], isHover : ref(false)},
-        {name: "Lĩnh vực hoạt động", link: "/field-da-op", sublinks:[{name:"Ngành đá", link:"#", isHover : ref(false)},{name: "Ngành gỗ", link:"#", isHover : ref(false)}, {name:"Ngành ô tô", link:"#", isHover : ref(false)},{name:"Ngành bất động sản", link:"#", isHover : ref(false)}], isHover : ref(false)},
+        {name: "Lĩnh vực hoạt động", link: "/linhvuc", sublinks:[{name:"Ngành đá", link:"/linhvuc/daop", isHover : ref(false)},{name: "Ngành gỗ", link:"/linhvuc/dogo", isHover : ref(false)}, {name:"Ngành ô tô", link:"#", isHover : ref(false)},{name:"Ngành bất động sản", link:"#", isHover : ref(false)}], isHover : ref(false)},
         {name: "Sản phẩm nổi bật", link: "#", sublinks:[], isHover : ref(false)},
         {name: "Quan hệ cổ đông", link: "#", sublinks:[], isHover : ref(false)},
         {name: "Tin tức và sự kiện", link: "#", sublinks:[], isHover : ref(false)},
