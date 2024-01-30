@@ -48,7 +48,7 @@ const newsData = ref([
           <p class="text-heading text-[#F16336]">
             Nội Thất Đá Tự Nhiên Và Gỗ Cao Cấp
           </p>
-          <p class="text-xl text-white">
+          <p class="md:text-xl text-white">
             Xây dựng không gian sống và giá trị thẩm mỹ vượt thời gian
           </p>
 
@@ -57,12 +57,12 @@ const newsData = ref([
       </div>
     </section>
     <section>
-      <div class="flex flex-col p-[100px]">
-        <div class="flex justify-between mb-20">
-          <p class="text-sub-heading w-1/2 text-[#003366]">
+      <div class="flex flex-col p-[20px] md:p-[100px]">
+        <div class=" justify-between mb-8 md:mb-20 md:flex">
+          <p class="text-sub-heading md:w-1/2 text-[#003366]">
             LĨNH VỰC <span class="text-[#F16336]">HOẠT ĐỘNG</span>
           </p>
-          <p class="text-desc w-[40%]">
+          <p class="text-desc md:w-[40%]">
             Với khát vọng lan tỏa giá trị thịnh vượng, chúng tôi nghiên cứu và
             phát triển những sản phẩm từ đá tự nhiên và đồ gỗ nội thất độc đáo,
             mang lại sự khác biệt trong không gian sống cho cộng đồng mà chúng
@@ -73,33 +73,33 @@ const newsData = ref([
       </div>
     </section>
     <section>
-      <div class="p-[100px] bg-white flex flex-col gap-10">
+      <div class="md:p-[100px] p-[20px] bg-white flex flex-col gap-10">
         <div class="content">
-          <p class="uppercase text-sub-heading w-1/2 text-[#003366]">
+          <p class="uppercase text-sub-heading md:w-1/2 text-[#003366]">
             QUAN HỆ <span class="text-[#F16336]">CỔ ĐÔNG</span>
           </p>
         </div>
-        <div class="set-img-text grid grid-cols-3 gap-4">
-          <div class="col-span-2">
+        <div class="set-img-text grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="md:col-span-2">
             <p class="text uppercase">BÁO CÁO TÀI CHÍNH</p>
             <div class="img">
               <img class="w-full" src="/assets/img/set-img-1.png" alt="" />
             </div>
           </div>
 
-          <div class="col-span-1">
+          <div class="md:col-span-1">
             <p class="text uppercase">BÁO CÁO THUẾ</p>
             <div class="img">
               <img class="w-full" src="/assets/img/set-img-2.png" alt="" />
             </div>
           </div>
-          <div class="col-span-1">
+          <div class="md:col-span-1">
             <p class="text uppercase">CÔNG BỐ THÔNG TIN</p>
             <div class="img">
               <img class="w-full" src="/assets/img/set-img-3.png" alt="" />
             </div>
           </div>
-          <div class="col-span-2">
+          <div class="md:col-span-2">
             <p class="text uppercase">TÀI LIỆU KHÁC</p>
             <div class="img">
               <img class="w-full" src="/assets/img/set-img-4.png" alt="" />
@@ -110,13 +110,13 @@ const newsData = ref([
     </section>
 
     <section>
-      <div class="p-[100px] flex flex-col gap-10">
+      <div class="p-[20px] md:p-[100px] flex flex-col gap-10">
         <div class="content">
-          <p class="uppercase text-sub-heading w-1/2 text-[#003366]">
+          <p class="uppercase text-sub-heading md:w-1/2 text-[#003366]">
             TIN TỨC VÀ <span class="text-[#F16336]">SỰ KIỆN</span>
           </p>
         </div>
-        <div class="card grid grid-cols-3 gap-5">
+        <div class="card grid grid-cols-1 md:grid-cols-3 gap-5">
           <newscard :cards="newsData" />
         </div>
       </div>

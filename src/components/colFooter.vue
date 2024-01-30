@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col gap-3">
     <div v-if="title" class="title">
-        <p class="uppercase">{{ title }}</p>
+        <p class="uppercase text-xl md:text-base">{{ title }}</p>
     </div>
     <div class="flex flex-col content gap-3">
         <div :class="[item.icon ? 'flex gap-3': '']" v-for="item in items" :key="item">

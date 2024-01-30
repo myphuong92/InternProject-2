@@ -1,14 +1,14 @@
 <template>
   <footer>
-    <div class="bg-[#003366] px-[100px] text-white pt-[100px] pb-[60px] flex flex-col gap-14">
+    <div class="bg-[#003366] px-[20px] md:px-[100px] text-white pt-[40px] md:pt-[100px] pb-[60px] flex flex-col gap-14">
         <div>
             <p class="text-sub-heading uppercase">Công ty cổ phần phú tài</p>
         </div>
-        <div class="flex flex-row gap-2">
-                <texticon class="w-[40%] mr-8" :items="col1"/>
-                <texticon class="w-[20%]" :title="title2" :items="col2"/>
-                <texticon class="w-[20%]" :title="title3" :items="col3"/>
-                <texticon class="w-[20%]" :title="title4" :items="col4"/>
+        <div class="flex flex-col md:flex-row gap-10 md:gap-2">
+                <texticon class="md:w-[40%] mr-8" :items="col1"/>
+                <texticon class="md:w-[20%]" :title="title2" :items="col2"/>
+                <texticon class="md:w-[20%]" :title="title3" :items="col3"/>
+                <texticon class="md:w-[20%]" :title="title4" :items="col4"/>
         </div>
     </div>
   </footer>

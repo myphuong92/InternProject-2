@@ -1,5 +1,5 @@
 <template>
-  <div class="slider">
+  <div class="slider md:w-[1000px]">
     <div class="list">
       <div
         class="item-slider relative"
@@ -8,17 +8,17 @@
       >
         <div>
           <img class="w-full" :src="content.bgimg" alt="" />
-          <div class="content flex flex-col">
+          <div class="content py-2  relative   flex flex-col mb-16 md:absolute md:w-[40%]">
             <div
               style="font-family: 'Big Shoulders Stencil Text', sans-serif"
-              class="title flex flex-col text-[#F16336] text-title"
+              class="title  flex flex-col text-[#F16336] text-title md:px-20 md:py-8"
             >
               <p>{{ content.id }}</p>
               <p>{{ content.title }}</p>
             </div>
-            <div class="desc bg-slate-50 flex flex-col justify-between gap-4">
+            <div class="desc bg-slate-50 flex flex-col justify-between gap-4 md:p-16">
               <p class="text-[#526D88]">{{ content.desc }}</p>
-              <buttonComp title="Xem thêm" class="w-1/2" changeColor="blue" />
+              <buttonComp title="Xem thêm" class="md:w-1/2" changeColor="blue" />
             </div>
           </div>
         </div>
@@ -66,20 +66,14 @@ let contents = [
 
 <style scoped>
 .slider .content {
-  position: absolute;
   bottom: 0;
-  width: 40%;
+
 }
-.slider .title {
-  padding: 5rem 2rem;
-}
-.slider .desc {
-  padding: 4rem;
-}
+
+
 .slider {
   position: relative;
   margin: auto;
-  width: 1000px;
   max-width: 100vw;
 }
 </style>
