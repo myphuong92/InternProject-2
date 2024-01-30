@@ -7,8 +7,8 @@
         </section>
         <section>
             <div class="nav flex text-sub-heading justify-between">
-                <router-link to="/myphuong92/linhvuc/daop">Khai thác chế biến đá ốp lát</router-link>
-                <router-link to=/myphuong92/linhvuc/dogo>Sản xuất kinh doanh đồ gỗ nội, ngoại thất</router-link>
+                <router-link to="/InternProject-2/linhvuc/daop">Khai thác chế biến đá ốp lát</router-link>
+                <router-link to=/InternProject-2/linhvuc/dogo>Sản xuất kinh doanh đồ gỗ nội, ngoại thất</router-link>
                 <a href="">Phân phối xe ô tô Toyota</a>
                 <a href="">Ngành bất động sản</a>
             </div>
