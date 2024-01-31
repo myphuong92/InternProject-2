@@ -5,7 +5,7 @@
     </div>
     <div class="content flex flex-col items-start gap-3">
         <p class="date">{{ card.date }}</p>
-        <p class="desc text-desc">{{ card.desc }}</p>
+        <p class="desc text-desc text-lg">{{ card.desc }}</p>
     </div>
   </div>
 </template>

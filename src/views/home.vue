@@ -6,6 +6,12 @@ import buttonComp from "../components/buttonComp.vue";
 import footerComp from "../components/footerComp.vue";
 import newscard from "../components/newsCard.vue";
 const iconArrow = "arrow_forward";
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import { useSwiper } from 'swiper/vue';
+
+const swiper = useSwiper();
+  // Import Swiper styles
+  import 'swiper/css';
 // NEWS CARD
 const newsData = ref([
   {
@@ -25,6 +31,18 @@ const newsData = ref([
       "Nghị quyết số :124/NQ-HĐQT về thống nhất và đống ý các Phương án mua lại trái phiếu trước hạ",
     date: "11-11-2023",
   },
+  {
+    img: "assets/img/news-card-3.png",
+    title:
+      "Nghị quyết số :124/NQ-HĐQT về thống nhất và đống ý các Phương án mua lại trái phiếu trước hạ",
+    date: "11-11-2023",
+  },
+  {
+    img: "assets/img/news-card-3.png",
+    title:
+      "Nghị quyết số :124/NQ-HĐQT về thống nhất và đống ý các Phương án mua lại trái phiếu trước hạ",
+    date: "11-11-2023",
+  },
 ]);
 </script>
 
@@ -35,7 +53,7 @@ const newsData = ref([
         <div class="w-full home-img-shade relative">
           <div class="w-full">
             <img
-              class="object-cover w-full"
+              class="full-img"
               src="/assets/img/home-banner.png"
               alt=""
             />
@@ -44,8 +62,8 @@ const newsData = ref([
         </div>
 
         <div class="content text-center flex flex-col gap-4 items-center">
-          <p class="text-heading text-white">Khám Phá Vẻ Đẹp Và Bền Vững:</p>
-          <p class="text-heading text-[#F16336]">
+          <p class="text-heading text-7xl text-white">Khám Phá Vẻ Đẹp Và Bền Vững:</p>
+          <p class="text-heading text-7xl text-[#F16336]">
             Nội Thất Đá Tự Nhiên Và Gỗ Cao Cấp
           </p>
           <p class="md:text-xl text-white">
@@ -59,10 +77,10 @@ const newsData = ref([
     <section>
       <div class="flex flex-col responsive-section">
         <div class=" justify-between mb-8 md:mb-20 md:flex">
-          <p class="text-sub-heading md:w-1/2 text-[#003366]">
+          <p class="text-sub-heading text-5xl md:w-1/2 text-[#003366]">
             LĨNH VỰC <span class="text-[#F16336]">HOẠT ĐỘNG</span>
           </p>
-          <p class="text-desc md:w-[40%]">
+          <p class="text-desc text-lg md:w-[40%]">
             Với khát vọng lan tỏa giá trị thịnh vượng, chúng tôi nghiên cứu và
             phát triển những sản phẩm từ đá tự nhiên và đồ gỗ nội thất độc đáo,
             mang lại sự khác biệt trong không gian sống cho cộng đồng mà chúng
@@ -75,7 +93,7 @@ const newsData = ref([
     <section>
       <div class="responsive-section bg-white flex flex-col gap-10">
         <div class="content">
-          <p class="uppercase text-sub-heading md:w-1/2 text-[#003366]">
+          <p class="uppercase text-sub-heading text-5xl md:w-1/2 text-[#003366]">
             QUAN HỆ <span class="text-[#F16336]">CỔ ĐÔNG</span>
           </p>
         </div>
@@ -111,13 +129,19 @@ const newsData = ref([
 
     <section>
       <div class=" responsive-section flex flex-col gap-10">
-        <div class="content">
-          <p class="uppercase text-sub-heading md:w-1/2 text-[#003366]">
+        <div class="content flex flex-row justify-between">
+          <p class="uppercase text-sub-heading text-5xl md:w-1/2 text-[#003366]">
             TIN TỨC VÀ <span class="text-[#F16336]">SỰ KIỆN</span>
           </p>
+          <div class="slide-button flex gap-6">
+            <button class="before"><span class="material-symbols-outlined">navigate_before</span></button>
+            <button class="next"><span class="material-symbols-outlined">navigate_next</span></button>
+          </div>
         </div>
-        <div class="card grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          <newscard :cards="newsData" />
+        <div class="card">
+          <newscard :cards="newsData"/>
+          
+          
         </div>
       </div>
     </section>

@@ -11,7 +11,7 @@
           <div class="content py-2  relative  flex flex-col mb-16 md:absolute md:w-[40%]">
             <div
               style="font-family: 'Big Shoulders Stencil Text', sans-serif"
-              class="title  flex flex-col text-[#F16336] text-title md:px-20 md:py-8"
+              class="title  flex flex-col text-[#F16336] text-title text-4xl md:px-20 md:py-8"
             >
               <p>{{ content.id }}</p>
               <p>{{ content.title }}</p>

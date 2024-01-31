@@ -30,7 +30,7 @@
                 <div class="flex items-center" :style="{'color' : link.isHover.value ? '#003366': ''}">
                     <div>
                         <span class="star material-symbols-outlined">star</span>
-                        <router-link class="text-3xl md:text-title" :to="link.link" @mouseover="setHover(link)" @mouseout="clearHover(link)" :style="{'font-size' : link.isHover.value ? '38px': ''}" >{{ link.name }}</router-link>
+                        <router-link class="text-3xl md:text-title text-4xl" :to="link.link" @mouseover="setHover(link)" @mouseout="clearHover(link)" :style="{'font-size' : link.isHover.value ? '38px': ''}" >{{ link.name }}</router-link>
                     </div>
                     
                 </div>

@@ -2,7 +2,7 @@
   <div class="flex flex-col gap-6 text-white" v-for="card in cards" :key="card">
     <div class="flex flex-row gap-6">
         <p class="number">{{ card.id }}</p>
-        <p class="text-desc">{{ card.title }}</p>
+        <p class="text-desc text-lg">{{ card.title }}</p>
     </div>
     <div class="img flex flex-col gap-4 ml-0 md:ml-[6rem]">
         <img :src="card.img" alt="">
@@ -23,7 +23,7 @@ p.number{
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 2px;
 }
-p.text-desc{
+p.text-desc text-lg{
   display: flex;
   align-items:flex-end;
 }

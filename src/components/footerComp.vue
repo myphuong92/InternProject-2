@@ -2,7 +2,7 @@
   <footer>
     <div class="bg-[#003366] px-[20px] md:px-[40px] lg:px-[100px] text-white pt-[40px] md:pt-[100px] pb-[60px] flex flex-col gap-14">
         <div>
-            <p class="text-sub-heading uppercase">Công ty cổ phần phú tài</p>
+            <p class="text-sub-heading text-5xl uppercase">Công ty cổ phần phú tài</p>
         </div>
         <div class="flex flex-col lg:flex-row gap-10 lg:gap-2">
                 <texticon class="lg:w-[40%] mr-8" :items="col1"/>

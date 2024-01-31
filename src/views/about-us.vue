@@ -5,7 +5,7 @@
         <div class="w-full home-img-shade relative">
           <div class="w-full">
             <img
-              class="object-cover w-full"
+              class="full-img"
               src="/assets/img/home-banner.png"
               alt=""
             />
@@ -17,8 +17,8 @@
     <section>
       <div class="relative bg-[#CCE6FF]">
         <div class="flex flex-col md:flex-row justify-between responsive-section md:h-[120rem] md:mb-[25rem] gap-6 md:gap-0">
-          <p class="md:w-1/2 text-heading text-[#F16336] uppercase">GIỚI THIỆU</p>
-          <p class="md:w-1/2 text-desc text-[#003366]">
+          <p class="md:w-1/2 text-heading text-7xl text-[#F16336] uppercase">GIỚI THIỆU</p>
+          <p class="md:w-1/2 text-desc text-lg text-[#003366]">
             Tiền thân của Công ty cổ phần Phú Tài (Phu Tai SJC) là Công ty sản
             xuất vật liệu xây dựng Phú Tài gọi tắt là Công ty Phú Tài (Quyết
             định số: 124/QĐ-QK). Trên cơ sở hợp nhất 03 đơn vị: Xí nghiệp 380;
@@ -64,7 +64,7 @@
     <section>
       <div class="responsive-section">
         <p
-          class="uppercase text-title text-[#003366] mb-10 md:mb-20"
+          class="uppercase text-title text-4xl text-[#003366] mb-10 md:mb-20"
           style="
             font-size: 60px;
             font-family: 'Big Shoulders Display', sans-serif;
@@ -80,7 +80,7 @@
     <section>
       <div class="responsive-section bg-white">
         <p
-          class="uppercase text-title text-[#003366] mb-20"
+          class="uppercase text-title text-4xl text-[#003366] mb-20"
           style="
             font-size: 60px;
             font-family: 'Big Shoulders Display', sans-serif;
@@ -90,10 +90,10 @@
         </p>
         <div class="flex flex-col lg:flex-row justify-between">
           <div class="img">
-            <img class="object-contain w-full" src="/assets/img/map.png" alt="" />
+            <img class="full-img" src="/assets/img/map.png" alt="" />
           </div>
           <div class="flex flex-col gap-10">
-            <p class="text-[#F16336] text-title" style="font-weight: 500">
+            <p class="text-[#F16336] text-title text-4xl" style="font-weight: 500">
               Bình Định
             </p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-0 divide-y-2 md:divide-y-0 md:divide-x-2 divide-cyan-950">
@@ -102,7 +102,7 @@
                 <cardTextIcon changeColor="blue" :cards="xiNghiep" />
               </div>
               <!-- <div class="divider"></div> -->
-              <div class="flex flex-col gap-12">
+              <div class="flex flex-col gap-12 md:pl-5">
                 <cardTextIcon changeColor="blue" :cards="nhaMay" />
                 <cardTextIcon changeColor="blue" :cards="nhaMay" />
               </div>
@@ -115,7 +115,7 @@
       <div class="responsive-section">
         <div class="ctyTv flex flex-col gap-10">
           <p
-            class="uppercase text-title text-[#003366]"
+            class="uppercase text-title text-4xl text-[#003366]"
             style="
               
               font-size: 60px;         
@@ -169,7 +169,7 @@
         <div class="lg:col-span-2 employee relative">
           <div class="content bg-[#003366] p-5 md:p-10 lg:absolute lg:w-[45%] lg:py-12 lg:px-32">
             <p
-              class="text-heading mb-4 uppercase"
+              class="text-heading text-7xl mb-4 uppercase"
               style="
                 color: white;
                 font-family: 'Big Shoulders Display', sans-serif;
@@ -177,7 +177,7 @@
             >
               ĐỘI NGŨ NHÂN VIÊN
             </p>
-            <p class="text-desc" style="color: white">
+            <p class="text-desc text-lg" style="color: white">
               Lorem ipsum dolor sit amet consectetur. Dolor interdum ipsum donec
               aliquet rhoncus pellentesque scelerisque. Habitant turpis commodo
               facilisis tellus at facilisis vitae et. Sem commodo adipiscing
@@ -194,7 +194,7 @@
         <div class="col-span-1 relative">
           <div class="content top-[17%] md:top-[30%] md:left-[8%] md:w-[80%] lg:top-[50%] lg:left-[50%] 	lg:translate-x-[-50%] lg:translate-y-[-50%]	lg:w-[60%] absolute">
             <p
-              class="text-heading mb-4 uppercase"
+              class="text-heading text-7xl mb-4 uppercase"
               style="
                 color: white;
                 font-family: 'Big Shoulders Display', sans-serif;
@@ -202,7 +202,7 @@
             >
               TẦM NHÌN
             </p>
-            <p class="text-desc" style="color: white">
+            <p class="text-desc text-lg" style="color: white">
               Lorem ipsum dolor sit amet consectetur. Dolor interdum ipsum donec
               aliquet rhoncus pellentesque scelerisque. Habitant turpis commodo
               facilisis tellus at facilisis vitae et. Sem commodo adipiscing
@@ -216,7 +216,7 @@
         <div class="col-span-1 relative">
           <div class="content absolute top-[17%] md:top-[30%] md:left-[8%] md:w-[80%] lg:top-[50%] lg:left-[50%] 	lg:translate-x-[-50%] lg:translate-y-[-50%]	lg:w-[60%] ">
             <p
-              class="text-heading mb-4 uppercase"
+              class="text-heading text-7xl mb-4 uppercase"
               style="
                 color: white;
                 font-family: 'Big Shoulders Display', sans-serif;
@@ -224,7 +224,7 @@
             >
               GIÁ TRỊ CỐT LÕI
             </p>
-            <p class="text-desc" style="color: white">
+            <p class="text-desc text-lg" style="color: white">
               Lorem ipsum dolor sit amet consectetur. Dolor interdum ipsum donec
               aliquet rhoncus pellentesque scelerisque. Habitant turpis commodo
               facilisis tellus at facilisis vitae et. Sem commodo adipiscing

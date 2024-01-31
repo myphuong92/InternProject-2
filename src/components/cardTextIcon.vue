@@ -1,7 +1,7 @@
 <template>
     <!-- Theo như trong giao diện thì có rows, và mỗi row sẽ có nhiều item -->
     <div>
-        <div class="flex flex-col gap-5" v-for="card in cards" :key="card">
+        <div class="flex flex-col gap-8" v-for="card in cards" :key="card">
         <div v-if="card.title">
             <p class="text-[20px] font-medium uppercase" :class="[changeColor === 'blue' ? 'text-[#003366]' : '']">{{ card.title }}</p>
         </div>

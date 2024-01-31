@@ -4,7 +4,9 @@ import About from "../views/about-us.vue";
 import LinhVuc from "../views/linh-vuc-hd.vue";
 import FieldDaOp from "../views/field-da-op.vue";
 import FieldDoGo from "../views/field-do-go.vue";
-
+import News from "../views/news.vue";
+import Article from "../views/article.vue";
+import Contact from "../views/contact.vue";
 const routes = [
   {
     path: "/",
@@ -16,6 +18,7 @@ const routes = [
     name: "About",
     component: About,
   },
+
   {
     path: "/linhvuc",
     name: "LinhVuc",
@@ -32,6 +35,22 @@ const routes = [
         component: FieldDoGo,
       },
     ],
+  },
+  {
+    path: "/news",
+    name: "News",
+    component: News,
+    children: [],
+  },
+  {
+    path: "/news/article",
+    name: "Article",
+    component: Article,
+  },
+  {
+    path: "/contact",
+    name: "Contact",
+    component: Contact,
   },
 ];
 const router = createRouter({

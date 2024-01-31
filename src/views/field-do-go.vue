@@ -1,7 +1,7 @@
 <template>
     <section>
         <div class="flex flex-col responsive-section gap-8">
-            <p class="text-sub-heading text-[#003366] uppercase">PHÁT TRIỂN MẢNG SẢN XUẤT KINH DOANH SẢN PHẨM GỖ</p>
+            <p class="text-sub-heading text-5xl text-[#003366] uppercase">PHÁT TRIỂN MẢNG SẢN XUẤT KINH DOANH SẢN PHẨM GỖ</p>
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 md:gap-16 text-[#526D88]">
                 <p>Lorem ipsum dolor sit amet consectetur. Lectus diam amet malesuada etiam. Ac auctor nulla elementum turpis. Donec dignissim sed elementum vivamus sagittis enim consectetur. Pellentesque dictumst porta nulla aliquam at integer adipiscing. Morbi elementum ipsum lacinia quam fermentum. Sollicitudin sed ac in sit pulvinar. Fermentum nibh feugiat nunc velit tellus</p>
                 <p>Lorem ipsum dolor sit amet consectetur. Lectus diam amet malesuada etiam. Ac auctor nulla elementum turpis. Donec dignissim sed elementum vivamus sagittis enim consectetur. Pellentesque dictumst porta nulla aliquam at integer adipiscing. Morbi elementum ipsum lacinia quam fermentum. Sollicitudin sed ac in sit pulvinar. Fermentum nibh feugiat nunc velit tellus. </p>
@@ -48,12 +48,12 @@
     </section>
     <section>
         <div class="flex flex-col responsive-section gap-10 md:gap-8">
-            <p class="text-sub-heading text-[#003366] uppercase">các sản phẩm gỗ chính của phú tài</p>
+            <p class="text-sub-heading text-5xl text-[#003366] uppercase">các sản phẩm gỗ chính của phú tài</p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
                 <div class="img grid grid-cols-2 gap-5">
-                    <div class=""><img class="object-cover w-full h-full rounded-md" src="/assets/img/go-1.png" alt=""></div>
-                    <div><img class="object-cover w-full h-full rounded-md" src="/assets/img/go-2.png" alt=""></div>
-                    <div class="col-span-2"><img class="object-cover w-full h-full rounded-md" src="/assets/img/go-3.png" alt=""></div>
+                    <div class=""><img class="full-img h-full rounded-md" src="/assets/img/go-1.png" alt=""></div>
+                    <div><img class="full-img h-full rounded-md" src="/assets/img/go-2.png" alt=""></div>
+                    <div class="col-span-2"><img class="full-img h-full rounded-md" src="/assets/img/go-3.png" alt=""></div>
                 </div>
                 <div class="flex flex-col gap-4 md:gap-10 justify-center">
                     <p class="title text-4xl font-medium uppercase">ĐỒ GỖ NGOÀI TRỜI</p>
@@ -66,41 +66,44 @@
                     <p class="content text-[#526D88]">Lorem ipsum dolor sit amet consectetur. Lectus diam amet malesuada etiam. Ac auctor nulla elementum turpis. Donec dignissim sed elementum vivamus sagittis enim consectetur. Pellentesque dictumst porta nulla aliquam at integer adipiscing. Morbi elementum ipsum lacinia quam fermentum. Sollicitudin sed ac in sit pulvinar. Fermentum nibh feugiat nunc velit tellus. </p>
                 </div>
                 <div class="img grid grid-cols-2 gap-5">
-                    <div class=""><img class="object-cover w-full h-full rounded-md" src="/assets/img/go-4.png" alt=""></div>
-                    <div><img class="object-cover w-full h-full rounded-md" src="/assets/img/go-6.png" alt=""></div>
-                    <div class="col-span-2"><img class="object-cover w-full h-full rounded-md" src="/assets/img/go-5.png" alt=""></div>
+                    <div class=""><img class="full-img h-full rounded-md" src="/assets/img/go-4.png" alt=""></div>
+                    <div><img class="full-img h-full rounded-md" src="/assets/img/go-6.png" alt=""></div>
+                    <div class="col-span-2"><img class="full-img h-full rounded-md" src="/assets/img/go-5.png" alt=""></div>
                 </div>
                 
             </div>
         </div>
     </section>
     <section>
-        <div class="responsive-section">
-            <p class="text-sub-heading text-[#003366] uppercase">công suất hiện hữu</p>
-            <div class="relative">
-                <img src="/assets/img/scott-webb.png" alt="">
-                <div class="flex flex-col gap-3 text-white absolute top-32 left-16">
+        <div class="responsive-section flex flex-col gap-10">
+            <p class="text-sub-heading text-5xl text-[#003366] uppercase">công suất hiện hữu</p>
+            <div class="relative bg-[url('/assets/img/scott-webb.png')] lg:bg-none bg-no-repeat	bg-cover">
+                <img class="hidden lg:block" src="/assets/img/scott-webb.png" alt="">
+                <div class="bg-black lg:bg-transparent opacity-80 lg:opacity-100	p-10 lg:p-0 grid grid-cols-1 gap-10 lg:gap-5 rounded-lg">
+                  <div class="flex flex-col gap-3 text-white lg:absolute lg:top-32 lg:left-16">
                     <p class="text-3xl font-medium">Nhà Máy Thắng lợi</p>
                     <cardTextIcon class="font-light" :cards="thangloi"/>
                     <p class="font-medium">Đang hoạt động tối đa công suất</p>
                 </div>
-                <div class="flex flex-col gap-3 text-white absolute top-[15rem] left-[30rem]">
+                <div class="flex flex-col gap-3 text-white lg:absolute lg:top-[15rem] lg:left-[30rem]">
                     <p class="text-3xl font-medium">Nhà Máy Đồng Nai</p>
                     <cardTextIcon class="font-light" :cards="dongnai"/>
                     <p class="font-medium">Đang hoạt động tối đa công suất</p>
                 </div>
-                <div class="flex flex-col gap-3 text-white absolute bottom-20 right-16">
+                <div class="flex flex-col gap-3 text-white lg:absolute lg:bottom-80 lg:right-16">
                     <p class="text-3xl font-medium">Nhà Máy VINAG7</p>
                     <cardTextIcon class="font-light" :cards="vinag7"/>
                     <p class="font-medium">Đang hoạt động 70% công suất thiết kế</p>
                 </div>
+                </div>
+                
                 
             </div>
         </div>
     </section>
     <section>
         <div class="flex flex-col responsive-section gap-10">
-            <p class="text-sub-heading text-[#003366] uppercase">Công ty con ngành gỗ</p>
+            <p class="text-sub-heading text-5xl text-[#003366] uppercase">Công ty con ngành gỗ</p>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 <cardBranch :cards="ctycon" />
 
@@ -109,7 +112,7 @@
     </section>
     <section>
         <div class="flex flex-col responsive-section gap-10">
-            <p class="text-sub-heading text-[#003366] uppercase">Công ty con ngành gỗ</p>
+            <p class="text-sub-heading text-5xl text-[#003366] uppercase">Công ty con ngành gỗ</p>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 <cardBranch :cards="donvi" />
 
@@ -328,4 +331,5 @@ const donvi = ref([
 .bar-chart canvas{
     height: 300px;
 }
+
 </style>
