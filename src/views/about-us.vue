@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="container">
     <section>
       <div class="home-intro relative">
         <div class="w-full home-img-shade relative">
@@ -16,9 +16,9 @@
     </section>
     <section>
       <div class="relative bg-[#CCE6FF]">
-        <div class="flex justify-between p-[100px] h-[120rem] mb-[25rem]">
-          <p class="w-1/2 text-heading text-[#F16336] uppercase">GIỚI THIỆU</p>
-          <p class="w-1/2 text-desc text-[#003366]">
+        <div class="flex flex-col md:flex-row justify-between responsive-section md:h-[120rem] md:mb-[25rem] gap-6 md:gap-0">
+          <p class="md:w-1/2 text-heading text-[#F16336] uppercase">GIỚI THIỆU</p>
+          <p class="md:w-1/2 text-desc text-[#003366]">
             Tiền thân của Công ty cổ phần Phú Tài (Phu Tai SJC) là Công ty sản
             xuất vật liệu xây dựng Phú Tài gọi tắt là Công ty Phú Tài (Quyết
             định số: 124/QĐ-QK). Trên cơ sở hợp nhất 03 đơn vị: Xí nghiệp 380;
@@ -34,10 +34,10 @@
           </p>
         </div>
         <div
-          class="grid grid-cols-2 bg-[rgb(0,38,77)] p-[4rem] absolute w-[87%] right-0 top-[25%]"
+          class="grid grid-cols-1 bg-[rgb(0,38,77)] p-5 right-0 top-[25%] md:p-[4rem] md:grid-cols-2 md:absolute md:w-[87%] "
         >
-          <div class="grid grid-rows-2">
-            <div class="flex flex-col gap-5 text-white w-[80%]">
+          <div class="grid grid-rows-1 md:grid-rows-2">
+            <div class="flex flex-col gap-5 text-white mb-10 md:mb-0 md:w-[80%]">
               <p class="text-[2rem]">
                 4 lĩnh vực hoạt động trọng tâm của Phu Tai SJC
               </p>
@@ -51,7 +51,7 @@
                 lĩnh vực
               </p>
             </div>
-            <div class="text-[#3399FF]">
+            <div class="text-[#3399FF] hidden md:block">
               <p class="vertical-text">Phu Tai JSC</p>
             </div>
           </div>
@@ -62,41 +62,41 @@
       </div>
     </section>
     <section>
-      <div class="p-[100px]">
+      <div class="responsive-section">
         <p
-          class="uppercase text-title text-[#003366] mb-20"
+          class="uppercase text-title text-[#003366] mb-10 md:mb-20"
           style="
-            font-size: 70px;
+            font-size: 60px;
             font-family: 'Big Shoulders Display', sans-serif;
           "
         >
           lịch sử công ty
         </p>
-        <div class="history flex flex-row flex-wrap gap-20">
+        <div class="history flex flex-row flex-wrap gap-5 lg:gap-20">
           <cardHistory :cards="timeline" />
         </div>
       </div>
     </section>
     <section>
-      <div class="p-[100px] bg-white">
+      <div class="responsive-section bg-white">
         <p
           class="uppercase text-title text-[#003366] mb-20"
           style="
-            font-size: 70px;
+            font-size: 60px;
             font-family: 'Big Shoulders Display', sans-serif;
           "
         >
           Chi nhánh công ty
         </p>
-        <div class="grid grid-cols-2">
+        <div class="flex flex-col lg:flex-row justify-between">
           <div class="img">
-            <img src="/assets/img/map.png" alt="" />
+            <img class="object-contain w-full" src="/assets/img/map.png" alt="" />
           </div>
           <div class="flex flex-col gap-10">
             <p class="text-[#F16336] text-title" style="font-weight: 500">
               Bình Định
             </p>
-            <div class="grid grid-cols-2 divide-x-2 divide-cyan-950">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-0 divide-y-2 md:divide-y-0 md:divide-x-2 divide-cyan-950">
               <div class="flex flex-col gap-12">
                 <cardTextIcon changeColor="blue" class="" :cards="xiNghiep" />
                 <cardTextIcon changeColor="blue" :cards="xiNghiep" />
@@ -112,24 +112,25 @@
       </div>
     </section>
     <section>
-      <div class="p-[100px]">
+      <div class="responsive-section">
         <div class="ctyTv flex flex-col gap-10">
           <p
             class="uppercase text-title text-[#003366]"
             style="
-              font-size: 70px;
+              
+              font-size: 60px;         
               font-family: 'Big Shoulders Display', sans-serif;
             "
           >
             Công ty thành viên
           </p>
-          <div class="flex">
+          <div class="flex flex-col lg:flex-row">
             <div class="img">
               <img src="/assets/img/branchCompany.png" alt="" />
             </div>
-            <div class="relative w-1/2">
-              <div class="content h-full firstLayer bg-[#001933] w-full">
-                <div class="flex flex-col text-white gap-4 px-12 pt-6 h-full">
+            <div class="relative w-full lg:w-1/2">
+              <div class="content h-full firstLayer lg:absolute bg-[#001933] w-full">
+                <div class="flex flex-col text-white gap-4 p-5 lg:px-12 lg:pt-6 h-full">
                   <p class="uppercase font-medium text-2xl leading-8">
                     CÔNG TY CỔ PHẦN VẬT LIỆU XÂY DỰNG PHÚ YÊN
                   </p>
@@ -139,7 +140,7 @@
                     <buttonComp
                       title="Xem chi tiết"
                       changeColor="white"
-                      class="rounded-none font-medium w-1/2"
+                      class="rounded-none font-medium lg:w-1/2"
                     />
                   </div>
                   <div class="slider flex flex-row gap-3 mt-5">
@@ -156,17 +157,17 @@
                   </div>
                 </div>
               </div>
-              <div class="secondLayer h-full w-full bg-[#022040]"></div>
-              <div class="thirdLayer h-full w-full bg-[#043F7C]"></div>
+              <div class="secondLayer hidden lg:block h-full w-full bg-[#022040]"></div>
+              <div class="thirdLayer  hidden lg:block h-full w-full bg-[#043F7C]"></div>
             </div>
           </div>
         </div>
       </div>
     </section>
     <section>
-      <div class="target grid grid-cols-2 pt-[100px]">
-        <div class="col-span-2 relative">
-          <div class="content bg-[#003366]">
+      <div class="target grid grid-cols-1 lg:grid-cols-2 pt-[100px]">
+        <div class="lg:col-span-2 employee relative">
+          <div class="content bg-[#003366] p-5 md:p-10 lg:absolute lg:w-[45%] lg:py-12 lg:px-32">
             <p
               class="text-heading mb-4 uppercase"
               style="
@@ -191,7 +192,7 @@
           />
         </div>
         <div class="col-span-1 relative">
-          <div class="content">
+          <div class="content top-[17%] md:top-[30%] md:left-[8%] md:w-[80%] lg:top-[50%] lg:left-[50%] 	lg:translate-x-[-50%] lg:translate-y-[-50%]	lg:w-[60%] absolute">
             <p
               class="text-heading mb-4 uppercase"
               style="
@@ -213,7 +214,7 @@
           <div class="blue-shade"></div>
         </div>
         <div class="col-span-1 relative">
-          <div class="content">
+          <div class="content absolute top-[17%] md:top-[30%] md:left-[8%] md:w-[80%] lg:top-[50%] lg:left-[50%] 	lg:translate-x-[-50%] lg:translate-y-[-50%]	lg:w-[60%] ">
             <p
               class="text-heading mb-4 uppercase"
               style="
@@ -436,7 +437,6 @@ const ctyThanhVien = ref([
   object-fit: cover;
 }
 .firstLayer {
-  position: absolute;
   top: 0;
   left: -10%;
   z-index: 2;
@@ -469,19 +469,15 @@ const ctyThanhVien = ref([
   opacity: 0.7;
 }
 .target .col-span-1 .content {
-  position: absolute;
-  top: 50%;
+  /* top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 60%;
+  width: 60%; */
   text-align: center;
   z-index: 1;
 }
-.target .col-span-2 .content {
-  position: absolute;
+.target .employee .content {
   top: -8rem;
   left: 0;
-  width: 45%;
-  padding: 3rem 8rem;
 }
 </style>

@@ -22,7 +22,8 @@ import buttonComp from "./buttonComp.vue"
 const iconArrow = "arrow_forward"
 const props = defineProps({
         cards:Array
-    })</script>
+    })
+</script>
 
 <style scoped>
     .card-img{

@@ -5,6 +5,9 @@
     .shade{
         @apply absolute w-full top-0 bottom-0 opacity-30 bg-black
     }
+    .responsive-section{
+        @apply p-[20px] md:p-[40px] lg:p-[100px]
+    }
 }
 *,
 *::before,
@@ -65,7 +68,8 @@ h6 {
 .container {
     width: 100%;
     max-width: 1933px !important;
-    margin: 0 auto
+    margin: 60px auto 0 auto;
+
 }
 .text-heading {
     font-family: 'Big Shoulders Stencil Text', sans-serif;
@@ -92,8 +96,8 @@ h6 {
 
 @media (min-width: 768px) and (max-width: 1024px) {
 	.container {
-		padding-left: 40px;
-		padding-right: 40px;
+		/* padding-left: 40px;
+		padding-right: 40px; */
 	}
 
 	.text-heading {
@@ -111,6 +115,9 @@ h6 {
     .text-sub-heading {
 		font-size: 2.5rem;
 	}
+    .text-desc{
+        font-size: 16px;
+    }
 	/* .text-desc {
 		font-size: 20px;
 	} */

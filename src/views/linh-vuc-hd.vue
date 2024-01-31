@@ -1,12 +1,12 @@
 <template>
-    <main>
+    <main class="container">
         <section>
-            <div class="h-[52rem] overflow-hidden">
+            <div class="lg:h-[52rem] overflow-hidden">
                 <img class="object-cover w-full" src="/assets/img/da-op-banner.png" alt="">
             </div>
         </section>
         <section>
-            <div class="nav flex text-sub-heading justify-between">
+            <div class="nav md:py-8 md:px-12 flex text-base text-sub-heading justify-between">
                 <router-link to="/linhvuc/daop">Khai thác chế biến đá ốp lát</router-link>
                 <router-link to="/linhvuc/dogo">Sản xuất kinh doanh đồ gỗ nội, ngoại thất</router-link>
                 <a href="">Phân phối xe ô tô Toyota</a>
@@ -25,9 +25,7 @@
     </script>
     
     <style scoped>
-    .nav{
-        padding: 2rem 3rem;
-    }
+    
     .nav a{
         font-size: 24px;
         font-weight: 400;

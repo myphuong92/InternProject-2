@@ -57,7 +57,7 @@ const newsData = ref([
       </div>
     </section>
     <section>
-      <div class="flex flex-col p-[20px] md:p-[100px]">
+      <div class="flex flex-col responsive-section">
         <div class=" justify-between mb-8 md:mb-20 md:flex">
           <p class="text-sub-heading md:w-1/2 text-[#003366]">
             LĨNH VỰC <span class="text-[#F16336]">HOẠT ĐỘNG</span>
@@ -73,7 +73,7 @@ const newsData = ref([
       </div>
     </section>
     <section>
-      <div class="md:p-[100px] p-[20px] bg-white flex flex-col gap-10">
+      <div class="responsive-section bg-white flex flex-col gap-10">
         <div class="content">
           <p class="uppercase text-sub-heading md:w-1/2 text-[#003366]">
             QUAN HỆ <span class="text-[#F16336]">CỔ ĐÔNG</span>
@@ -110,13 +110,13 @@ const newsData = ref([
     </section>
 
     <section>
-      <div class="p-[20px] md:p-[100px] flex flex-col gap-10">
+      <div class=" responsive-section flex flex-col gap-10">
         <div class="content">
           <p class="uppercase text-sub-heading md:w-1/2 text-[#003366]">
             TIN TỨC VÀ <span class="text-[#F16336]">SỰ KIỆN</span>
           </p>
         </div>
-        <div class="card grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div class="card grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           <newscard :cards="newsData" />
         </div>
       </div>

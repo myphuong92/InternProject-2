@@ -4,7 +4,7 @@
         <p class="number">{{ card.id }}</p>
         <p class="text-desc">{{ card.title }}</p>
     </div>
-    <div class="img flex flex-col gap-4 ">
+    <div class="img flex flex-col gap-4 ml-0 md:ml-[6rem]">
         <img :src="card.img" alt="">
     </div>
   </div>
@@ -27,7 +27,5 @@ p.text-desc{
   display: flex;
   align-items:flex-end;
 }
-div.img{
-  margin-left: 6rem;
-}
+
 </style>

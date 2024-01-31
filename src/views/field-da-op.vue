@@ -1,18 +1,18 @@
 <template>
   <main>
     <section>
-      <div class="bg-white p-[100px] flex flex-col gap-16">
+      <div class="bg-white responsive-section flex flex-col gap-16">
         <p
           style="font-family: 'Big Shoulders Display', sans-serif"
-          class="text-5xl font-bold text-[#003366] uppercase"
+          class="text-3xl md:text-5xl font-bold text-[#003366] uppercase"
         >
           Khai thác chế biến đá ốp lát
         </p>
-        <div class="daop grid grid-cols-3">
-          <div class="flex flex-col gap-14">
+        <div class="daop grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-8">
+          <div class="flex flex-col gap-6 md:gap-10 lg:gap-14">
             <div class="flex flex-row gap-x-4 items-center">
               <img src="/assets/img/da-op-lat.png" alt="" />
-              <p class="title">Đá ốp lát</p>
+              <p class="title text-xl md:text-[30px]">Đá ốp lát</p>
             </div>
             <div class="content flex flex-col gap-8">
               <div>
@@ -25,10 +25,10 @@
               </div>
             </div>
           </div>
-          <div class="flex flex-col gap-14">
+          <div class="flex flex-col gap-6 md:gap-10 lg:gap-14">
             <div class="flex flex-row gap-4 items-center">
               <img src="/assets/img/da-thu-cong.png" alt="" />
-              <p class="title">Đá thủ công</p>
+              <p class="title text-xl md:text-[30px]">Đá thủ công</p>
             </div>
             <div class="content flex flex-col gap-8">
               <div>
@@ -41,10 +41,10 @@
               </div>
             </div>
           </div>
-          <div class="flex flex-col gap-14">
+          <div class="flex flex-col gap-6 md:gap-10 lg:gap-14">
             <div class="flex flex-row gap-4 items-center">
               <img src="/assets/img/da-nghien-sang.png" alt="" />
-              <p class="title">Đá nghiền sàng</p>
+              <p class="title text-xl md:text-[30px]">Đá nghiền sàng</p>
             </div>
             <div class="content flex flex-col gap-8">
               <div>
@@ -61,20 +61,20 @@
       </div>
     </section>
     <section>
-      <div class="p-[100px] flex flex-col gap-14">
+      <div class="responsive-section flex flex-col gap-14">
         <p
           style="font-family: 'Big Shoulders Display', sans-serif"
-          class="text-5xl font-bold text-[#003366] uppercase"
+          class="text-3xl md:text-5xl font-bold text-[#003366] uppercase"
         >
           MỎ ĐÁ NGUYÊN LIỆU
         </p>
-        <div class="relative">
+        <div class="relative flex flex-col gap-10 md:block">
           <div class="flex justify-center">
             <div class="map-location">
               <img src="/assets/img/map-location.png" alt="" />
             </div>
           </div>
-          <div class="flex flex-col gap-14 absolute top-52 left-0">
+          <div class="flex flex-col md:w-1/3 lg:w-full md:gap-10 lg:gap-14 md:absolute top-52 left-0">
             <div>
               <p
                 class="uppercase cursor-pointer text-[#003366] text-[20px] font-bold hover:text-[#F16336]"
@@ -123,7 +123,7 @@
               </div>
             </div>
           </div>
-          <div class="flex flex-col gap-14 absolute top-0 right-0">
+          <div class="flex flex-col md:w-1/3 lg:w-full md:gap-10 lg:gap-14 md:absolute top-0 right-0">
             <div>
               <p
                 class="uppercase cursor-pointer text-[#003366] text-[20px] font-bold hover:text-[#F16336]"
@@ -181,20 +181,20 @@
             </div>
           </div>
           <div class="">
-            <div class="dot-line"></div>
+            <div class="hidden md:block dot-line md:right-[30rem] lg:right-[44rem]"></div>
           </div>
         </div>
       </div>
     </section>
     <section>
-      <div class="bg-white p-[100px] flex flex-col gap-x-8 gap-y-20">
+      <div class="bg-white responsive-section flex flex-col gap-x-8 gap-y-20">
         <p
           style="font-family: 'Big Shoulders Display', sans-serif"
-          class="text-5xl font-bold text-[#003366] uppercase"
+          class="text-3xl md:text-5xl font-bold text-[#003366] uppercase"
         >
           Mạng lưới nhà máy và chi nhánh công ty
         </p>
-        <div class="grid grid-cols-4 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
           <cardBranch :cards="card" />
         </div>
       </div>
@@ -208,61 +208,61 @@ import { ref } from "vue";
 import cardBranch from "../components/cardBranch.vue";
 const card = ref([
   {
-    img: "/assets/img/card-branch-1.png",
+    img: "/InternProject-2//assets/img/card-branch-1.png",
     title: "NHÀ MÁY CHẾ BIẾN ĐÁ ỐP LÁT TẠI TỈNH BÌNH ĐỊNH",
     content:
       "Lorem ipsum dolor sit amet consectetur. Neque vestibulum mauris aliquam enim nulla at orci. Turpis sollicitudin elementum in donec.",
   },
   {
-    img: "/assets/img/card-branch-2.png",
+    img: "/InternProject-2//assets/img/card-branch-2.png",
     title: "XÍ NGHIỆP THẮNG LỢI",
     content:
       "Lorem ipsum dolor sit amet consectetur. Neque vestibulum mauris aliquam enim nulla at orci. Turpis sollicitudin elementum in donec.",
   },
   {
-    img: "/assets/img/card-branch-3.png",
+    img: "/InternProject-2//assets/img/card-branch-3.png",
     title: "NHÀ MÁY CHẾ BIẾN GỖ PHÙ CÁT",
     content:
       "Lorem ipsum dolor sit amet consectetur. Neque vestibulum mauris aliquam enim nulla at orci. Turpis sollicitudin elementum in donec.",
   },
   {
-    img: "/assets/img/card-branch-4.png",
+    img: "/InternProject-2//assets/img/card-branch-4.png",
     title: "XÍ NGHIỆP SẢN XUẤT VẬT LIỆU XÂY DỰNG NHƠN HÒA",
     content:
       "Lorem ipsum dolor sit amet consectetur. Neque vestibulum mauris aliquam enim nulla at orci. Turpis sollicitudin elementum in donec.",
   },
   {
-    img: "/assets/img/card-branch-5.png",
+    img: "/InternProject-2//assets/img/card-branch-5.png",
     title: "NHÀ MÁY CHẾ BIẾN ĐÁ GRANITE-BASALT",
     content:
       "Lorem ipsum dolor sit amet consectetur. Neque vestibulum mauris aliquam enim nulla at orci. Turpis sollicitudin elementum in donec.",
   },
   {
-    img: "/assets/img/card-branch-6.png",
+    img: "/InternProject-2//assets/img/card-branch-6.png",
     title: "NHÀ MÁY CHẾ BIẾN ĐÁ ỐP LÁT TẠI TỈNH ĐỒNG NAI",
     content:
       "Lorem ipsum dolor sit amet consectetur. Neque vestibulum mauris aliquam enim nulla at orci. Turpis sollicitudin elementum in donec.",
   },
   {
-    img: "/assets/img/card-branch-7.png",
+    img: "/InternProject-2//assets/img/card-branch-7.png",
     title: "NHÀ MÁY CHẾ BIẾN ĐÁ GRANITE TẠI TỈNH KHÁNH HÒA",
     content:
       "Lorem ipsum dolor sit amet consectetur. Neque vestibulum mauris aliquam enim nulla at orci. Turpis sollicitudin elementum in donec.",
   },
   {
-    img: "/assets/img/card-branch-8.png",
+    img: "/InternProject-2//assets/img/card-branch-8.png",
     title: "NHÀ MÁY CHẾ BIẾN ĐÁ ỐP LÁT TẠI DIÊN TÂN - KHÁNH HOÀ",
     content:
       "Lorem ipsum dolor sit amet consectetur. Neque vestibulum mauris aliquam enim nulla at orci. Turpis sollicitudin elementum in donec.",
   },
   {
-    img: "/assets/img/card-branch-9.png",
+    img: "/InternProject-2//assets/img/card-branch-9.png",
     title: "NHÀ MÁY CHẾ BIẾN ĐÁ ỐP LÁT TẠI TỈNH HƯNG YÊN",
     content:
       "Lorem ipsum dolor sit amet consectetur. Neque vestibulum mauris aliquam enim nulla at orci. Turpis sollicitudin elementum in donec.",
   },
   {
-    img: "/assets/img/card-branch-10.png",
+    img: "/InternProject-2//assets/img/card-branch-10.png",
     title: "VĂN PHÒNG TẠI TP HỒ CHÍ MINH",
     content:
       "Lorem ipsum dolor sit amet consectetur. Neque vestibulum mauris aliquam enim nulla at orci. Turpis sollicitudin elementum in donec.",
@@ -273,7 +273,6 @@ const card = ref([
 <style scoped>
 .daop .title {
   color: #003366;
-  font-size: 30px;
 }
 .daop p.content {
   font-size: 20px;
@@ -294,7 +293,6 @@ const card = ref([
   border-left: 3px dotted #003366;
   position: absolute;
   top: 6.5rem;
-  right: 44rem;
   left: 1rem;
 }
 .map-location {

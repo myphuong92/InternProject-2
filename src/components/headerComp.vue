@@ -1,6 +1,6 @@
 <template>
     <header>
-        <div class="header-line flex justify-between px-3 md:px-24">
+        <div class="header-line flex justify-between px-3 md:px-10 lg:px-24">
     <a class="flex items-center">
         <img src="/assets/img/logo.png" alt="">
         <p class="text-2xl font-medium text-[#FF4300] drop-shadow-xl hidden md:block">Công ty cổ phần phú tài</p>
@@ -23,9 +23,9 @@
     </div>  
 </div>
 <Transition :duration="550" name="nested">
-    <div class="h-screen outer navigation bg-[#E4ECFA] md:py-8 md:px-24" v-if="isMenuClicked" :class="{'active' : isMenuClicked}">
+    <div class="h-screen outer navigation bg-[#E4ECFA] md:p-12 lg:py-8 lg:px-24" v-if="isMenuClicked" :class="{'active' : isMenuClicked}">
         <ul class="inner relative flex flex-col gap-[2rem] ">
-        <li class="md:flex md:w-[60%]" :key="link.name" v-for="link in links"  @mouseover="handleMouseOver(link)" @mouseout="handleMouseOut(link)">
+        <li class="md:flex lg:w-[60%]" :key="link.name" v-for="link in links"  @mouseover="handleMouseOver(link)" @mouseout="handleMouseOut(link)">
             <div class="nav-title" :class="{'pl-[20px]': link.isHover.value}">
                 <div class="flex items-center" :style="{'color' : link.isHover.value ? '#003366': ''}">
                     <div>
@@ -36,7 +36,7 @@
                 </div>
             </div>
             
-            <ul class="ml-24 sub-title flex flex-col gap-[2rem]" v-if="link.sublinks.length>0" >
+            <ul class="md:ml-10 lg:ml-24 sub-title flex flex-col gap-[2rem]" v-if="link.sublinks.length>0" >
                 <li v-for="sublink in link.sublinks" :key="sublink.name">
                     <div>
                         <div class="md:flex items-center">

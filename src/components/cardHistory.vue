@@ -1,6 +1,6 @@
 <template>
-  <div class="flex flex-col gap-8 w-[20%]" v-for="card in cards" :key="card">
-    <div class="connect flex items-center">
+  <div class="flex flex-col gap-8 md:w-[48%] lg:w-[20%]" v-for="card in cards" :key="card">
+    <div class="connect items-center hidden lg:flex">
         <span class="circle-orange"></span>
     </div>
     <div class="content flex flex-col items-start gap-3">

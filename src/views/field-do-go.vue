@@ -1,14 +1,14 @@
 <template>
     <section>
-        <div class="flex flex-col p-[100px] gap-8">
+        <div class="flex flex-col responsive-section gap-8">
             <p class="text-sub-heading text-[#003366] uppercase">PHÁT TRIỂN MẢNG SẢN XUẤT KINH DOANH SẢN PHẨM GỖ</p>
-            <div class="grid grid-cols-3 gap-16 text-[#526D88]">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 md:gap-16 text-[#526D88]">
                 <p>Lorem ipsum dolor sit amet consectetur. Lectus diam amet malesuada etiam. Ac auctor nulla elementum turpis. Donec dignissim sed elementum vivamus sagittis enim consectetur. Pellentesque dictumst porta nulla aliquam at integer adipiscing. Morbi elementum ipsum lacinia quam fermentum. Sollicitudin sed ac in sit pulvinar. Fermentum nibh feugiat nunc velit tellus</p>
                 <p>Lorem ipsum dolor sit amet consectetur. Lectus diam amet malesuada etiam. Ac auctor nulla elementum turpis. Donec dignissim sed elementum vivamus sagittis enim consectetur. Pellentesque dictumst porta nulla aliquam at integer adipiscing. Morbi elementum ipsum lacinia quam fermentum. Sollicitudin sed ac in sit pulvinar. Fermentum nibh feugiat nunc velit tellus. </p>
                 <p>Lorem ipsum dolor sit amet consectetur. Lectus diam amet malesuada etiam. Ac auctor nulla elementum turpis. Donec dignissim sed elementum vivamus sagittis enim consectetur. Pellentesque dictumst porta nulla aliquam at integer adipiscing. Morbi elementum ipsum lacinia quam fermentum. Sollicitudin sed ac in sit pulvinar. Fermentum nibh feugiat nunc velit tellus. </p>
             </div>
             <div class="donut-chart">
-                <div class="grid grid-cols-2 divide-x-2 divide-black">
+                <div class="grid grid-cols-1 md:grid-cols-2 md:divide-x-2 md:divide-black">
                     <!-- Product  -->
                     <div class="products flex flex-col gap-8">
                         <div class="title text-center text-lg font-semibold">
@@ -17,7 +17,7 @@
                         <div class="donutProducts">
                             <donutChart :data="dataProducts" :options="options"/>
                         </div>
-                        <div class="grid grid-rows-5 grid-flow-col gap-y-5 gap-x-10">
+                        <div class="grid grid-cols-2 md:grid-rows-5 grid-flow-row md:grid-flow-col md:gap-y-5 md:gap-x-10">
                             <div class="stats flex gap-3" v-for="stat in statProduct" :key="stat">
                                 <div class="circle-stat w-6 h-6 rounded-full" :class="stat.circle"></div>
                                 <p>{{ stat.desc }}</p>
@@ -47,21 +47,21 @@
         </div>
     </section>
     <section>
-        <div class="flex flex-col p-[100px] gap-8">
+        <div class="flex flex-col responsive-section gap-10 md:gap-8">
             <p class="text-sub-heading text-[#003366] uppercase">các sản phẩm gỗ chính của phú tài</p>
-            <div class="grid grid-cols-2 gap-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
                 <div class="img grid grid-cols-2 gap-5">
                     <div class=""><img class="object-cover w-full h-full rounded-md" src="/assets/img/go-1.png" alt=""></div>
                     <div><img class="object-cover w-full h-full rounded-md" src="/assets/img/go-2.png" alt=""></div>
                     <div class="col-span-2"><img class="object-cover w-full h-full rounded-md" src="/assets/img/go-3.png" alt=""></div>
                 </div>
-                <div class="flex flex-col gap-10 justify-center">
+                <div class="flex flex-col gap-4 md:gap-10 justify-center">
                     <p class="title text-4xl font-medium uppercase">ĐỒ GỖ NGOÀI TRỜI</p>
                     <p class="content text-[#526D88]">Lorem ipsum dolor sit amet consectetur. Lectus diam amet malesuada etiam. Ac auctor nulla elementum turpis. Donec dignissim sed elementum vivamus sagittis enim consectetur. Pellentesque dictumst porta nulla aliquam at integer adipiscing. Morbi elementum ipsum lacinia quam fermentum. Sollicitudin sed ac in sit pulvinar. Fermentum nibh feugiat nunc velit tellus. </p>
                 </div>
             </div>
-            <div class="grid grid-cols-2 gap-10">
-                <div class="flex flex-col gap-10 justify-center">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
+                <div class="flex flex-col gap-4 md:gap-10 justify-center order-last md:order-first">
                     <p class="title text-4xl font-medium uppercase">ĐỒ GỖ TRONG NHÀ</p>
                     <p class="content text-[#526D88]">Lorem ipsum dolor sit amet consectetur. Lectus diam amet malesuada etiam. Ac auctor nulla elementum turpis. Donec dignissim sed elementum vivamus sagittis enim consectetur. Pellentesque dictumst porta nulla aliquam at integer adipiscing. Morbi elementum ipsum lacinia quam fermentum. Sollicitudin sed ac in sit pulvinar. Fermentum nibh feugiat nunc velit tellus. </p>
                 </div>
@@ -75,7 +75,7 @@
         </div>
     </section>
     <section>
-        <div class="p-[100px]">
+        <div class="responsive-section">
             <p class="text-sub-heading text-[#003366] uppercase">công suất hiện hữu</p>
             <div class="relative">
                 <img src="/assets/img/scott-webb.png" alt="">
@@ -99,9 +99,21 @@
         </div>
     </section>
     <section>
-        <div class="p-[100px]">
+        <div class="flex flex-col responsive-section gap-10">
             <p class="text-sub-heading text-[#003366] uppercase">Công ty con ngành gỗ</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <cardBranch :cards="ctycon" />
 
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="flex flex-col responsive-section gap-10">
+            <p class="text-sub-heading text-[#003366] uppercase">Công ty con ngành gỗ</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <cardBranch :cards="donvi" />
+
+            </div>
         </div>
     </section>
 </template>
@@ -111,7 +123,9 @@
     import cardTextIcon from '../components/cardTextIcon.vue';
     import donutChart from "../components/donutChart.vue"
     import barChart from "../components/barChart.vue"
+    import cardBranch from "../components/cardBranch.vue";
 
+    
     // Product
     const dataProducts = ref({
         // labels: ['Điện thoại và các loại linh kiện', 'Hàng dệt, may', 'Điện tử, máy tính và linh kiện', 'Giày dép','Máy móc, thiết bị, dụng cụ và phụ tùng khác','Hàng hải sản','Gỗ và sản phẩm gỗ','Dầu thô'],
@@ -271,6 +285,41 @@ const vinag7 = ref([
       },
       { items: [{ icon: "bolt", desc: "80 containers/tháng" }] },
     ],
+  },
+]);
+// CÔNG TY CON
+const ctycon = ref([
+  {
+    img: "/InternProject-2/assets/img/ctycon-1.png",
+    title: "CÔNG TY TNHH MTV GỖ PHÚ TÀI BÌNH ĐỊNH",
+    content:
+      "Lorem ipsum dolor sit amet consectetur. Neque vestibulum mauris aliquam enim nulla at orci. Turpis sollicitudin elementum in donec.",
+  },
+  {
+    img: "/InternProject-2/assets/img/ctycon-2.png",
+    title: "CÔNG TY CỔ PHẦN VINA G7",
+    content:
+      "Lorem ipsum dolor sit amet consectetur. Neque vestibulum mauris aliquam enim nulla at orci. Turpis sollicitudin elementum in donec.",
+  },
+  {
+    img: "/InternProject-2/assets/img/ctycon-3.png",
+    title: "CÔNG TY TNHH MTV PHÚ TÀI ĐỒNG NAI",
+    content:
+      "Lorem ipsum dolor sit amet consectetur. Neque vestibulum mauris aliquam enim nulla at orci. Turpis sollicitudin elementum in donec.",
+  },
+]);
+const donvi = ref([
+  {
+    img: "/InternProject-2/assets/img/donvi-1.png",
+    title: "XÍ NGHIỆP THẮNG LỢI",
+    content:
+      "Lorem ipsum dolor sit amet consectetur. Neque vestibulum mauris aliquam enim nulla at orci. Turpis sollicitudin elementum in donec.",
+  },
+  {
+    img: "/InternProject-2/assets/img/donvi-2.png",
+    title: "CHI NHÀNH THÀNH PHỐ HỒ CHÍ MINH",
+    content:
+      "Lorem ipsum dolor sit amet consectetur. Neque vestibulum mauris aliquam enim nulla at orci. Turpis sollicitudin elementum in donec.",
   },
 ]);
 </script>
