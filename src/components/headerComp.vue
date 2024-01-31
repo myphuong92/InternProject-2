@@ -66,9 +66,9 @@
         {name: "Lĩnh vực hoạt động", link: "/linhvuc", sublinks:[{name:"Ngành đá", link:"/linhvuc/daop", isHover : ref(false)},{name: "Ngành gỗ", link:"/linhvuc/dogo", isHover : ref(false)}, {name:"Ngành ô tô", link:"#", isHover : ref(false)},{name:"Ngành bất động sản", link:"#", isHover : ref(false)}], isHover : ref(false)},
         {name: "Sản phẩm nổi bật", link: "#", sublinks:[], isHover : ref(false)},
         {name: "Quan hệ cổ đông", link: "#", sublinks:[], isHover : ref(false)},
-        {name: "Tin tức và sự kiện", link: "#", sublinks:[], isHover : ref(false)},
+        {name: "Tin tức và sự kiện", link: "/news", sublinks:[], isHover : ref(false)},
         {name: "Tuyển dụng", link: "#", sublinks:[], isHover : ref(false)},
-        {name: "Liên hệ", link: "#", sublinks:[], isHover : ref(false)},
+        {name: "Liên hệ", link: "/contact", sublinks:[], isHover : ref(false)},
     ]
     const isMenuClicked = ref(false);
     const isSearchClicked = ref(false);
