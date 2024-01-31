@@ -6,11 +6,11 @@
             </div>
         </section>
         <section>
-            <div class="nav px-2 md:py-8 md:px-12 flex text-sub-heading text-lg md:text-6xl justify-between">
-                <router-link to="/linhvuc/daop"><span class="hidden lg:block">Khai thác chế biến đá ốp lát</span> <span class="lg:hidden text-lg md:text-3xl">Đá ốp lát</span></router-link>
-                <router-link to="/linhvuc/dogo"><span class="hidden lg:block">Sản xuất kinh doanh đồ gỗ nội, ngoại thất</span><span class="lg:hidden text-lg md:text-3xl">Đồ gỗ nội, ngoại thất</span></router-link>
-                <a href=""><span class="hidden lg:block">Phân phối xe ô tô Toyota</span>  <span class="lg:hidden text-lg md:text-3xl">Xe ô tô Toyota</span></a>
-                <a href=""><span class="hidden lg:block">Ngành bất động sản</span><span class="lg:hidden text-lg md:text-3xl">Bất động sản</span></a>
+            <div class="md:flex md:flex-row whitespace-nowrap	md:whitespace-normal overflow-x-scroll md:overflow-auto px-2 md:py-8 md:px-12  text-sub-heading justify-between">
+                <router-link to="/linhvuc/daop" class=" text-lg md:text-6xl">Khai thác chế biến đá ốp lát</router-link>
+                <router-link to="/linhvuc/dogo" class="ml-5 text-lg md:text-6xl">Sản xuất kinh doanh đồ gỗ nội, ngoại thất</router-link>
+                <a href="" class="ml-5 text-lg md:text-6xl">Phân phối xe ô tô Toyota</a>
+                <a href="" class="ml-5 text-lg md:text-6xl">Ngành bất động sản</a>
             </div>
             <div class="divider"></div>
         </section>
@@ -27,7 +27,6 @@
     <style scoped>
     
     .nav a{
-        font-size: 24px;
         font-weight: 400;
         cursor: pointer;
     }

@@ -7,6 +7,8 @@ import FieldDoGo from "../views/field-do-go.vue";
 import News from "../views/news.vue";
 import Article from "../views/article.vue";
 import Contact from "../views/contact.vue";
+import JobRecruit from "../views/job-recruit.vue";
+import JobDesc from "../views/job-desc.vue";
 const routes = [
   {
     path: "/",
@@ -51,6 +53,16 @@ const routes = [
     path: "/contact",
     name: "Contact",
     component: Contact,
+  },
+  {
+    path: "/job-recruit",
+    name: "JobRecruit",
+    component: JobRecruit,
+  },
+  {
+    path: "/job-desc",
+    name: "JobDesc",
+    component: JobDesc,
   },
 ];
 const router = createRouter({

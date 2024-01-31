@@ -3,11 +3,11 @@
     <div class="p-[20px] md:p-[40px] lg:px-[100px] lg:pt-[100px] lg:pb-[70px]">
             <p class="text-heading text-7xl text-[#F16336] uppercase">Liên hệ</p>
         </div>
-        <div class="flex flex-row justify-around py-8 bg-[#E4E4E4]">
-            <a style="font-family: 'Big Shoulders Stencil Text', sans-serif;" class="uppercase text-[#686868] text-2xl" href="">CÔNG TY PHÚ TÀI</a>
-            <a style="font-family: 'Big Shoulders Stencil Text', sans-serif;" class="uppercase text-[#686868] text-2xl" href="">NGÀNH ĐÁ TỰ NHIÊN</a>
-            <a style="font-family: 'Big Shoulders Stencil Text', sans-serif;" class="uppercase text-[#686868] text-2xl" href="">NGÀNH ĐỒ GỖ</a>
-            <a style="font-family: 'Big Shoulders Stencil Text', sans-serif;" class="uppercase text-[#686868] text-2xl" href="">NGÀNH Ô TÔ</a>
+        <div class="md:flex md:flex-row whitespace-nowrap	md:whitespace-normal overflow-x-scroll md:overflow-auto justify-around px-4 md:px-0 py-8 bg-[#E4E4E4] uppercase text-[#686868] text-lg md:text-2xl">
+            <a style="font-family: 'Big Shoulders Stencil Text', sans-serif;" class=" " href="">CÔNG Ty PHÚ TÀI</a>
+            <a style="font-family: 'Big Shoulders Stencil Text', sans-serif;" class="ml-5" href="">NGÀNH ĐÁ TỰ NHIÊN</a>
+            <a style="font-family: 'Big Shoulders Stencil Text', sans-serif;" class="ml-5" href="">NGÀNH ĐỒ GỖ</a>
+            <a style="font-family: 'Big Shoulders Stencil Text', sans-serif;" class="ml-5" href="">NGÀNH Ô TÔ</a>
         </div>
     <section>
         <div class="responsive-section grid grid-cols-1 md:grid-cols-2 gap-10">
