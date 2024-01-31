@@ -1,7 +1,7 @@
 <template>
   <main>
     <section>
-      <div class="bg-white responsive-section flex flex-col gap-16">
+      <div class="bg-white responsive-section flex flex-col gap-10 md:gap-16">
         <p
           style="font-family: 'Big Shoulders Display', sans-serif"
           class="text-3xl md:text-5xl font-bold text-[#003366] uppercase"

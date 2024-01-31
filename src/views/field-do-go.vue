@@ -8,7 +8,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur. Lectus diam amet malesuada etiam. Ac auctor nulla elementum turpis. Donec dignissim sed elementum vivamus sagittis enim consectetur. Pellentesque dictumst porta nulla aliquam at integer adipiscing. Morbi elementum ipsum lacinia quam fermentum. Sollicitudin sed ac in sit pulvinar. Fermentum nibh feugiat nunc velit tellus. </p>
             </div>
             <div class="donut-chart">
-                <div class="grid grid-cols-1 md:grid-cols-2 md:divide-x-2 md:divide-black">
+                <div class="grid grid-cols-1 gap-16 md:gap-0 md:grid-cols-2 md:divide-x-2 md:divide-black">
                     <!-- Product  -->
                     <div class="products flex flex-col gap-8">
                         <div class="title text-center text-lg font-semibold">
@@ -17,10 +17,10 @@
                         <div class="donutProducts">
                             <donutChart :data="dataProducts" :options="options"/>
                         </div>
-                        <div class="grid grid-cols-2 md:grid-rows-5 grid-flow-row md:grid-flow-col md:gap-y-5 md:gap-x-10">
-                            <div class="stats flex gap-3" v-for="stat in statProduct" :key="stat">
+                        <div class="grid grid-cols-2 md:grid-rows-5 grid-flow-row md:grid-flow-col gap-y-8 gap-x-3 lg:gap-y-5 lg:gap-x-10">
+                            <div class="stats grid grid-cols-5 gap-3" v-for="stat in statProduct" :key="stat">
                                 <div class="circle-stat w-6 h-6 rounded-full" :class="stat.circle"></div>
-                                <p>{{ stat.desc }}</p>
+                                <p class="col-span-4">{{ stat.desc }}</p>
                             </div>
                         </div>
                     </div>
@@ -32,10 +32,10 @@
                         <div class="donutProducts">
                             <donutChart :data="dataCountries" :options="options"/>
                         </div>
-                        <div class="grid grid-cols-3 grid-flow-row gap-y-5 gap-x-10">
-                            <div class="stats flex gap-3" v-for="stat in statCountry" :key="stat">
+                        <div class="grid grid-cols-3 grid-flow-row gap-y-12 gap-x-10">
+                            <div class="stats grid grid-cols-5 gap-8" v-for="stat in statCountry" :key="stat">
                                 <div class="circle-stat w-6 h-6 rounded-full" :class="stat.circle"></div>
-                                <p>{{ stat.desc }}</p>
+                                <p class="col-span-4">{{ stat.desc }}</p>
                             </div>
                         </div>
                     </div>

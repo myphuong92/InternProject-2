@@ -3,13 +3,13 @@
         <div class="p-[20px] md:p-[40px] lg:px-[100px] lg:pt-[100px] lg:pb-[70px]">
             <p class="text-heading text-7xl"><span class="text-[#F16336]">TIN TỨC</span> <span class="text-[#001933]">VÀ SỰ KIỆN</span></p>
         </div>
-        <div class="flex flex-row justify-evenly p-8 bg-[#E4E4E4]">
-            <a style="font-family: 'Big Shoulders Stencil Text', sans-serif;" class="uppercase text-[#686868] text-2xl" href="">Tất cả</a>
-            <a style="font-family: 'Big Shoulders Stencil Text', sans-serif;" class="uppercase text-[#686868] text-2xl" href="">NGÀNH ĐÁ</a>
-            <a style="font-family: 'Big Shoulders Stencil Text', sans-serif;" class="uppercase text-[#686868] text-2xl" href="">NGÀNH Ô TÔ</a>
-            <a style="font-family: 'Big Shoulders Stencil Text', sans-serif;" class="uppercase text-[#686868] text-2xl" href="">NGÀY BẤT ĐỘNG SẢN</a>
-            <a style="font-family: 'Big Shoulders Stencil Text', sans-serif;" class="uppercase text-[#686868] text-2xl" href="">NGÀY BẤT ĐỘNG SẢN</a>
-            <a style="font-family: 'Big Shoulders Stencil Text', sans-serif;" class="uppercase text-[#686868] text-2xl" href="">NGÀNH ĐỒ GỖ</a>
+        <div class="md:flex md:flex-row whitespace-nowrap	md:whitespace-normal overflow-x-scroll	md:overflow-auto justify-evenly py-5 px-3 md:p-8 bg-[#E4E4E4] text-[#686868] text-lg md:text-2xl uppercase">
+            <a style="font-family: 'Big Shoulders Stencil Text', sans-serif;" class="" href="">Tất cả</a>
+            <a style="font-family: 'Big Shoulders Stencil Text', sans-serif;" class="ml-5" href="">NGÀNH ĐÁ</a>
+            <a style="font-family: 'Big Shoulders Stencil Text', sans-serif;" class="ml-5" href="">NGÀNH Ô TÔ</a>
+            <a style="font-family: 'Big Shoulders Stencil Text', sans-serif;" class="ml-5" href="">NGÀY BẤT ĐỘNG SẢN</a>
+            <a style="font-family: 'Big Shoulders Stencil Text', sans-serif;" class="ml-5" href="">NGÀY BẤT ĐỘNG SẢN</a>
+            <a style="font-family: 'Big Shoulders Stencil Text', sans-serif;" class="ml-5" href="">NGÀNH ĐỒ GỖ</a>
         </div>
         <section class="responsive-section">
             <div class="grid grid-cols-1 divide-y-2 lg:divide-y-0 lg:grid-cols-2 gap-10">
