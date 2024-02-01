@@ -26,7 +26,7 @@
         >
             <swiper-slide class=" bg-[#003366] pl-5" v-for="card in cards" :key="card">
                     <div class="flex flex-col gap-4 bg-white h-full">
-                <div class="card-img">
+                <div class="card-img max-h-[390px] overflow-hidden">
                     <img class="full-img" :src="card.img" alt="">
                 </div>
                 <div class="card-content flex flex-col gap-3 px-5 pb-5 justify-between h-[10rem]">

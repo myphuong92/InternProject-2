@@ -53,7 +53,7 @@ let contents = [
     learnMore: "#",
   },
 ];
-const activeSlideId = ref(null);
+const activeSlideId = ref(1);
 const setActiveSlideId = (id)=>{
   activeSlideId.value = id
   console.log('clicked')

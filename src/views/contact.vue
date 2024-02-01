@@ -82,7 +82,7 @@
                             </div>
                         </div>
                         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-0 pt-10">
-                            <p class="title text-3xl">Mua sản phẩm <br>Xe ô tô</p>
+                            <p class="title text-3xl leading-relaxed">Mua sản phẩm <br>Xe ô tô</p>
                             <div class="grid grid-cols-1 divide-y-2 divide-gray-500 col-span-2">
                                 <div class="grid grid-cols-1 md:grid-cols-3 pb-6 gap-3 md:gap-0">
                                     <p class="category text-base">Toyota Đà Nẵng <br>Duy Tân</p>
@@ -138,7 +138,7 @@
                             <input type="text">
                         </div>
                     </div>
-                    <buttonComp class="w-full md:w-1/2" title="Gửi nội dung" icon="arrow_forward" changeColor="darkblue"/>
+                    <buttonComp class="w-full md:w-1/3 lg:w-1/2 lg:col-start-2 lg:mt-8" title="Gửi nội dung" icon="arrow_forward" changeColor="darkblue"/>
 
 
                 </div>

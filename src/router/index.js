@@ -42,7 +42,13 @@ const routes = [
     path: "/news",
     name: "News",
     component: News,
-    children: [],
+    children: [
+      // {
+      //   path: "article",
+      //   name: "Article",
+      //   component: Article,
+      // },
+    ],
   },
   {
     path: "/news/article",
@@ -69,4 +75,13 @@ const router = createRouter({
   history: createWebHistory("/InternProject-2/"), // Provide the base URL directly
   routes,
 });
+// Chuyển lên đầu trang khi qua route mới
+router.beforeEach((to, from, next) => {
+  // Kiểm tra path của route
+  if (to.path !== "/linhvuc/daop" && to.path !== "/linhvuc/dogo") {
+    window.scrollTo(0, 0); // Cuộn lên đầu trang
+  }
+  next();
+});
+
 export default router;

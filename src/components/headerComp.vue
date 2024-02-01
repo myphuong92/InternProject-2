@@ -1,10 +1,10 @@
 <template>
     <header>
         <div class="header-line flex justify-between px-3 md:px-10 lg:px-24">
-    <a class="flex items-center">
+    <router-link to="/" class="flex items-center">
         <img src="/assets/img/logo.png" alt="">
         <p class="text-2xl font-medium text-[#FF4300] drop-shadow-xl hidden md:block">Công ty cổ phần phú tài</p>
-    </a>
+    </router-link>
     <div class="flex items-center gap-5">
         <div class="items-center hidden md:flex">
             <p class="language text-lg"><span class="text-[#989898]">EN</span> | <span @click="toggleLanguage()" :class="isLanguageClicked ? 'text-[#003366]' : 'text-[#989898]'">VN</span></p>
@@ -23,31 +23,45 @@
     </div>  
 </div>
 <Transition :duration="550" name="nested">
-    <div class="h-screen outer navigation bg-[#E4ECFA] md:p-12 lg:py-8 lg:px-24" v-if="isMenuClicked" :class="{'active' : isMenuClicked}">
-        <ul class="inner relative flex flex-col gap-[2rem] ">
+    <div class="h-screen outer navigation bg-[#E4ECFA] px-2 py-6 md:p-10 lg:py-8 lg:px-24" v-if="isMenuClicked" :class="{'active' : isMenuClicked}">
+        <ul class="inner relative flex flex-col gap-6 md:gap-[2rem] h-full">
         <li class="md:flex lg:w-[60%]" :key="link.name" v-for="link in links"  @mouseover="handleMouseOver(link)" @mouseout="handleMouseOut(link)">
-            <div class="nav-title" :class="{'pl-[20px]': link.isHover.value}">
-                <div class="flex items-center" :style="{'color' : link.isHover.value ? '#003366': ''}">
-                    <div>
-                        <span class="star material-symbols-outlined">star</span>
-                        <router-link class="text-3xl md:text-title text-4xl" :to="link.link" @mouseover="setHover(link)" @mouseout="clearHover(link)" :style="{'font-size' : link.isHover.value ? '38px': ''}" >{{ link.name }}</router-link>
-                    </div>
+            <div class=" nav-title whitespace-nowrap	" :class="{'pl-[20px]': link.isHover.value}">
+                <div  class="flex items-center gap-2 hover:color-[#003366]" 
+                :style="{'color' : link.isHover.value ? '#003366': ''}"
+                @click="closeMenu(false, link)">
+                        <div class="star material-symbols-outlined">star</div>
+                        <router-link 
+                        class="text-xl md:text-2xl lg:text-4xl"
+                        :to="link.link" 
+                        @mouseover="setHover(link)" 
+                        @mouseout="clearHover(link)"
+                          >
+                         {{ link.name }}
+                        </router-link>
                     
                 </div>
             </div>
             
-            <ul class="md:ml-10 lg:ml-24 sub-title flex flex-col gap-[2rem]" v-if="link.sublinks.length>0" >
+            <ul class="mt-6 md:mt-0 ml-[60px] md:ml-10 lg:ml-24 sub-title flex flex-col gap-[2rem] whitespace-nowrap" v-if="link.sublinks.length>0" :class="{'hidden' : !link.isHover.value}">
                 <li v-for="sublink in link.sublinks" :key="sublink.name">
                     <div>
-                        <div class="md:flex items-center">
-                            <span class="material-symbols-outlined" :class="{'hidden' : !sublink.isHover.value}">arrow_forward_ios</span>
-                            <router-link class="text-xl md:text-3xl hover:text-[#003366]" :to="sublink.link" @mouseover="setHover(sublink)" @mouseout="clearHover(sublink)">
+                        <div class="md:flex items-center"
+                        @click="closeMenu(false, sublink)">
+                            <span class="material-symbols-outlined text-base md:text-lg" 
+                            :class="{'hidden' : !sublink.isHover.value}">
+                                arrow_forward_ios
+                            </span>
+                            <router-link class="text-xl md:text-3xl hover:text-[#003366]" 
+                            :to="sublink.link" 
+                            @mouseover="setHover(sublink)" 
+                            @mouseout="clearHover(sublink)">
                                 {{ sublink.name }}
                             </router-link>
                         </div>
                     </div>
                     
-            </li>
+                </li>
             </ul>
         </li>
     </ul>
@@ -67,7 +81,7 @@
         {name: "Sản phẩm nổi bật", link: "#", sublinks:[], isHover : ref(false)},
         {name: "Quan hệ cổ đông", link: "#", sublinks:[], isHover : ref(false)},
         {name: "Tin tức và sự kiện", link: "/news", sublinks:[], isHover : ref(false)},
-        {name: "Tuyển dụng", link: "#", sublinks:[], isHover : ref(false)},
+        {name: "Tuyển dụng", link: "/job-recruit", sublinks:[], isHover : ref(false)},
         {name: "Liên hệ", link: "/contact", sublinks:[], isHover : ref(false)},
     ]
     const isMenuClicked = ref(false);
@@ -77,6 +91,21 @@
         isMenuClicked.value=!isMenuClicked.value;
         // console.log(isMenuClicked.value)
     }
+    function closeMenu(state, link){
+        // link có mảng sublinks là rỗng
+        if(Array.isArray(link.sublinks) && link.sublinks.length ===0){
+                // close the menu
+                isMenuClicked.value=state;
+                // reset the hover state to false
+                link.isHover.value=false;
+        }else if(!('sublinks' in link)){
+            // close the menu
+            isMenuClicked.value=state;
+            // reset the hover state to false
+            link.isHover.value=false;
+        }
+    }
+    
     function toggleSearch(){
         isSearchClicked.value = !isSearchClicked.value;
     }

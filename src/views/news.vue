@@ -4,19 +4,19 @@
             <p class="text-heading text-7xl"><span class="text-[#F16336]">TIN TỨC</span> <span class="text-[#001933]">VÀ SỰ KIỆN</span></p>
         </div>
         <div class="md:flex md:flex-row whitespace-nowrap	md:whitespace-normal overflow-x-scroll	md:overflow-auto justify-evenly py-5 px-3 md:p-8 bg-[#E4E4E4] text-[#686868] text-lg md:text-2xl uppercase">
-            <a style="font-family: 'Big Shoulders Stencil Text', sans-serif;" class="" href="">Tất cả</a>
-            <a style="font-family: 'Big Shoulders Stencil Text', sans-serif;" class="ml-5" href="">NGÀNH ĐÁ</a>
-            <a style="font-family: 'Big Shoulders Stencil Text', sans-serif;" class="ml-5" href="">NGÀNH Ô TÔ</a>
-            <a style="font-family: 'Big Shoulders Stencil Text', sans-serif;" class="ml-5" href="">NGÀY BẤT ĐỘNG SẢN</a>
-            <a style="font-family: 'Big Shoulders Stencil Text', sans-serif;" class="ml-5" href="">NGÀY BẤT ĐỘNG SẢN</a>
-            <a style="font-family: 'Big Shoulders Stencil Text', sans-serif;" class="ml-5" href="">NGÀNH ĐỒ GỖ</a>
+            <a style="font-family: 'Big Shoulders Stencil Text', sans-serif;" class=" hover:text-[#003366] hover:font-semibold" href="">Tất cả</a>
+            <a style="font-family: 'Big Shoulders Stencil Text', sans-serif;" class="ml-5 hover:text-[#003366] hover:font-semibold" href="">NGÀNH ĐÁ</a>
+            <a style="font-family: 'Big Shoulders Stencil Text', sans-serif;" class="ml-5 hover:text-[#003366] hover:font-semibold" href="">NGÀNH Ô TÔ</a>
+            <a style="font-family: 'Big Shoulders Stencil Text', sans-serif;" class="ml-5 hover:text-[#003366] hover:font-semibold" href="">NGÀY BẤT ĐỘNG SẢN</a>
+            <a style="font-family: 'Big Shoulders Stencil Text', sans-serif;" class="ml-5 hover:text-[#003366] hover:font-semibold" href="">NGÀY BẤT ĐỘNG SẢN</a>
+            <a style="font-family: 'Big Shoulders Stencil Text', sans-serif;" class="ml-5 hover:text-[#003366] hover:font-semibold" href="">NGÀNH ĐỒ GỖ</a>
         </div>
         <section class="responsive-section">
             <div class="grid grid-cols-1 divide-y-2 lg:divide-y-0 lg:grid-cols-2 gap-10">
             <div class="flex flex-col gap-8">
-                <div>
+                <router-link to="/news/article">
                     <img class="full-img h-full" src="/assets/img/news-1.png" alt="">
-                </div>
+                </router-link>
                 <div class="content flex flex-col gap-5">
                     <p class= "text-sm md:text-base lg:text-sm text-[#003366]">THÔNG TIN CÔNG TY</p>
                     <p class="text-base md:text-xl hover:text-[#003366] cursor-pointer hover:font-semibold font-medium">PTB vào top danh sách 25 thương hiệu công ty hàng tiêu dùng cá nhân và công nghiệp dẫn đầu do Forbes Việt Nam bình chọn.</p>
