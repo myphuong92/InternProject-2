@@ -16,7 +16,7 @@
     </section>
     <section>
       <div class="relative bg-[#CCE6FF]">
-        <div class="flex flex-col md:flex-row justify-between responsive-section md:h-[120rem] md:mb-[25rem] gap-6 md:gap-0">
+        <div class="flex flex-col md:flex-row justify-between responsive-section md:h-[120rem] gap-6 md:gap-0">
           <p class="md:w-1/2 text-heading text-7xl text-[#F16336] uppercase">GIỚI THIỆU</p>
           <p class="md:w-1/2 text-desc text-lg text-[#003366]">
             Tiền thân của Công ty cổ phần Phú Tài (Phu Tai SJC) là Công ty sản
@@ -33,8 +33,11 @@
             ty.
           </p>
         </div>
+      </div>
+
+      <div class="w-full flex justify-end">
         <div
-          class="grid grid-cols-1 bg-[rgb(0,38,77)] p-5 right-0 top-[25%] md:p-[4rem] md:grid-cols-2 md:absolute md:w-[87%] "
+          class="grid grid-cols-1 bg-[rgb(0,38,77)] p-5 right-0 top-[25%] md:p-[4rem] md:grid-cols-2 md:w-[87%] relative md:mt-[-80rem] lg:mt-[-91rem]"
         >
           <div class="grid grid-rows-1 md:grid-rows-2">
             <div class="flex flex-col gap-5 text-white mb-10 md:mb-0 md:w-[80%]">
@@ -51,7 +54,7 @@
                 lĩnh vực
               </p>
             </div>
-            <div class="text-[#3399FF] hidden md:block">
+            <div class="text-[#3399FF] hidden md:flex">
               <p class="vertical-text">Phu Tai JSC</p>
             </div>
           </div>
@@ -60,6 +63,7 @@
           </div>
         </div>
       </div>
+      
     </section>
     <section>
       <div class="responsive-section">
@@ -72,7 +76,10 @@
         >
           lịch sử công ty
         </p>
-        <div class="history flex flex-row flex-wrap gap-5 lg:gap-20">
+        <!-- <div class="history flex flex-row flex-wrap gap-5 lg:gap-20">
+          <cardHistory :cards="timeline" />
+        </div> -->
+        <div class="history grid grid-cols-5">
           <cardHistory :cards="timeline" />
         </div>
       </div>
@@ -293,26 +300,32 @@ const timeline = ref([
     date: "2005",
     desc: "Bộ Trưởng Bộ Quốc phòng quyết định Công ty cổ phần Phú Tài chính thức đi vào hoạt động theo mô hình công ty cổ phần kể từ ngày 01 tháng 01 năm 2005 (Quyết định số 150/2004/QĐ-BQP ). Công ty cổ phần Phú Tài bao gồm có cơ quan công ty và 06 đơn vị thành viên: Xí nghiệp 380, Xí nghiệp toyota Đà Nẵng; Xí nghiệp Thắng Lợi; Chi nhánh Công ty tại Đồng Nai ;Đội sản xuất đá xây dựng và trồng công nông nghiệp Nhơn Hòa; Văn phòng đại diện tại Thành phố Hồ Chí Minh. Đầu tư xây dựng Nhà máy chế biến đá ốp lát tại Quy Nhơn. Đầu tư xây dựng Tòa nhà Văn phòng làm việc công ty cổ phần Phú Tài.",
   },
+  
   {
-    date: "2006",
-    desc: "Đầu tư thành lập Chi nhánh công ty cổ phần Phú Tài tại tỉnh Gia lai.",
-  },
-  {
-    date: "2007",
-    desc: "Đầu tư xây dựng Chi nhánh Công ty cổ phần Phú Tài – Nhà máy chế biến đá Bazal, granite tại tỉnh Đăk Nông. Đầu tư xây dựng di dời Xí nghiệp Thắng Lợi-Chi nhánh Công ty cổ phần Phú Tài. Đầu tư thành lập Chi nhánh Quy Nhơn-Xí nghiệp Toyota Đà Nẵng-Công ty cổ phần Phú Tài. Đầu tư nhận chuyển nhượng cổ phần chi phối Công ty cổ phần vật liệu xây dựng Phú Yên.",
-  },
-  {
-    date: "2008",
-    desc: "Đầu tư xây dựng Chi nhánh Công ty cổ phần Phú Tài – Nhà máy chế biến đá granite tại tỉnh Khánh Hòa.",
+    date: "2013",
+    desc: "Đầu tư nhận chuyển nhượng 100% vốn điều lệ của Công ty TNHH MTV khoáng sản Tuấn Đạt.",
   },
   {
     date: "2012",
     desc: "Đầu tư Mở rộng Xí nghiệp Toyota Đà Nẵng-Công ty cổ phần Phú Tài.",
   },
   {
-    date: "2013",
-    desc: "Đầu tư nhận chuyển nhượng 100% vốn điều lệ của Công ty TNHH MTV khoáng sản Tuấn Đạt.",
+    date: "2008",
+    desc: "Đầu tư xây dựng Chi nhánh Công ty cổ phần Phú Tài – Nhà máy chế biến đá granite tại tỉnh Khánh Hòa.",
   },
+  {
+    date: "2007",
+    desc: "Đầu tư xây dựng Chi nhánh Công ty cổ phần Phú Tài – Nhà máy chế biến đá Bazal, granite tại tỉnh Đăk Nông. Đầu tư xây dựng di dời Xí nghiệp Thắng Lợi-Chi nhánh Công ty cổ phần Phú Tài. Đầu tư thành lập Chi nhánh Quy Nhơn-Xí nghiệp Toyota Đà Nẵng-Công ty cổ phần Phú Tài. Đầu tư nhận chuyển nhượng cổ phần chi phối Công ty cổ phần vật liệu xây dựng Phú Yên.",
+  },
+  {
+    date: "2006",
+    desc: "Đầu tư thành lập Chi nhánh công ty cổ phần Phú Tài tại tỉnh Gia lai.",
+  },
+  
+  
+  
+  
+  
   {
     date: "2014",
     desc: "Đầu tư Mở rộng Nhà máy chế biến gỗ Xí nghiệp Thắng Lợi-Công ty cổ phần Phú Tài.",

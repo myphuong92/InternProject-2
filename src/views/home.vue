@@ -9,8 +9,7 @@ const iconArrow = "arrow_forward";
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { useSwiper } from 'swiper/vue';
 
-const swiper = useSwiper();
-  // Import Swiper styles
+
   import 'swiper/css';
 // NEWS CARD
 const newsData = ref([
@@ -87,7 +86,83 @@ const newsData = ref([
             tôi phục vụ.
           </p>
         </div>
-        <sliderNganh />
+        <!-- <sliderNganh /> -->
+        <div>
+          <div>
+            <ul class="slides">
+              <sliderNganh/>
+            </ul>
+            
+          </div>
+          <!-- <ul class="slides">
+            <li class="slide active slide1 flex items-end bg-[url('/assets/img/slider-nganh.png')] bg-no-repeat bg-cover">
+                <div class="title">
+                    <span>Ngành đá</span>
+                </div>
+                <div class="content flex flex-col">
+                  <div style="font-family: 'Big Shoulders Stencil Text', sans-serif"
+                        class="  flex flex-col text-[#F16336] text-title text-4xl md:px-20 md:py-8">
+                    <p>01</p>
+                    <p>Ngành gỗ</p>
+                  </div>
+                  <div class="bg-slate-50 flex flex-col justify-between gap-4 p-3 lg:p-6 w-1/2">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam error ad esse. Ab illum molestias, quam reprehenderit labore deserunt est eum aliquid sunt reiciendis saepe rerum, ipsum qui. Dolorem, expedita?</p>
+                    <buttonComp title="Xem thêm" class="md:w-1/2" changeColor="blue"/>
+                  </div>
+                </div>
+            </li>
+            <li class="slide slide2 bg-[url('/assets/img/slider-nganh.png')] bg-no-repeat bg-cover">
+                <div class="title">
+                    <span>Ngành gỗ</span>
+                </div>
+                <div class="content flex flex-col">
+                  <div style="font-family: 'Big Shoulders Stencil Text', sans-serif"
+                        class="  flex flex-col text-[#F16336] text-title text-4xl md:px-20 md:py-8">
+                    <p>01</p>
+                    <p>Ngành gỗ</p>
+                  </div>
+                  <div class="bg-slate-50 flex flex-col justify-between gap-4 p-3 lg:p-6 w-1/2">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam error ad esse. Ab illum molestias, quam reprehenderit labore deserunt est eum aliquid sunt reiciendis saepe rerum, ipsum qui. Dolorem, expedita?</p>
+                    <buttonComp title="Xem thêm" class="md:w-1/2" changeColor="blue"/>
+                  </div>
+                </div>
+            </li>
+            <li class="slide slide3 bg-[url('/assets/img/slider-nganh.png')] bg-no-repeat bg-cover">
+                <div class="title">
+                    <span>Ngành ô tô</span>
+                </div>
+                <div class="content flex flex-col">
+                  <div style="font-family: 'Big Shoulders Stencil Text', sans-serif"
+                        class="flex flex-col text-[#F16336] text-title text-4xl md:px-20 md:py-8">
+                    <p>01</p>
+                    <p>Ngành gỗ</p>
+                  </div>
+                  <div class="bg-slate-50 flex flex-col justify-between gap-4 p-3 lg:p-6 w-1/2">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam error ad esse. Ab illum molestias, quam reprehenderit labore deserunt est eum aliquid sunt reiciendis saepe rerum, ipsum qui. Dolorem, expedita?</p>
+                    <buttonComp title="Xem thêm" class="md:w-1/2" changeColor="blue"/>
+                  </div>
+                </div>
+            </li> 
+            <li class="slide slide4 bg-[url('/assets/img/slider-nganh.png')] bg-no-repeat bg-cover">
+                <div class="title">
+                    <span>Ngành bất động sản</span>
+                </div>
+                <div class="content flex flex-col">
+                  <div style="font-family: 'Big Shoulders Stencil Text', sans-serif"
+                        class="flex flex-col text-[#F16336] text-title text-4xl md:px-20 md:py-8">
+                    <p>01</p>
+                    <p>Ngành gỗ</p>
+                  </div>
+                  <div class="bg-slate-50 flex flex-col justify-between gap-4 p-3 lg:p-6 w-1/2">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam error ad esse. Ab illum molestias, quam reprehenderit labore deserunt est eum aliquid sunt reiciendis saepe rerum, ipsum qui. Dolorem, expedita?</p>
+                    <buttonComp title="Xem thêm" class="md:w-1/2" changeColor="blue"/>
+                  </div>
+                </div>
+            </li>
+        </ul> -->
+          
+        </div>
+        
       </div>
     </section>
     <section>
@@ -134,8 +209,8 @@ const newsData = ref([
             TIN TỨC VÀ <span class="text-[#F16336]">SỰ KIỆN</span>
           </p>
           <div class="slide-button flex gap-6">
-            <button class="before"><span class="material-symbols-outlined">navigate_before</span></button>
-            <button class="next"><span class="material-symbols-outlined">navigate_next</span></button>
+            <button class="before hidden lg:block "><span class="material-symbols-outlined text-3xl">navigate_before</span></button>
+            <button class="next hidden lg:block "><span class="material-symbols-outlined text-3xl">navigate_next</span></button>
           </div>
         </div>
         <div class="card">
@@ -172,4 +247,57 @@ const newsData = ref([
   transform: translate(-50%, -50%);
   width: 80%;
 }
+button.before, button.next{
+  border: 3px solid black;
+  border-radius: 50%;
+}
+button.before:hover, button.next:hover{
+  border: 3px solid #F16336;
+  color: #F16336
+}
+button.before span, button.next span{
+  padding: 10px 15px
+}
+
+ul li{
+	list-style: none;
+}
+
+.slides{
+	display: flex;
+	height: 650px;
+}
+/* .slide{
+	width: 5%;
+	overflow: hidden;
+	transition: .5s  ease;
+}
+
+
+.title {
+	position: relative;
+	height: 100%;
+}
+ .title span {
+	position: absolute;
+	top: 50%;
+	transform: rotate(270deg) translateX(50%);
+	width: 100px;
+	left: -15px;
+ }
+
+ .active {
+	width: 80%;
+ }
+
+ .content {
+	padding: 40px;
+ }
+
+ .active.slide .title {
+	display: none;
+ } */
+/* .slide[data-v-432a0480]{
+  width: 65.69px;
+} */
 </style>

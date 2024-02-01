@@ -7,7 +7,7 @@
     </a>
     <div class="flex items-center gap-5">
         <div class="items-center hidden md:flex">
-            <p>EN | VN</p>
+            <p class="language text-lg"><span class="text-[#989898]">EN</span> | <span @click="toggleLanguage()" :class="isLanguageClicked ? 'text-[#003366]' : 'text-[#989898]'">VN</span></p>
             <div class="searchBox mx-2">
                 <input type="text">
             </div>
@@ -72,12 +72,16 @@
     ]
     const isMenuClicked = ref(false);
     const isSearchClicked = ref(false);
+    const isLanguageClicked = ref(false);
     function toggleMenu(){
         isMenuClicked.value=!isMenuClicked.value;
         // console.log(isMenuClicked.value)
     }
     function toggleSearch(){
         isSearchClicked.value = !isSearchClicked.value;
+    }
+    function toggleLanguage(){
+        isLanguageClicked.value= !isLanguageClicked.value;
     }
     function setHover(link){
         link.isHover.value=true;
@@ -168,5 +172,8 @@
     .searchBoxMobile input{
         border-bottom: solid black 1px;
         transition: 0.5s ease-in-out;
+    }
+    .language{
+        font-family: 'Big Shoulders Display', sans-serif;
     }
 </style>
