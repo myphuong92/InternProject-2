@@ -1,5 +1,6 @@
 <template>
-  <li class="slide flex items-end bg-[url('/assets/img/slider-nganh.png')] bg-no-repeat bg-cover" v-for="content in contents" :key="content.id" :class="{active: content.id === activeSlideId, 'w-[67px]': content.id ===1, 'w-[72px]':content.id !==1}" @click="setActiveSlideId(content.id)">
+  <!-- Computer -->
+  <li class="slide hidden  lg:flex items-end bg-[url('/assets/img/slider-nganh.png')] bg-no-repeat bg-cover" v-for="content in contents" :key="content.id" :class="{active: content.id === activeSlideId, 'w-[67px]': content.id ===1, 'w-[72px]':content.id !==1}" @click="setActiveSlideId(content.id)">
                 <div style="font-family: 'Big Shoulders Display', sans-serif;" class="title bg-[#003366] text-white font-bold text-4xl">
                     <div class="flex items-end h-full pb-3"><p>0{{ content.id }}</p></div>
                     <span class="text uppercase">{{ content.title }}</span>
@@ -10,10 +11,49 @@
                     <p>0{{ content.id }}</p>
                     <p>{{ content.title }}</p>
                   </div>
-                  <div class="bg-slate-50 flex flex-col justify-between gap-4 p-3 lg:p-6 w-1/2">
+                  <div class="bg-slate-50 flex flex-col justify-between gap-4 p-4 lg:p-6 lg:w-1/2">
                     <p>{{ content.desc }}</p>
                     <buttonComp title="Xem thêm" class="md:w-1/2" changeColor="blue"/>
                   </div>
+                </div>
+            </li>
+    <!-- Desktop -->
+    <li class="slide hidden  md:flex lg:hidden items-end bg-[url('/assets/img/slider-nganh.png')] bg-no-repeat bg-cover" v-for="content in contents" :key="content.id" :class="{active: content.id === activeSlideId, 'w-[69px]': content.id ===1, 'w-[70px]':content.id ===2, 'w-[77px]':content.id ===3,'w-[77px]':content.id ===4}" @click="setActiveSlideId(content.id)">
+                <div style="font-family: 'Big Shoulders Display', sans-serif;" class="title bg-[#003366] text-white font-bold text-4xl">
+                    <div class="flex items-end h-full pb-3"><p>0{{ content.id }}</p></div>
+                    <span class="text uppercase">{{ content.title }}</span>
+                </div>
+                <div class="content flex-col" :class="{flex: content.id === activeSlideId , 'hidden': content.id !== activeSlideId }">
+                  <div style="font-family: 'Big Shoulders Stencil Text', sans-serif"
+                        class=" flex flex-col text-[#F16336] text-title text-4xl md:py-8">
+                    <p>0{{ content.id }}</p>
+                    <p>{{ content.title }}</p>
+                  </div>
+                  <div class="bg-slate-50 flex flex-col justify-between gap-4 p-4 lg:p-6 lg:w-1/2">
+                    <p>{{ content.desc }}</p>
+                    <buttonComp title="Xem thêm" class="md:w-1/2" changeColor="blue"/>
+                  </div>
+                </div>
+            </li>
+    <!-- Mobile -->
+            <li class="slideMobile block md:hidden bg-[url('/assets/img/slider-nganh.png')] bg-no-repeat bg-cover" v-for="content in contents" :key="content.id" :class="{activeMobile: content.id === activeSlideId}" @click="setActiveSlideId(content.id)">
+                <div style="font-family: 'Big Shoulders Display', sans-serif;" class="title flex gap-3 bg-[#003366] text-white font-bold text-2xl">
+                    <div class=""><p>0{{ content.id }}</p></div>
+                    <span class="text uppercase">{{ content.title }}</span>
+                </div>
+                <div class="content flex-col gap-3" :class="{flex: content.id === activeSlideId , 'hidden': content.id !== activeSlideId }">
+                  <div style="font-family: 'Big Shoulders Stencil Text', sans-serif"
+                        class="text-[#F16336] text-title text-2xl">
+                    <p>0{{ content.id }}</p>
+                    <p>{{ content.title }}</p>
+                  </div>
+                  <div class="w-full">
+                    <div class="bg-slate-50 text-sm p-3 flex flex-col justify-between gap-4 ">
+                    <p>{{ content.desc }}</p>
+                    <buttonComp title="Xem thêm" class="md:w-1/2" changeColor="blue"/>
+                  </div>
+                  </div>
+                  
                 </div>
             </li>
 </template>
@@ -65,24 +105,31 @@ ul li{
 	list-style: none;
 }
 
-.slides{
-	display: flex;
-	
-}
-.slide{
+
+.slide, .slideMobile{
 	overflow: hidden;
 	transition: .5s  ease;
 }
-
-
-.title {
+.slide{
+  /* width:70px; */
+}
+.slideMobile{
+  height: 45px;
+}
+.slide .title {
 	position: relative;
 	height: 100%;
 
   padding: 0 22px;
   border-right: 1px solid #fff;
 }
-.title > span.text {
+.slideMobile .title{
+  padding: 6px 0px 6px 10px;
+
+  border-bottom: 1px solid #fff;
+
+}
+.slide .title > span.text {
     position: absolute;
     top: 61%;
     transform: rotate(270deg) translateX(-100%);
@@ -96,17 +143,31 @@ ul li{
  .active {
 	width: 80%;
  }
+ .activeMobile {
+	height: 500px;
+ }
 
- .content {
+ .slide .content {
 	padding: 40px;
  }
 
- .active.slide .title {
+ .slide .active.slide .title {
 	display: none;
  }
- .title div p{
+ .slide .title div p{
   border-top: 4px solid white;
     padding-top: 10px;
  }
- 
+ .slideMobile .content{
+  margin-top: 40px;
+    padding: 0px 20px;
+ }
+ @media screen and (max-width: 768px) {
+
+ }
+ @media (min-width: 769px) and (max-width: 1024px) {
+  .slide .title > span.text {
+    font-size: 30px;
+  }
+ }
 </style>

@@ -89,7 +89,8 @@ const newsData = ref([
         <!-- <sliderNganh /> -->
         <div>
           <div>
-            <ul class="slides">
+            <!-- md:flex -->
+            <ul class="slides md:flex h-[650px]">
               <sliderNganh/>
             </ul>
             
@@ -263,10 +264,9 @@ ul li{
 	list-style: none;
 }
 
-.slides{
-	display: flex;
-	height: 650px;
-}
+/* .slides > .slide:first-child{
+  width: 67px;
+} */
 /* .slide{
 	width: 5%;
 	overflow: hidden;
