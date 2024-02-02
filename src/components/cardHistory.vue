@@ -55,7 +55,7 @@ const props = defineProps({
     right: 0%;
     top: -12px;
 }
-.box:nth-child(8)::before, .box:nth-child(9)::before, .box:nth-child(10)::before{
+.box:nth-child(6)::before,.box:nth-child(7)::before,.box:nth-child(8)::before, .box:nth-child(9)::before, .box:nth-child(10)::before{
     left: 32px;
     right: unset;
     transform: rotate(180deg);
@@ -76,19 +76,71 @@ const props = defineProps({
     left: 68px;
 }
 .box:nth-child(6){
+    /* border-left: 2px dashed black; */
+    /* border-bottom: 2px dashed black; */
+    /* border-image: linear-gradient(to bottom, #000 50%, transparent 50%) 100% 1; */
+    /* margin-left: -76px;
+    padding-left: 76px; */
+}
+.box:nth-child(10){
     border-left: 2px dashed black;
     /* border-bottom: 2px dashed black; */
     /* border-image: linear-gradient(to bottom, #000 50%, transparent 50%) 100% 1; */
     margin-left: -76px;
     padding-left: 76px;
 }
-.box:nth-child(6)::before{
+.box:nth-child(10)::before{
     left: -2px;
     right: unset;
     transform: rotate(180deg);
 }
-.box:nth-child(5)::after{
-    
-    
+/* ORDER */
+.box:nth-child(1){ 
+    order: 1;
+}
+.box:nth-child(2){
+order: 2;
+}
+.box:nth-child(3){
+    order: 3;
+}
+.box:nth-child(4){
+    order: 4;
+}
+.box:nth-child(5){
+    order: 5;
+}
+.box:nth-child(6){
+    order: 10;
+}
+.box:nth-child(7){
+    order: 9;
+}
+.box:nth-child(8){
+    order: 8;
+}
+.box:nth-child(9){
+    order:7;
+}
+.box:nth-child(10){
+    order: 6;
+}
+.box:nth-child(10){
+    order: 6;
+}
+.box:nth-child(11){
+    order: 11;
+}
+.box:nth-child(12){
+    order: 12;
+}
+.box:nth-child(13){
+    order: 13;
+}
+.box:nth-child(14){
+    order: 14;
+}
+.box:nth-child(15){
+    order: 15;
 }
 </style>

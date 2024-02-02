@@ -20,7 +20,7 @@
         :modules="modules"
           :slides-per-view="1"
         :space-between="5"
-        :navigation="{ nextEl: '.next', prevEl: '.before' }"
+        :navigation="navigationClasses"
         :breakpoints="{768:{ slidesPerView: 2, spaceBetween:10}, 1024:{slidesPerView:3, spaceBetween:20}}"
         class="h-full"
         >
@@ -48,7 +48,7 @@ import buttonComp from "./buttonComp.vue"
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import { useSwiper } from 'swiper/vue';
-import { ref } from "vue";
+import { ref, computed } from "vue";
 
 import 'swiper/css/navigation';
   import 'swiper/css/pagination';
@@ -82,7 +82,24 @@ const props = defineProps({
       },
 });
 const modules = [Navigation, Pagination, Scrollbar, A11y];
-
+const breakpoints = ref({
+  mobile: 768,
+  tablet: 1024,
+  desktop: 1280,
+});
+const navigationClasses = computed(() => {
+  if (window.innerWidth < breakpoints.value.mobile) {
+    return {
+      nextEl: '.nextMobile',
+      prevEl: '.beforeMobile',
+    };
+  } else {
+    return {
+      nextEl: '.next',
+      prevEl: '.before',
+    };
+  }
+});
 </script>
 
 <style scoped>

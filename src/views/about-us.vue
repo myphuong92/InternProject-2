@@ -131,10 +131,22 @@
           >
             Công ty thành viên
           </p>
+          
+          
           <div class="flex flex-col lg:flex-row">
-            <div class="img">
-              <img src="/assets/img/branchCompany.png" alt="" />
-            </div>
+            <div class="w-full lg:w-[70%]">
+            <swiper 
+            :modules="modules"        
+            :navigation="{ nextEl: '.btn-slider.next', prevEl: '.btn-slider.prev' }"
+             class="img w-full">
+              <swiper-slide><img src="/assets/img/branchCompany.png" alt=""></swiper-slide>
+              <swiper-slide><img src="/assets/img/branchCompany.png" alt=""></swiper-slide>
+              <swiper-slide><img src="/assets/img/branchCompany.png" alt=""></swiper-slide>
+              <swiper-slide><img src="/assets/img/branchCompany.png" alt=""></swiper-slide>
+              <swiper-slide><img src="/assets/img/branchCompany.png" alt=""></swiper-slide>
+
+            </swiper>
+          </div>
             <div class="relative w-full lg:w-1/2">
               <div class="content h-full firstLayer lg:absolute bg-[#001933] w-full">
                 <div class="flex flex-col text-white gap-4 p-5 lg:px-12 lg:pt-6 h-full">
@@ -151,12 +163,12 @@
                     />
                   </div>
                   <div class="slider flex flex-row gap-3 mt-5">
-                    <button class="btn-slder">
+                    <button class="btn-slider prev">
                       <span class="material-symbols-outlined"
                         >chevron_left</span
                       >
                     </button>
-                    <button class="btn-slder">
+                    <button class="btn-slider next">
                       <span class="material-symbols-outlined"
                         >chevron_right</span
                       >
@@ -255,7 +267,17 @@ import cardTextIcon from "../components/cardTextIcon.vue";
 import buttonComp from "../components/buttonComp.vue";
 import setCardBranch from "../components/cardBranch.vue";
 import { ref } from "vue";
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { useSwiper } from 'swiper/vue';
+
+import 'swiper/css/navigation';
+  import 'swiper/css/pagination';
+  import 'swiper/css/scrollbar';
+  // Import Swiper styles
+  import 'swiper/css';
 let id = ref(1);
+const modules = [Navigation, Pagination, Scrollbar, A11y];
 
 const cardField = ref([
   {
@@ -301,27 +323,30 @@ const timeline = ref([
     desc: "Bộ Trưởng Bộ Quốc phòng quyết định Công ty cổ phần Phú Tài chính thức đi vào hoạt động theo mô hình công ty cổ phần kể từ ngày 01 tháng 01 năm 2005 (Quyết định số 150/2004/QĐ-BQP ). Công ty cổ phần Phú Tài bao gồm có cơ quan công ty và 06 đơn vị thành viên: Xí nghiệp 380, Xí nghiệp toyota Đà Nẵng; Xí nghiệp Thắng Lợi; Chi nhánh Công ty tại Đồng Nai ;Đội sản xuất đá xây dựng và trồng công nông nghiệp Nhơn Hòa; Văn phòng đại diện tại Thành phố Hồ Chí Minh. Đầu tư xây dựng Nhà máy chế biến đá ốp lát tại Quy Nhơn. Đầu tư xây dựng Tòa nhà Văn phòng làm việc công ty cổ phần Phú Tài.",
   },
   
+  
+  
+  
+  
   {
-    date: "2013",
-    desc: "Đầu tư nhận chuyển nhượng 100% vốn điều lệ của Công ty TNHH MTV khoáng sản Tuấn Đạt.",
-  },
-  {
-    date: "2012",
-    desc: "Đầu tư Mở rộng Xí nghiệp Toyota Đà Nẵng-Công ty cổ phần Phú Tài.",
-  },
-  {
-    date: "2008",
-    desc: "Đầu tư xây dựng Chi nhánh Công ty cổ phần Phú Tài – Nhà máy chế biến đá granite tại tỉnh Khánh Hòa.",
+    date: "2006",
+    desc: "Đầu tư thành lập Chi nhánh công ty cổ phần Phú Tài tại tỉnh Gia lai.",
   },
   {
     date: "2007",
     desc: "Đầu tư xây dựng Chi nhánh Công ty cổ phần Phú Tài – Nhà máy chế biến đá Bazal, granite tại tỉnh Đăk Nông. Đầu tư xây dựng di dời Xí nghiệp Thắng Lợi-Chi nhánh Công ty cổ phần Phú Tài. Đầu tư thành lập Chi nhánh Quy Nhơn-Xí nghiệp Toyota Đà Nẵng-Công ty cổ phần Phú Tài. Đầu tư nhận chuyển nhượng cổ phần chi phối Công ty cổ phần vật liệu xây dựng Phú Yên.",
   },
   {
-    date: "2006",
-    desc: "Đầu tư thành lập Chi nhánh công ty cổ phần Phú Tài tại tỉnh Gia lai.",
+    date: "2008",
+    desc: "Đầu tư xây dựng Chi nhánh Công ty cổ phần Phú Tài – Nhà máy chế biến đá granite tại tỉnh Khánh Hòa.",
   },
-  
+  {
+    date: "2012",
+    desc: "Đầu tư Mở rộng Xí nghiệp Toyota Đà Nẵng-Công ty cổ phần Phú Tài.",
+  },
+  {
+    date: "2013",
+    desc: "Đầu tư nhận chuyển nhượng 100% vốn điều lệ của Công ty TNHH MTV khoáng sản Tuấn Đạt.",
+  },
   
   
   
@@ -436,7 +461,7 @@ const ctyThanhVien = ref([
   border-left: 3px solid #00264d;
   height: 70%;
 }
-.btn-slder {
+.btn-slider {
   background-color: white;
   padding: 8px 10px;
   color: gray;
@@ -493,4 +518,5 @@ const ctyThanhVien = ref([
   top: -8rem;
   left: 0;
 }
+
 </style>

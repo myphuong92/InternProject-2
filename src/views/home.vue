@@ -209,14 +209,17 @@ const newsData = ref([
           <p class="uppercase text-sub-heading text-5xl md:w-1/2 text-[#003366]">
             TIN TỨC VÀ <span class="text-[#F16336]">SỰ KIỆN</span>
           </p>
-          <div class="slide-button flex gap-6">
-            <button class="before hidden lg:block "><span class="material-symbols-outlined text-3xl">navigate_before</span></button>
-            <button class="next hidden lg:block "><span class="material-symbols-outlined text-3xl">navigate_next</span></button>
+          <div class="slide-button hidden md:flex gap-2 md:gap-6">
+            <button class="before "><span class="material-symbols-outlined text-xl md:text-3xl">navigate_before</span></button>
+            <button class="next"><span class="material-symbols-outlined text-xl md:text-3xl">navigate_next</span></button>
           </div>
         </div>
         <div class="card">
           <newscard :cards="newsData"/>
-          
+          <div class="slide-button flex md:hidden justify-center mt-4">
+            <button class="beforeMobile"><span class="material-symbols-outlined text-xl md:text-3xl">navigate_before</span></button>
+            <button class="ml-5 nextMobile"><span class="material-symbols-outlined text-xl md:text-3xl">navigate_next</span></button>
+          </div>
           
         </div>
       </div>
@@ -252,10 +255,12 @@ button.before, button.next{
   border: 3px solid black;
   border-radius: 50%;
 }
+
 button.before:hover, button.next:hover{
   border: 3px solid #F16336;
   color: #F16336
 }
+
 button.before span, button.next span{
   padding: 10px 15px
 }
@@ -263,7 +268,25 @@ button.before span, button.next span{
 ul li{
 	list-style: none;
 }
+button.beforeMobile span, button.nextMobile span{
+  padding: 6px 10px
+}
+button.beforeMobile:hover, button.nextMobile:hover{
+  border: 1px solid #F16336;
+  color: #F16336
+}
+button.beforeMobile, button.nextMobile{
+  border: 1px solid black;
+  border-radius: 50%;
+}
+@media screen and (max-width: 768px) {
 
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  button.before span, button.next span{
+  padding: 4px 14px
+}
+}
 /* .slides > .slide:first-child{
   width: 67px;
 } */
