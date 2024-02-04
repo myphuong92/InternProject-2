@@ -79,7 +79,7 @@
         <!-- <div class="history flex flex-row flex-wrap gap-5 lg:gap-20">
           <cardHistory :cards="timeline" />
         </div> -->
-        <div class="history grid grid-cols-5">
+        <div class="history grid md:grid-cols-3 lg:grid-cols-5">
           <cardHistory :cards="timeline" />
         </div>
       </div>
