@@ -131,38 +131,148 @@
           >
             Công ty thành viên
           </p>
-          
-          
-          <div class="flex flex-col lg:flex-row">
-            <div class="w-full lg:w-[70%]">
-            <swiper 
-            :modules="modules"        
-            :navigation="{ nextEl: '.btn-slider.next', prevEl: '.btn-slider.prev' }"
-             class="img w-full">
-              <swiper-slide><img src="/assets/img/branchCompany.png" alt=""></swiper-slide>
-              <swiper-slide><img src="/assets/img/branchCompany.png" alt=""></swiper-slide>
-              <swiper-slide><img src="/assets/img/branchCompany.png" alt=""></swiper-slide>
-              <swiper-slide><img src="/assets/img/branchCompany.png" alt=""></swiper-slide>
-              <swiper-slide><img src="/assets/img/branchCompany.png" alt=""></swiper-slide>
-
-            </swiper>
-          </div>
-            <div class="relative w-full lg:w-1/2">
-              <div class="content h-full firstLayer lg:absolute bg-[#001933] w-full">
-                <div class="flex flex-col text-white gap-4 p-5 lg:px-12 lg:pt-6 h-full">
-                  <p class="uppercase font-medium text-2xl leading-8">
-                    CÔNG TY CỔ PHẦN VẬT LIỆU XÂY DỰNG PHÚ YÊN
-                  </p>
-                  <div class="desc font-light flex flex-col gap-6">
-                    <p>Khai thác chế biến đá ốp lát, đá xây dựng, cát xây</p>
-                    <cardTextIcon :cards="ctyThanhVien" />
-                    <buttonComp
-                      title="Xem chi tiết"
-                      changeColor="white"
-                      class="rounded-none font-medium lg:w-1/2"
-                    />
+          <div class="relative bg-[#001933]">
+            <swiper :modules="modules"        
+            :navigation="{ nextEl: '.btn-slider.next', prevEl: '.btn-slider.prev' }">
+            <swiper-slide>
+              <div class="w-full h-full">
+                <div class="flex flex-col lg:flex-row w-full h-full">
+                <div class="w-full lg:w-[70%]">
+                  <div 
+                    class="img w-full">
+                  <div><img src="/assets/img/branchCompany.png" alt=""></div>
+                </div>
+              </div>
+              <div class="relative w-full lg:w-1/2">
+                <div class="content h-full firstLayer lg:absolute bg-[#001933] w-full">
+                  <div class="flex flex-col text-white gap-4 p-5 lg:px-12 lg:pt-6 lg:pb-16 h-full">
+                    <p class="uppercase font-medium text-2xl leading-8">
+                      CÔNG TY CỔ PHẦN VẬT LIỆU XÂY DỰNG PHÚ YÊN
+                    </p>
+                    <div class="desc font-light flex flex-col gap-6">
+                      <p>Khai thác chế biến đá ốp lát, đá xây dựng, cát xây</p>
+                      <cardTextIcon :cards="ctyThanhVien" />
+                      <buttonComp
+                        title="Xem chi tiết"
+                        changeColor="white"
+                        class="rounded-none font-medium lg:w-1/2"
+                      />
+                    </div>
+                    
                   </div>
-                  <div class="slider flex flex-row gap-3 mt-5">
+                </div>
+                <div class="secondLayer hidden lg:block h-full w-full bg-[#022040]"></div>
+                <div class="thirdLayer  hidden lg:block h-full w-full bg-[#043F7C]"></div>
+              </div>
+            </div>
+              </div>
+        
+            </swiper-slide>
+            <swiper-slide>
+              <div class="w-full h-full">
+                <div class="flex flex-col lg:flex-row w-full h-full">
+                <div class="w-full lg:w-[70%]">
+                  <div 
+                    class="img w-full">
+                  <div><img src="/assets/img/branchCompany.png" alt=""></div>
+                </div>
+              </div>
+              <div class="relative w-full lg:w-1/2">
+                <div class="content h-full firstLayer lg:absolute bg-[#001933] w-full">
+                  <div class="flex flex-col text-white gap-4 p-5 lg:px-12 lg:pt-6 h-full">
+                    <p class="uppercase font-medium text-2xl leading-8">
+                      CÔNG TY CỔ PHẦN VẬT LIỆU XÂY DỰNG PHÚ YÊN
+                    </p>
+                    <div class="desc font-light flex flex-col gap-6">
+                      <p>Khai thác chế biến đá ốp lát, đá xây dựng, cát xây</p>
+                      <cardTextIcon :cards="ctyThanhVien" />
+                      <buttonComp
+                        title="Xem chi tiết"
+                        changeColor="white"
+                        class="rounded-none font-medium lg:w-1/2"
+                      />
+                    </div>
+                    
+                  </div>
+                </div>
+                <div class="secondLayer hidden lg:block h-full w-full bg-[#022040]"></div>
+                <div class="thirdLayer  hidden lg:block h-full w-full bg-[#043F7C]"></div>
+              </div>
+            </div>
+              </div>
+                
+            </swiper-slide>
+            <swiper-slide>
+              <div class="w-full h-full">
+                <div class="flex flex-col lg:flex-row w-full h-full">
+                <div class="w-full lg:w-[70%]">
+                  <div 
+                    class="img w-full">
+                  <div><img src="/assets/img/branchCompany.png" alt=""></div>
+                </div>
+              </div>
+              <div class="relative w-full lg:w-1/2">
+                <div class="content h-full firstLayer lg:absolute bg-[#001933] w-full">
+                  <div class="flex flex-col text-white gap-4 p-5 lg:px-12 lg:pt-6 h-full">
+                    <p class="uppercase font-medium text-2xl leading-8">
+                      CÔNG TY CỔ PHẦN VẬT LIỆU XÂY DỰNG PHÚ YÊN
+                    </p>
+                    <div class="desc font-light flex flex-col gap-6">
+                      <p>Khai thác chế biến đá ốp lát, đá xây dựng, cát xây</p>
+                      <cardTextIcon :cards="ctyThanhVien" />
+                      <buttonComp
+                        title="Xem chi tiết"
+                        changeColor="white"
+                        class="rounded-none font-medium lg:w-1/2"
+                      />
+                    </div>
+                    
+                  </div>
+                </div>
+                <div class="secondLayer hidden lg:block h-full w-full bg-[#022040]"></div>
+                <div class="thirdLayer  hidden lg:block h-full w-full bg-[#043F7C]"></div>
+              </div>
+            </div>
+              </div>
+                
+            </swiper-slide>
+            <swiper-slide>
+              <div class="w-full h-full">
+                <div class="flex flex-col lg:flex-row w-full h-full">
+                <div class="w-full lg:w-[70%]">
+                  <div 
+                    class="img w-full">
+                  <div><img src="/assets/img/branchCompany.png" alt=""></div>
+                </div>
+              </div>
+              <div class="relative w-full lg:w-1/2">
+                <div class="content h-full firstLayer lg:absolute bg-[#001933] w-full">
+                  <div class="flex flex-col text-white gap-4 p-5 lg:px-12 lg:pt-6 h-full">
+                    <p class="uppercase font-medium text-2xl leading-8">
+                      CÔNG TY CỔ PHẦN VẬT LIỆU XÂY DỰNG PHÚ YÊN
+                    </p>
+                    <div class="desc font-light flex flex-col gap-6">
+                      <p>Khai thác chế biến đá ốp lát, đá xây dựng, cát xây</p>
+                      <cardTextIcon :cards="ctyThanhVien" />
+                      <buttonComp
+                        title="Xem chi tiết"
+                        changeColor="white"
+                        class="rounded-none font-medium lg:w-1/2"
+                      />
+                    </div>
+                    
+                  </div>
+                </div>
+                <div class="secondLayer hidden lg:block h-full w-full bg-[#022040]"></div>
+                <div class="thirdLayer  hidden lg:block h-full w-full bg-[#043F7C]"></div>
+              </div>
+            </div>
+              </div>
+                
+            </swiper-slide>
+            
+          </swiper>
+          <div class="BtnSlider mb-5 lg:mb-0 justify-center lg:absolute flex flex-row gap-3 mt-5">
                     <button class="btn-slider prev">
                       <span class="material-symbols-outlined"
                         >chevron_left</span
@@ -174,12 +284,10 @@
                       >
                     </button>
                   </div>
-                </div>
-              </div>
-              <div class="secondLayer hidden lg:block h-full w-full bg-[#022040]"></div>
-              <div class="thirdLayer  hidden lg:block h-full w-full bg-[#043F7C]"></div>
-            </div>
           </div>
+          
+          
+          
         </div>
       </div>
     </section>
@@ -518,5 +626,14 @@ const ctyThanhVien = ref([
   top: -8rem;
   left: 0;
 }
-
+.swiper{
+  margin-left:0%;
+  margin-right: 0;
+}
+.BtnSlider{
+  
+  z-index: 20;
+  right: 34%;
+  bottom: 4%;
+}
 </style>

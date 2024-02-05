@@ -30,42 +30,31 @@
             <div class="responsive-section flex flex-col gap-10">
                 <p class="text-heading text-5xl text-[#003366]">Tin tức liên quan</p>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 divide-y-2 pt-8 lg:pt-0">
-                    <div class="grid grid-cols-1 gap-5">
-                        <div><img class="full-img h-full" src="/assets/img/relevant-news-1.png" alt=""></div>
-
-                        <div class="content justify-center flex flex-col gap-4">
-                            <p class="uppercase text-sm md:text-base lg:text-sm text-[#003366]">thông tin công ty</p>
-                            <p class="text-base md:text-xl hover:text-[#003366] cursor-pointer hover:font-semibold">PTB giải trình kết quả hoạt động SXKD quý II năm 2023</p>
-                            <p class="text-xs md:text-sm lg:text-xs">02-01-2024</p>
-                        </div>
-                    </div>
-                    <div class="grid grid-cols-1 gap-5">
-                        <div><img class="full-img h-full" src="/assets/img/relevant-news-2.png" alt=""></div>
-
-                        <div class="content justify-center flex flex-col gap-4">
-                            <p class="uppercase text-sm md:text-base lg:text-sm text-[#003366]">thông tin công ty</p>
-                            <p class="text-base md:text-xl hover:text-[#003366] cursor-pointer hover:font-semibold">CBTT báo cáo tài chính hợp nhất Quý II năm 2023</p>
-                            <p class="text-xs md:text-sm lg:text-xs">02-01-2024</p>
-                        </div>
-                    </div>
-                    <div class="grid grid-cols-1 gap-5">
-                        <div><img class="full-img h-full" src="/assets/img/relevant-news-3.png" alt=""></div>
-                        <div class="content justify-center flex flex-col gap-4">
-                            <p class="uppercase text-sm md:text-base lg:text-sm text-[#003366]">thông tin công ty</p>
-                            <p class="text-base md:text-xl hover:text-[#003366] cursor-pointer hover:font-semibold">CBTT báo cáo tài chính riêng công ty mẹ Quý II năm 2023</p>
-                            <p class="text-xs md:text-sm lg:text-xs">02-01-2024</p>
-                        </div>
-                    </div>
+                    <newsAndEvents :cards="newsData"/>
             </div>
             </div>
         </section>
     </main>
 </template>
 
-<script>
-export default {
+<script setup>
+import newsAndEvents from '../components/newsAndEvents.vue'
+import { ref } from 'vue'
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { useSwiper } from 'swiper/vue';
 
-}
+import 'swiper/css/navigation';
+  import 'swiper/css/pagination';
+  import 'swiper/css/scrollbar';
+  // Import Swiper styles
+  import 'swiper/css';
+const newsData = ref([
+    {img:'relevant-news-1.png', category:'thông tin công ty', title:'CBTT báo cáo tài chính riêng công ty mẹ Quý II năm 2023', date:'02-01-2024'},
+    {img:'relevant-news-2.png', category:'thông tin công ty', title:'CBTT báo cáo tài chính riêng công ty mẹ Quý II năm 2023', date:'02-01-2024'},
+    {img:'relevant-news-3.png', category:'thông tin công ty', title:'CBTT báo cáo tài chính riêng công ty mẹ Quý II năm 2023', date:'02-01-2024'},
+
+])
 </script>
 
 <style scoped>

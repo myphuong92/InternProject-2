@@ -27,15 +27,17 @@
                 <div class="grid grid-cols-2">
                     <div class="content justify-center flex flex-col gap-4">
                         <p class="uppercase text-sm md:text-base lg:text-sm text-[#003366]">thông tin công ty</p>
-                        <p class="text-base md:text-xl hover:text-[#003366] cursor-pointer hover:font-semibold">PTB giải trình kết quả hoạt động SXKD quý II năm 2023</p>
+                        <router-link to="/news/article"><p class="text-base md:text-xl hover:text-[#003366] cursor-pointer hover:font-semibold">PTB giải trình kết quả hoạt động SXKD quý II năm 2023</p></router-link>
                         <p class="text-xs md:text-sm lg:text-xs">02-01-2024</p>
                     </div>
-                    <div><img class="full-img h-full" src="/assets/img/news-2.png" alt=""></div>
+                    <router-link to="/news/article">
+                    <img class="full-img h-full" src="/assets/img/news-2.png" alt="">
+                </router-link>
                 </div>
                 <div class="grid grid-cols-2 pt-6">
                     <div class="content justify-center flex flex-col gap-4">
                         <p class="uppercase text-sm md:text-base lg:text-sm text-[#003366]">thông tin công ty</p>
-                        <p class="text-base md:text-xl hover:text-[#003366] cursor-pointer hover:font-semibold">CBTT báo cáo tài chính hợp nhất Quý II năm 2023</p>
+                        <router-link to="/news/article"><p class="text-base md:text-xl hover:text-[#003366] cursor-pointer hover:font-semibold">CBTT báo cáo tài chính hợp nhất Quý II năm 2023</p></router-link>
                         <p class="text-xs md:text-sm lg:text-xs">02-01-2024</p>
                     </div>
                     <div><img class="full-img h-full" src="/assets/img/news-3.png" alt=""></div>
@@ -51,16 +53,89 @@
             </div>
         </div>
         </section>
-        
+        <section class="responsive-section pb-20">
+            <swiper class="" 
+            :pagination="pagination" :modules="modules"
+            >
+                <swiper-slide>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-5">
+                        <newsAndEvents :cards="newsData"/>
+                    </div>
+                </swiper-slide>
+                <swiper-slide>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-5">
+                        <newsAndEvents :cards="newsData"/>
+                    </div>
+                </swiper-slide>
+            </swiper>
+            <div class="swiper-pagination"></div>
+        </section>
     </main>
 </template>
 
-<script>
-export default {
+<script setup>
+import newsAndEvents from '../components/newsAndEvents.vue'
+import { ref } from 'vue'
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { useSwiper } from 'swiper/vue';
 
-}
+import 'swiper/css/navigation';
+  import 'swiper/css/pagination';
+  import 'swiper/css/scrollbar';
+  // Import Swiper styles
+  import 'swiper/css';
+  const modules = [Navigation, Pagination, Scrollbar, A11y];
+  const pagination = {
+el: '.swiper-pagination',
+  clickable: true,
+  renderBullet: (index, className) => {
+    return `<span class="${className}">${index + 1}</span>`;
+  },
+};
+const newsData = ref([
+    {img:'news-event-1.png', category:'thông tin công ty', title:'CBTT báo cáo tài chính riêng công ty mẹ Quý II năm 2023', date:'02-01-2024'},
+    {img:'news-event-2.png', category:'thông tin công ty', title:'CBTT báo cáo tài chính riêng công ty mẹ Quý II năm 2023', date:'02-01-2024'},
+    {img:'news-event-3.png', category:'thông tin công ty', title:'CBTT báo cáo tài chính riêng công ty mẹ Quý II năm 2023', date:'02-01-2024'},
+    {img:'news-event-4.png', category:'thông tin công ty', title:'CBTT báo cáo tài chính riêng công ty mẹ Quý II năm 2023', date:'02-01-2024'},
+    {img:'news-event-5.png', category:'thông tin công ty', title:'CBTT báo cáo tài chính riêng công ty mẹ Quý II năm 2023', date:'02-01-2024'},
+    {img:'news-event-6.png', category:'thông tin công ty', title:'CBTT báo cáo tài chính riêng công ty mẹ Quý II năm 2023', date:'02-01-2024'},
+
+])
 </script>
 
-<style>
+<style scoped>
 
+
+.swiper {
+    /* padding-bottom: 70px !important; */
+}
+:deep(.swiper-pagination) {
+	position: relative;
+	top: 27px;
+	right: 10px;
+	width: auto !important;
+	left: auto !important;
+	margin: 0;
+    
+}
+:deep(.swiper-pagination-bullet) {
+  display: inline;
+  padding: 12px 15px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 16px;
+  color: #000;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 5px
+}
+
+:deep(.swiper-pagination-bullet-active) {
+  color: #fff;
+  background: #003366;
+}
+.swiper-pagination-bullet{
+    display: inline !important;
+}
 </style>

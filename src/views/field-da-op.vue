@@ -68,13 +68,13 @@
         >
           MỎ ĐÁ NGUYÊN LIỆU
         </p>
-        <div class="relative flex flex-col gap-10 md:block">
+        <div class="relative divide-y-2 md:divide-y flex flex-col gap-10 md:block">
           <div class="flex justify-center">
             <div class="map-location">
               <img src="/assets/img/map-location.png" alt="" />
             </div>
           </div>
-          <div class="flex flex-col md:w-1/3 lg:w-full md:gap-10 lg:gap-14 md:absolute top-52 left-0">
+          <div class="flex flex-col pt-5 md:pt-0 md:w-1/3 lg:w-full md:gap-10 lg:gap-14 md:absolute top-52 left-0">
             <div>
               <p
                 class="uppercase cursor-pointer text-[#003366] text-[20px] font-bold hover:text-[#F16336]"
@@ -123,7 +123,7 @@
               </div>
             </div>
           </div>
-          <div class="flex flex-col md:w-1/3 lg:w-full md:gap-10 lg:gap-14 md:absolute top-0 right-0">
+          <div class="flex flex-col pt-5 md:pt-0 -0 md:w-1/3 md:gap-10 lg:gap-14 md:absolute top-0 right-0">
             <div>
               <p
                 class="uppercase cursor-pointer text-[#003366] text-[20px] font-bold hover:text-[#F16336]"

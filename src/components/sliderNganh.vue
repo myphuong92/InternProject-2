@@ -162,10 +162,10 @@ ul li{
   margin-top: 40px;
     padding: 0px 20px;
  }
- @media screen and (max-width: 768px) {
+ @media screen and (max-width: 767px) {
 
  }
- @media (min-width: 769px) and (max-width: 1024px) {
+ @media (min-width: 768px) and (max-width: 1024px) {
   .slide .title > span.text {
     font-size: 30px;
   }

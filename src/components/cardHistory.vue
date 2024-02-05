@@ -153,7 +153,7 @@ order: 2;
 .box:nth-child(15){
     order: 15;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 .box:not(:last-child):before{
     content:none
 }
@@ -214,7 +214,7 @@ order: 2;
     order: 15;
 }
 }
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
     .box:not(:last-child):before{
     content:"\f0da";
     font-family: "Font Awesome 6 Free";

@@ -6,14 +6,14 @@
     <div class="grid grid-cols-1 gap-10">
         <!-- Search and location -->
         <div class="flex flex-col gap-10 md:gap-0 md:flex-row justify-evenly">
-            <div class="flex justify-between gap-8 items-center">
+            <div class="flex justify-evenly md:justify-between md:gap-8 items-center">
                 <p style="font-family:'Big Shoulders Display', sans-serif;" class="text-2xl text-[#001933]">Tìm kiếm</p>
                 <div class="search">
-                    <input type="text" size="35">
+                    <input class="py-[10px] px-[5px] md:p-[10px] max-w-[300px] min-w-[300px]" type="text" size="35">
                     <span></span>
                 </div>
             </div>
-            <div class="search flex justify-between gap-8 items-center">
+            <div class="search flex justify-evenly md:justify-between md:gap-8 items-center">
                 <p style="font-family:'Big Shoulders Display', sans-serif;" class="text-2xl text-[#001933]">Địa điểm</p>
                 <select name="cars" id="cars">
                     <option value="volvo">Volvo</option>
@@ -56,9 +56,7 @@ const jobData = ref([
 </script>
 
 <style scoped>
-div.search input{
-    padding: 10px;
-}
+
 div.search select{
     width: 300px;
     padding: 12px;

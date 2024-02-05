@@ -279,10 +279,10 @@ button.beforeMobile, button.nextMobile{
   border: 1px solid black;
   border-radius: 50%;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 
 }
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   button.before span, button.next span{
   padding: 4px 14px
 }
