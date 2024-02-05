@@ -54,7 +54,7 @@
                 lĩnh vực
               </p>
             </div>
-            <div class="text-[#3399FF] hidden md:flex">
+            <div class="text-[#3399FF] hidden md:flex whitespace-nowrap">
               <p class="vertical-text">Phu Tai JSC</p>
             </div>
           </div>
