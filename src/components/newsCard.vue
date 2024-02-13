@@ -21,7 +21,8 @@
           :slides-per-view="1"
         :space-between="5"
         :navigation="navigationClasses"
-        :breakpoints="{768:{ slidesPerView: 2, spaceBetween:10}, 1024:{slidesPerView:3, spaceBetween:20}}"
+        :breakpoints="{768:{ slidesPerView: 2, spaceBetween: 10}, 1025:{slidesPerView: 3, spaceBetween: 20}}"
+        :breakpointsBase='window'
         class="h-full"
         >
             <swiper-slide class=" bg-[#003366] pl-5" v-for="card in cards" :key="card">
@@ -31,10 +32,10 @@
                 </div>
                 <div class="card-content flex flex-col gap-3 px-5 pb-5 justify-between h-[10rem]">
                     <div class="flex flex-col gap-3" style="font-family: 'Big Shoulders Display', sans-serif;">
-                        <p class="hover:text-[#F16336] cursor-pointer  line-clamp-2  text-2xl">{{ card.title }}</p>
+                        <p class="hover:text-[#F16336] cursor-pointer  line-clamp-2  text-2xl min-h-16">{{ card.title }}</p>
                         <p>{{ card.date }}</p>
                     </div>
-                    <div class=" md:w-1/2 bg-[#003366] text-white">
+                    <div class=" lg:w-1/2 bg-[#003366] text-white">
                         <buttonComp class="w-full" title="Xem thêm" :icon="iconArrow"/>
                     </div>
                 </div>
