@@ -66,7 +66,7 @@
       
     </section>
     <section>
-      <div class="responsive-section">
+      <div class="responsive-section mt-8">
         <p
           class="uppercase text-title text-4xl text-[#003366] mb-10 md:mb-20"
           style="

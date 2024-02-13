@@ -216,6 +216,7 @@ const newsData = ref([
         </div>
         <div class="card">
           <newscard :cards="newsData"/>
+
           <div class="slide-button flex md:hidden justify-center mt-4">
             <button class="beforeMobile"><span class="material-symbols-outlined text-xl md:text-3xl">navigate_before</span></button>
             <button class="ml-5 nextMobile"><span class="material-symbols-outlined text-xl md:text-3xl">navigate_next</span></button>

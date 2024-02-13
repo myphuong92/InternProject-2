@@ -1,29 +1,38 @@
 <template>
-    
-    <!-- <div class=" bg-[#003366] pl-5" v-for="card in cards" :key="card">
-        <div class="flex flex-col gap-4 bg-white h-full pb-5">
-            <div class="card-img">
-                <img :src="card.img" alt="">
-            </div>
-            <div class="card-content flex flex-col gap-3 px-5 pb-5 justify-between h-[10rem]">
-                <div class="flex flex-col gap-3" style="font-family: 'Big Shoulders Display', sans-serif;">
-                    <p class="hover:text-[#F16336] cursor-pointer  line-clamp-2  text-2xl">{{ card.title }}</p>
-                    <p>{{ card.date }}</p>
-                </div>
-                <div class="w-[43%] bg-[#003366] text-white">
-                    <buttonComp title="Xem thêm" :icon="iconArrow"/>
-                </div>
-            </div>
-        </div>
-    </div> -->
     <swiper
         :modules="modules"
           :slides-per-view="1"
         :space-between="5"
-        :navigation="navigationClasses"
+        :navigation="{ nextEl: '.nextMobile', prevEl: '.beforeMobile' }"
         :breakpoints="{768:{ slidesPerView: 2, spaceBetween: 10}, 1025:{slidesPerView: 3, spaceBetween: 20}}"
         :breakpointsBase='window'
-        class="h-full"
+        class="h-full mobile"
+        >
+            <swiper-slide class=" bg-[#003366] pl-5" v-for="card in cards" :key="card">
+                    <div class="flex flex-col gap-4 bg-white h-full">
+                <div class="card-img max-h-[390px] min-h-[390px] overflow-hidden">
+                    <img class="full-img h-full" :src="card.img" alt="">
+                </div>
+                <div class="card-content flex flex-col gap-3 px-5 pb-5 justify-between h-[10rem]">
+                    <div class="flex flex-col gap-3" style="font-family: 'Big Shoulders Display', sans-serif;">
+                        <p class="hover:text-[#F16336] cursor-pointer  line-clamp-2  text-2xl min-h-16">{{ card.title }}</p>
+                        <p>{{ card.date }}</p>
+                    </div>
+                    <div class=" lg:w-1/2 bg-[#003366] text-white">
+                        <buttonComp class="w-full" title="Xem thêm" :icon="iconArrow"/>
+                    </div>
+                </div>
+            </div>
+            </swiper-slide>
+          </swiper>
+          <swiper
+        :modules="modules"
+          :slides-per-view="1"
+        :space-between="5"
+        :navigation="{ nextEl: '.next', prevEl: '.before' }"
+        :breakpoints="{768:{ slidesPerView: 2, spaceBetween: 10}, 1025:{slidesPerView: 3, spaceBetween: 20}}"
+        :breakpointsBase='window'
+        class="h-full tablet"
         >
             <swiper-slide class=" bg-[#003366] pl-5" v-for="card in cards" :key="card">
                     <div class="flex flex-col gap-4 bg-white h-full">
@@ -85,7 +94,7 @@ const props = defineProps({
 const modules = [Navigation, Pagination, Scrollbar, A11y];
 const breakpoints = ref({
   mobile: 768,
-  tablet: 1024,
+  tablet: 1025,
   desktop: 1280,
 });
 const navigationClasses = computed(() => {
@@ -111,4 +120,18 @@ const navigationClasses = computed(() => {
         height: 100%;
         object-fit: cover;
     } */
+    .mobile{
+      display: none;
+    }
+@media screen and (max-width: 767px) {
+  .mobile{
+      display: block;
+  }
+  .tablet{
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 1025px) {
+ 
+}
 </style>

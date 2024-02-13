@@ -165,7 +165,7 @@ ul li{
  @media screen and (max-width: 767px) {
 
  }
- @media (min-width: 768px) and (max-width: 1024px) {
+ @media (min-width: 768px) and (max-width: 1025px) {
   .slide .title > span.text {
     font-size: 30px;
   }
