@@ -111,7 +111,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-y-8 lg:gap-0 contact-form pt-10 md:pt-20">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-y-8 lg:gap-x-5 contact-form pt-10 md:pt-20">
                     <div class="flex flex-col gap-5">
                         <p style="font-family: 'Big Shoulders Display', sans-serif;" class="text-4xl text-[#003366] font-bold uppercase">liên hệ với chúng tôi</p>
                         <p class="text-sm italic">Nếu bạn có câu hỏi xin vui lòng điền thông tin và gửi cho chúng tôi. Chúng tôi sẽ liên lạc với bạn ngay.</p>
