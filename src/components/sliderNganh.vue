@@ -1,6 +1,6 @@
 <template>
   <!-- Computer -->
-  <li class="slide hidden  lg:flex items-end bg-[url('/assets/img/slider-nganh.png')] bg-no-repeat bg-cover" v-for="content in contents" :key="content.id" :class="{active: content.id === activeSlideId, 'w-[67px]': content.id ===1, 'w-[72px]':content.id !==1}" @click="setActiveSlideId(content.id)">
+  <li class=" computer slide items-end bg-[url('/assets/img/slider-nganh.png')] bg-no-repeat bg-cover" v-for="content in contents" :key="content.id" :class="{active: content.id === activeSlideId, 'w-[67px]': content.id ===1, 'w-[72px]':content.id !==1}" @click="setActiveSlideId(content.id)">
                 <div style="font-family: 'Big Shoulders Display', sans-serif;" class="title bg-[#003366] text-white font-bold text-4xl">
                     <div class="flex items-end h-full pb-3"><p>0{{ content.id }}</p></div>
                     <span class="text uppercase">{{ content.title }}</span>
@@ -18,7 +18,7 @@
                 </div>
             </li>
     <!-- Desktop -->
-    <li class="slide hidden  md:flex lg:hidden items-end bg-[url('/assets/img/slider-nganh.png')] bg-no-repeat bg-cover" v-for="content in contents" :key="content.id" :class="{active: content.id === activeSlideId, 'w-[69px]': content.id ===1, 'w-[70px]':content.id ===2, 'w-[77px]':content.id ===3,'w-[77px]':content.id ===4}" @click="setActiveSlideId(content.id)">
+    <li class=" desktop slide items-end bg-[url('/assets/img/slider-nganh.png')] bg-no-repeat bg-cover" v-for="content in contents" :key="content.id" :class="{active: content.id === activeSlideId, 'w-[69px]': content.id ===1, 'w-[70px]':content.id ===2, 'w-[77px]':content.id ===3,'w-[77px]':content.id ===4}" @click="setActiveSlideId(content.id)">
                 <div style="font-family: 'Big Shoulders Display', sans-serif;" class="title bg-[#003366] text-white font-bold text-4xl">
                     <div class="flex items-end h-full pb-3"><p>0{{ content.id }}</p></div>
                     <span class="text uppercase">{{ content.title }}</span>
@@ -36,7 +36,7 @@
                 </div>
             </li>
     <!-- Mobile -->
-            <li class="slideMobile block md:hidden bg-[url('/assets/img/slider-nganh.png')] bg-no-repeat bg-cover" v-for="content in contents" :key="content.id" :class="{activeMobile: content.id === activeSlideId}" @click="setActiveSlideId(content.id)">
+            <li class="mobile slideMobile bg-[url('/assets/img/slider-nganh.png')] bg-no-repeat bg-cover" v-for="content in contents" :key="content.id" :class="{activeMobile: content.id === activeSlideId}" @click="setActiveSlideId(content.id)">
                 <div style="font-family: 'Big Shoulders Display', sans-serif;" class="title flex gap-3 bg-[#003366] text-white font-bold text-2xl">
                     <div class=""><p>0{{ content.id }}</p></div>
                     <span class="text uppercase">{{ content.title }}</span>
@@ -162,12 +162,38 @@ ul li{
   margin-top: 40px;
     padding: 0px 20px;
  }
+ .computer{
+  display: flex;
+ }
+ .desktop{
+  display: none;
+ }
+ .mobile{
+  display: none;
+ }
  @media screen and (max-width: 767px) {
-
+  .computer{
+    display: none;
+  }
+  .desktop{
+    display: none;
+  }
+  .mobile{
+    display: block;
+  }
  }
  @media (min-width: 768px) and (max-width: 1025px) {
   .slide .title > span.text {
     font-size: 30px;
+  }
+  .computer{
+    display: none;
+  }
+  .desktop{
+    display: flex;
+  }
+  .mobile{
+    display: none;
   }
  }
 </style>
