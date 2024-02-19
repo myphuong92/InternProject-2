@@ -9,7 +9,6 @@ import Article from "../views/article.vue";
 import Contact from "../views/contact.vue";
 import JobRecruit from "../views/job-recruit.vue";
 import JobDesc from "../views/job-desc.vue";
-import NotFoundComponent from "../views/not-found.vue";
 
 const routes = [
   {
@@ -71,11 +70,6 @@ const routes = [
     path: "/job-desc",
     name: "JobDesc",
     component: JobDesc,
-  },
-  {
-    path: "/:catchAll(.*)", // The catch-all route pattern
-    name: "NotFound", // Name your catch-all route
-    component: NotFoundComponent, // Component to display for unmatched routes
   },
 ];
 const router = createRouter({
