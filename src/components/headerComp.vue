@@ -3,10 +3,10 @@
         <div class="header-line flex justify-between px-3 md:px-10 lg:px-24">
     <router-link to="/" class="flex items-center">
         <img src="/assets/img/logo.png" alt="">
-        <p class="text-2xl font-medium text-[#FF4300] drop-shadow-xl hidden md:block">Công ty cổ phần phú tài</p>
+        <p class="text-2xl font-medium text-[#FF4300] drop-shadow-xl hide-in-mobile-block">Công ty cổ phần phú tài</p>
     </router-link>
     <div class="flex items-center gap-5">
-        <div class="items-center hidden md:flex">
+        <div class="items-center hide-in-mobile-flex">
             <p class="language text-lg"><span class="text-[#989898]">EN</span> | <span @click="toggleLanguage()" :class="isLanguageClicked ? 'text-[#003366]' : 'text-[#989898]'">VN</span></p>
             <div class="searchBox mx-2">
                 <input type="text">
@@ -208,4 +208,20 @@
     .language{
         font-family: 'Big Shoulders Display', sans-serif;
     }
+    .hide-in-mobile-block{
+        display: block;
+    }
+    .hide-in-mobile-flex{
+        display: flex;
+    }
+    @media screen and (max-width: 767px) {
+        .hide-in-mobile-block{
+            display: none;
+        }
+        .hide-in-mobile-flex{
+            display: none;
+        }
+ }
+ @media (min-width: 768px) and (max-width: 1025px) {
+ }
 </style>
