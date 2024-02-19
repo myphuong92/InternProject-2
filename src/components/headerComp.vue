@@ -1,6 +1,6 @@
 <template>
     <header>
-        <div class="header-line flex justify-between px-3 md:px-10 lg:px-24">
+        <div class="header-line flex justify-between px-3 md:px-10 lg:px-24 md:py-4">
     <router-link to="/" class="flex items-center">
         <img src="/assets/img/logo.png" alt="">
         <p class="text-2xl font-medium text-[#FF4300] drop-shadow-xl hide-in-mobile-block">Công ty cổ phần phú tài</p>
