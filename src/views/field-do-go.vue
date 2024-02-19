@@ -80,17 +80,17 @@
             <div class="relative bg-[url('/assets/img/scott-webb.png')] lg:bg-none bg-no-repeat	bg-cover">
                 <img class="hidden lg:block" src="/assets/img/scott-webb.png" alt="">
                 <div class="bg-black lg:bg-transparent opacity-80 lg:opacity-100	p-10 lg:p-0 grid grid-cols-1 gap-10 lg:gap-5 rounded-lg">
-                  <div class="flex flex-col gap-3 text-white lg:absolute lg:top-32 lg:left-16">
+                  <div class="flex flex-col gap-3 text-white lg:absolute lg:top-[115px] lg:left-16">
                     <p class="text-3xl font-medium">Nhà Máy Thắng lợi</p>
                     <cardTextIcon class="font-light" :cards="thangloi"/>
                     <p class="font-medium">Đang hoạt động tối đa công suất</p>
                 </div>
-                <div class="flex flex-col gap-3 text-white lg:absolute lg:top-[15rem] lg:left-[30rem]">
+                <div class="flex flex-col gap-3 text-white lg:absolute lg:top-[190px] lg:left-[380px]">
                     <p class="text-3xl font-medium">Nhà Máy Đồng Nai</p>
                     <cardTextIcon class="font-light" :cards="dongnai"/>
                     <p class="font-medium">Đang hoạt động tối đa công suất</p>
                 </div>
-                <div class="flex flex-col gap-3 text-white lg:absolute lg:bottom-80 lg:right-16">
+                <div class="flex flex-col gap-3 text-white lg:absolute lg:bottom-[265px] lg:right-16">
                     <p class="text-3xl font-medium">Nhà Máy VINAG7</p>
                     <cardTextIcon class="font-light" :cards="vinag7"/>
                     <p class="font-medium">Đang hoạt động 70% công suất thiết kế</p>
