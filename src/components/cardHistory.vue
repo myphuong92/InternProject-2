@@ -9,7 +9,7 @@
     </div>
   </div> -->
   <div class="box flex flex-col gap-y-4 pr-8 pb-8" v-for="card in cards" :key="card">
-    <div class="connect items-center hidden md:flex">
+    <div class="connect items-center">
         <span class="circle-orange"></span>
     </div>
     <div class="content flex flex-col items-start gap-3">
@@ -26,6 +26,9 @@ const props = defineProps({
 </script>
 
 <style scoped>
+.connect{
+    display: flex;
+}
 .content .date{
     font-size: 20px;
     color: #3399FF;
@@ -154,6 +157,9 @@ order: 2;
     order: 15;
 }
 @media screen and (max-width: 767px) {
+.connect{
+    display: hidden;
+}
 .box:not(:last-child):before{
     content:none
 }
