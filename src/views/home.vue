@@ -78,7 +78,7 @@ const newsData = ref([
         <div class="flex flex-col  border-l-[1px] border-[#808080] has-border lg:py-[100px] py-[20px] md:py-[40px]">
           <div class=" justify-between mb-8 md:mb-20 md:flex ">
             <div class="md:w-1/2">
-              <p class="text-sub-heading text-5xl whitespace-nowrap	 text-[#003366] pl-[40px] border-l-4 border-[#F16336] has-border">
+              <p class="text-sub-heading text-5xl whitespace-nowrap	 text-[#003366] md:pl-[40px] border-l-4 border-[#F16336] has-border">
             LĨNH VỰC <span class="text-[#F16336]">HOẠT ĐỘNG</span>
           </p>
             </div>
@@ -297,6 +297,9 @@ button.beforeMobile, button.nextMobile{
 @media screen and (max-width: 767px) {
   .has-border{
   border: unset;
+}
+.set-img-text p.text {
+  padding: 0.5rem;
 }
 }
 @media (min-width: 768px) and (max-width: 1024px) {

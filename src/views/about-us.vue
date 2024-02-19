@@ -634,6 +634,6 @@ const ctyThanhVien = ref([
   
   z-index: 20;
   right: 5%;
-  bottom: 8%;
+  bottom: 31px;
 }
 </style>
