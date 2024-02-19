@@ -1,5 +1,4 @@
 import { defineConfig } from "vite";
-import historyFallback from "connect-history-api-fallback";
 
 import vue from "@vitejs/plugin-vue";
 
@@ -7,7 +6,4 @@ import vue from "@vitejs/plugin-vue";
 export default defineConfig({
   base: "/InternProject-2/",
   plugins: [vue()],
-  server: {
-    middleware: [historyFallback()],
-  },
 });
