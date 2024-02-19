@@ -40,15 +40,7 @@
 <script setup>
 import newsAndEvents from '../components/newsAndEvents.vue'
 import { ref } from 'vue'
-import { Swiper, SwiperSlide } from 'swiper/vue';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
-import { useSwiper } from 'swiper/vue';
 
-import 'swiper/css/navigation';
-  import 'swiper/css/pagination';
-  import 'swiper/css/scrollbar';
-  // Import Swiper styles
-  import 'swiper/css';
 const newsData = ref([
     {img:'relevant-news-1.png', category:'thông tin công ty', title:'CBTT báo cáo tài chính riêng công ty mẹ Quý II năm 2023', date:'02-01-2024'},
     {img:'relevant-news-2.png', category:'thông tin công ty', title:'CBTT báo cáo tài chính riêng công ty mẹ Quý II năm 2023', date:'02-01-2024'},

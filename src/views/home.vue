@@ -74,11 +74,15 @@ const newsData = ref([
       </div>
     </section>
     <section>
-      <div class="flex flex-col responsive-section">
-        <div class=" justify-between mb-8 md:mb-20 md:flex">
-          <p class="text-sub-heading text-5xl md:w-1/2 text-[#003366]">
+      <div class="px-[20px] md:px-[40px] lg:px-[80px]">
+        <div class="flex flex-col  border-l-[1px] border-[#808080] has-border lg:py-[100px] py-[20px] md:py-[40px]">
+          <div class=" justify-between mb-8 md:mb-20 md:flex ">
+            <div class="md:w-1/2">
+              <p class="text-sub-heading text-5xl whitespace-nowrap	 text-[#003366] pl-[40px] border-l-4 border-[#F16336] has-border">
             LĨNH VỰC <span class="text-[#F16336]">HOẠT ĐỘNG</span>
           </p>
+            </div>
+          
           <p class="text-desc text-lg md:w-[40%]">
             Với khát vọng lan tỏa giá trị thịnh vượng, chúng tôi nghiên cứu và
             phát triển những sản phẩm từ đá tự nhiên và đồ gỗ nội thất độc đáo,
@@ -163,12 +167,16 @@ const newsData = ref([
         </ul> -->
           
         </div>
+        </div>
+        
+        
         
       </div>
     </section>
     <section>
-      <div class="responsive-section bg-white flex flex-col gap-10">
-        <div class="content">
+      <div class="px-[20px] md:px-[40px] lg:px-[80px]  bg-white ">
+        <div class="flex flex-col gap-10 md:pl-5 border-l-[1px] border-[#808080] has-border lg:py-[100px] py-[20px] md:py-[40px]">
+          <div class="content md:-ml-5 md:pl-5 border-l-4 border-[#F16336] has-border">
           <p class="uppercase text-sub-heading text-5xl md:w-1/2 text-[#003366]">
             QUAN HỆ <span class="text-[#F16336]">CỔ ĐÔNG</span>
           </p>
@@ -188,7 +196,7 @@ const newsData = ref([
             </div>
           </div>
           <div class="md:col-span-1">
-            <p class="text uppercase">CÔNG BỐ THÔNG TIN</p>
+            <p class="text uppercase ">CÔNG BỐ THÔNG TIN</p>
             <div class="img">
               <img class="w-full" src="/assets/img/set-img-3.png" alt="" />
             </div>
@@ -200,12 +208,15 @@ const newsData = ref([
             </div>
           </div>
         </div>
+        </div>
+        
       </div>
     </section>
 
     <section>
-      <div class=" responsive-section flex flex-col gap-10">
-        <div class="content flex flex-row justify-between">
+      <div class="px-[20px] md:px-[40px] lg:px-[80px]">
+        <div class="flex flex-col gap-10 md:pl-5 border-l-[1px] border-[#808080] has-border lg:py-[100px] py-[20px] md:py-[40px]">
+          <div class="content flex flex-row justify-between md:-ml-5 md:pl-5 border-l-4 border-[#F16336] has-border">
           <p class="uppercase text-sub-heading text-5xl md:w-1/2 text-[#003366]">
             TIN TỨC VÀ <span class="text-[#F16336]">SỰ KIỆN</span>
           </p>
@@ -223,6 +234,9 @@ const newsData = ref([
           </div>
           
         </div>
+        </div>
+        
+        
       </div>
     </section>
   </main>
@@ -281,7 +295,9 @@ button.beforeMobile, button.nextMobile{
   border-radius: 50%;
 }
 @media screen and (max-width: 767px) {
-
+  .has-border{
+  border: unset;
+}
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   button.before span, button.next span{
