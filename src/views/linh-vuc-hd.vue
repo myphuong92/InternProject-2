@@ -11,8 +11,8 @@
                 :class="{ active: $route.path === '/linhvuc/daop' }">Khai thác chế biến đá ốp lát</router-link>
                 <router-link to="/linhvuc/dogo" class="ml-5 text-lg md:text-xl lg:text-3xl"
                 :class="{ active: $route.path === '/linhvuc/dogo' }">Sản xuất kinh doanh đồ gỗ nội, ngoại thất</router-link>
-                <a href="" class="ml-5 text-lg md:text-xl lg:text-3xl">Phân phối xe ô tô Toyota</a>
-                <a href="" class="ml-5 text-lg md:text-xl lg:text-3xl">Ngành bất động sản</a>
+                <a href="#" class="ml-5 text-lg md:text-xl lg:text-3xl">Phân phối xe ô tô Toyota</a>
+                <a href="#" class="ml-5 text-lg md:text-xl lg:text-3xl">Ngành bất động sản</a>
             </div>
             <div class="divider"></div>
         </section>
