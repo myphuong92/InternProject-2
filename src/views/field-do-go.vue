@@ -333,6 +333,7 @@ const donvi = ref([
 }
 .nhamay-bg{
   background-image: url('/assets/img/scott-webb.png');
+  height: 731px;
 }
 
 </style>

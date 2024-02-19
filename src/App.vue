@@ -1,5 +1,5 @@
 <template>
-  <div class="nav">
+  <div class="nav overflow-hidden">
     <headerComp/>
     <router-view/>
     <footerComp/>
