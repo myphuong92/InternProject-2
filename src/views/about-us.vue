@@ -103,7 +103,7 @@
             <p class="text-[#F16336] text-title text-4xl" style="font-weight: 500">
               Bình Định
             </p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-0 divide-y-2 md:divide-y-0 md:divide-x-2 divide-cyan-950">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-0 md:divide-y-0 md:divide-x-2 divide-cyan-950">
               <div class="flex flex-col gap-12">
                 <cardTextIcon changeColor="blue" class="" :cards="xiNghiep" />
                 <cardTextIcon changeColor="blue" :cards="xiNghiep" />
