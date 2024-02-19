@@ -272,7 +272,7 @@
             </swiper-slide>
             
           </swiper>
-          <div class="BtnSlider mb-5 lg:mb-0 justify-center lg:absolute flex flex-row gap-3 mt-5">
+          <div class="BtnSlider mb-5 lg:mb-0 justify-center lg:absolute flex flex-row gap-3 mt-5 lg:mt-0">
                     <button class="btn-slider prev">
                       <span class="material-symbols-outlined"
                         >chevron_left</span
@@ -633,7 +633,7 @@ const ctyThanhVien = ref([
 .BtnSlider{
   
   z-index: 20;
-  right: 34%;
-  bottom: 4%;
+  right: 5%;
+  bottom: 8%;
 }
 </style>
