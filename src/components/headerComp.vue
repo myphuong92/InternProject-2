@@ -23,7 +23,7 @@
     </div>  
 </div>
 <Transition :duration="550" name="nested">
-    <div class="h-screen outer navigation bg-[#E4ECFA] px-2 py-6 md:p-10 lg:py-8 lg:px-24" v-if="isMenuClicked" :class="{'active' : isMenuClicked}">
+    <div @click="closeMenuSpace()" class="h-screen outer navigation bg-[#E4ECFA] px-2 py-6 md:p-10 lg:py-8 lg:px-24" v-if="isMenuClicked" :class="{'active' : isMenuClicked}">
         <ul class="inner relative flex flex-col gap-6 md:gap-[2rem] h-full">
         <li class="md:flex lg:w-[60%]" :key="link.name" v-for="link in links"  @mouseover="handleMouseOver(link)" @mouseout="handleMouseOut(link)">
             <div class=" nav-title whitespace-nowrap	" :class="{'pl-[20px]': link.isHover.value}">
@@ -90,6 +90,9 @@
     function toggleMenu(){
         isMenuClicked.value=!isMenuClicked.value;
         // console.log(isMenuClicked.value)
+    }
+    function closeMenuSpace(){
+        isMenuClicked.value=false;
     }
     function closeMenu(state, link){
         // link có mảng sublinks là rỗng

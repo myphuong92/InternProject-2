@@ -87,7 +87,7 @@
     <section>
       <div class="responsive-section bg-white">
         <p
-          class="uppercase text-title text-4xl text-[#003366] mb-20"
+          class="uppercase text-title text-4xl text-[#003366] mb-20 pt-5"
           style="
             font-size: 60px;
             font-family: 'Big Shoulders Display', sans-serif;
@@ -120,7 +120,7 @@
     </section>
     <section>
       <div class="responsive-section">
-        <div class="ctyTv flex flex-col gap-10">
+        <div class="ctyTv flex flex-col gap-10 pt-5">
           <p
             class="uppercase text-title text-4xl text-[#003366]"
             style="
