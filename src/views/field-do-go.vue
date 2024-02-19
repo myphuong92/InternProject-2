@@ -335,5 +335,13 @@ const donvi = ref([
   background-image: url('/assets/img/scott-webb.png');
   height: 731px;
 }
+@media screen and (max-width: 767px) {
 
+ }
+ @media (min-width: 768px) and (max-width: 1025px) {
+  .nhamay-bg{
+    height: auto;
+  }
+
+ }
 </style>
