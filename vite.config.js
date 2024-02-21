@@ -6,4 +6,5 @@ import vue from "@vitejs/plugin-vue";
 export default defineConfig({
   base: "/InternProject-2/",
   plugins: [vue()],
+  appType: "spa",
 });
