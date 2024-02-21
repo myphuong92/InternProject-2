@@ -90,11 +90,13 @@ const newsData = ref([
             tôi phục vụ.
           </p>
         </div>
-        <!-- <sliderNganh /> -->
         <div>
           <div>
-            <!-- md:flex -->
-            <ul class="slides md:flex h-[650px]">
+            <div class="sliderNganhBtn flex justify-between mb-5 ">
+              <button class="sliderNganh-prev"><span class="material-symbols-outlined text-2xl md:hidden text-[#003366]">navigate_before</span></button>
+            <button class="sliderNganh-next"><span class="material-symbols-outlined text-2xl md:hidden text-[#F16336]">navigate_next</span></button>
+            </div>
+            <ul class="slides md:flex md:h-[650px]">
               <sliderNganh/>
             </ul>
             
@@ -299,6 +301,16 @@ button.beforeMobile, button.nextMobile{
 }
 .desktop{
   display: flex;
+}
+.sliderNganhBtn button{
+    border-radius: 50%;
+    padding: 2px 8px;
+}
+.sliderNganhBtn button:first-child{
+  border: #003366 solid;
+}
+.sliderNganhBtn button:last-child{
+  background: white;
 }
 @media screen and (max-width: 767px) {
   .has-border{

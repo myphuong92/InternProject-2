@@ -36,32 +36,47 @@
                 </div>
             </li>
     <!-- Mobile -->
-            <li class="mobile slideMobile bg-[url('/assets/img/slider-nganh.png')] bg-no-repeat bg-cover" v-for="content in contents" :key="content.id" :class="{activeMobile: content.id === activeSlideId}" @click="setActiveSlideId(content.id)">
-                <div style="font-family: 'Big Shoulders Display', sans-serif;" class="title flex gap-3 bg-[#003366] text-white font-bold text-2xl">
-                    <div class=""><p>0{{ content.id }}</p></div>
-                    <span class="text uppercase">{{ content.title }}</span>
-                </div>
-                <div class="content flex-col gap-3" :class="{flex: content.id === activeSlideId , 'hidden': content.id !== activeSlideId }">
+    <swiper 
+    :modules="modules"
+    :slides-per-view="1"
+    :navigation="{ nextEl: '.sliderNganh-next', prevEl: '.sliderNganh-prev' }"
+
+    class="">
+      <swiper-slide class="mobile slideMobile" v-for="content in contents" :key="content.id">
+                <div class="relative bg-[url('/assets/img/slider-nganh.png')] bg-no-repeat bg-cover h-[420px]">
                   <div style="font-family: 'Big Shoulders Stencil Text', sans-serif"
-                        class="text-[#F16336] text-title text-2xl">
+                        class="text-[#F16336] text-title text-3xl absolute bottom-[50px] left-[25px]">
                     <p>0{{ content.id }}</p>
                     <p>{{ content.title }}</p>
                   </div>
+                </div>
+                <div class="content flex-col">
                   <div class="w-full">
-                    <div class="bg-slate-50 text-sm p-3 flex flex-col justify-between gap-4 ">
+                    <div class="bg-slate-50 text-sm p-5 flex flex-col justify-between gap-5">
                     <p>{{ content.desc }}</p>
-                    <buttonComp title="Xem thêm" class="md:w-1/2" changeColor="blue"/>
+                    <buttonComp title="Xem thêm" class="w-1/2" changeColor="blue"/>
                   </div>
                   </div>
                   
                 </div>
-            </li>
+            </swiper-slide>
+    </swiper>
+            
 </template>
 
 <script setup>
 import { ref } from "vue";
-
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { useSwiper } from 'swiper/vue'
 import buttonComp from "./buttonComp.vue";
+import 'swiper/css/navigation';
+  import 'swiper/css/pagination';
+  import 'swiper/css/scrollbar';
+  // Import Swiper styles
+  import 'swiper/css';
+  const modules = [Navigation, Pagination, Scrollbar, A11y];
+
 let id = ref(1);
 let contents = [
   {
@@ -114,7 +129,8 @@ ul li{
   /* width:70px; */
 }
 .slideMobile{
-  height: 45px;
+  height: auto;
+
 }
 .slide .title {
 	position: relative;
@@ -159,8 +175,7 @@ ul li{
     padding-top: 10px;
  }
  .slideMobile .content{
-  margin-top: 40px;
-    padding: 0px 20px;
+  
  }
  .computer{
   display: flex;
