@@ -74,9 +74,9 @@ const newsData = ref([
       </div>
     </section>
     <section>
-      <div class="px-[20px] md:px-[40px] lg:px-[80px]">
+      <div class="">
         <div class="flex flex-col  border-l-[1px] border-[#808080] has-border lg:py-[100px] py-[20px] md:py-[40px]">
-          <div class=" justify-between mb-8 md:mb-20 md:flex ">
+          <div class=" justify-between mb-8 md:mb-20 md:flex px-[20px] md:px-[40px] lg:px-[80px]">
             <div class="md:w-1/2">
               <p class="text-sub-heading text-5xl whitespace-nowrap	 text-[#003366] md:pl-[40px] border-l-4 border-[#F16336] has-border">
             LĨNH VỰC <span class="text-[#F16336]">HOẠT ĐỘNG</span>
@@ -92,9 +92,9 @@ const newsData = ref([
         </div>
         <div>
           <div>
-            <div class="sliderNganhBtn flex justify-between mb-5 ">
-              <button class="sliderNganh-prev"><span class="material-symbols-outlined text-2xl md:hidden text-[#003366]">navigate_before</span></button>
-            <button class="sliderNganh-next"><span class="material-symbols-outlined text-2xl md:hidden text-[#F16336]">navigate_next</span></button>
+            <div class="sliderNganhBtn flex justify-between mb-5 md:hidden px-[20px]">
+              <button class="sliderNganh-prev"><span class="material-symbols-outlined text-2xl  text-[#003366]">navigate_before</span></button>
+            <button class="sliderNganh-next"><span class="material-symbols-outlined text-2xl text-[#F16336]">navigate_next</span></button>
             </div>
             <ul class="slides md:flex md:h-[650px]">
               <sliderNganh/>
