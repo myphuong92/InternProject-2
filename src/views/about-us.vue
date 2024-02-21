@@ -15,7 +15,7 @@
       </div>
     </section>
     <section>
-      <div class="relative bg-[#CCE6FF]">
+      <div class="relative bg-[#CCE6FF] ">
         <div class="flex flex-col md:flex-row justify-between responsive-section md:h-[120rem] gap-6 md:gap-0">
           <p class="md:w-1/2 text-heading text-7xl text-[#F16336] uppercase">GIỚI THIỆU</p>
           <p class="md:w-1/2 text-desc text-lg text-[#003366]">
@@ -131,7 +131,7 @@
           >
             Công ty thành viên
           </p>
-          <div class="relative bg-[#001933]">
+          <div class="relative bg-[#001933] md:-ml-[40px] lg:-ml-[100px]">
             <swiper :modules="modules"        
             :navigation="{ nextEl: '.btn-slider.next', prevEl: '.btn-slider.prev' }">
             <swiper-slide>
@@ -625,7 +625,7 @@ const ctyThanhVien = ref([
 .BtnSlider{
   
   z-index: 20;
-  right: 343px;
+  right: 385px;
   bottom: 12px;
 }
 </style>
