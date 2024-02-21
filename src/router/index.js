@@ -9,6 +9,7 @@ import Article from "../views/article.vue";
 import Contact from "../views/contact.vue";
 import JobRecruit from "../views/job-recruit.vue";
 import JobDesc from "../views/job-desc.vue";
+import NotFoundComponent from "../views/not-found.vue";
 
 const routes = [
   {
@@ -70,6 +71,11 @@ const routes = [
     path: "/job-desc",
     name: "JobDesc",
     component: JobDesc,
+  },
+  {
+    path: "/:pathMatch(.*)", // Catch-all route for 404 errors
+    name: "NotFound",
+    component: NotFoundComponent,
   },
 ];
 const router = createRouter({
