@@ -227,7 +227,7 @@ const newsData = ref([
             <button class="next"><span class="material-symbols-outlined text-xl md:text-3xl">navigate_next</span></button>
           </div>
         </div>
-        <div class="card">
+        <div class="card md:-mr-[40px] lg:-mr-[100px]">
           <newscard :cards="newsData"/>
 
           <div class="slide-button mobile justify-center mt-4">
@@ -312,12 +312,17 @@ button.beforeMobile, button.nextMobile{
 .sliderNganhBtn button:last-child{
   background: white;
 }
+.set-img-text p.text:hover{
+  color: #F16336
+}
 @media screen and (max-width: 767px) {
   .has-border{
   border: unset;
 }
 .set-img-text p.text {
   padding: 0.5rem;
+  cursor: pointer;
+  
 }
 .mobile{
   display: flex;

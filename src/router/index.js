@@ -83,7 +83,7 @@ const routes = [
   // },
 ];
 const router = createRouter({
-  history: createWebHashHistory("/InternProject-2/"), // Provide the base URL directly
+  history: createWebHistory("/InternProject-2/"), // Provide the base URL directly
   routes,
 });
 // Chuyển lên đầu trang khi qua route mới

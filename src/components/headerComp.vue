@@ -3,7 +3,7 @@
         <div class="header-line flex justify-between px-3 md:px-10 lg:px-24 md:py-4">
     <router-link to="/" class="flex items-center">
         <img src="/assets/img/logo.png" alt="">
-        <p class="text-2xl font-medium text-[#FF4300] drop-shadow-xl hide-in-mobile-block">Công ty cổ phần phú tài</p>
+        <p class="text-2xl font-medium text-[#FF4300] drop-shadow-xl hide-in-mobile-block uppercase">Công ty cổ phần phú tài</p>
     </router-link>
     <div class="flex items-center gap-5">
         <div class="items-center hide-in-mobile-flex">
@@ -18,7 +18,7 @@
             </transition>
             <span @click="toggleSearch()" class="material-symbols-outlined">search</span>
         </div>
-        <span @click="toggleMenu()" class="material-symbols-outlined">menu</span>
+        <span @click="toggleMenu()" class="material-symbols-outlined cursor-pointer">menu</span>
 
     </div>  
 </div>
