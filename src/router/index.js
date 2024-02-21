@@ -2,6 +2,7 @@ import {
   createRouter,
   createWebHistory,
   createMemoryHistory,
+  createWebHashHistory,
 } from "vue-router";
 import Home from "../views/home.vue";
 import About from "../views/about-us.vue";
@@ -83,7 +84,7 @@ const routes = [
   },
 ];
 const router = createRouter({
-  history: createWebHistory("/InternProject-2/"), // Provide the base URL directly
+  history: createWebHashHistory("/InternProject-2/"), // Provide the base URL directly
   routes,
 });
 // Chuyển lên đầu trang khi qua route mới
