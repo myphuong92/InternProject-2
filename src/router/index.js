@@ -77,11 +77,11 @@ const routes = [
     name: "JobDesc",
     component: JobDesc,
   },
-  {
-    path: "/:pathMatch(.*)", // Catch-all route for 404 errors
-    name: "NotFound",
-    component: NotFoundComponent,
-  },
+  // {
+  //   path: "/:pathMatch(.*)", // Catch-all route for 404 errors
+  //   name: "NotFound",
+  //   component: NotFoundComponent,
+  // },
 ];
 const router = createRouter({
   history: createWebHashHistory("/InternProject-2/"), // Provide the base URL directly
