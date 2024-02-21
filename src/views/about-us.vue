@@ -152,11 +152,7 @@
                     <div class="desc font-light flex flex-col gap-6">
                       <p>Khai thác chế biến đá ốp lát, đá xây dựng, cát xây</p>
                       <cardTextIcon :cards="ctyThanhVien" />
-                      <buttonComp
-                        title="Xem chi tiết"
-                        changeColor="white"
-                        class="rounded-none font-medium lg:w-1/2"
-                      />
+                      
                     </div>
                     
                   </div>
@@ -186,11 +182,7 @@
                     <div class="desc font-light flex flex-col gap-6">
                       <p>Khai thác chế biến đá ốp lát, đá xây dựng, cát xây</p>
                       <cardTextIcon :cards="ctyThanhVien" />
-                      <buttonComp
-                        title="Xem chi tiết"
-                        changeColor="white"
-                        class="rounded-none font-medium lg:w-1/2"
-                      />
+                      
                     </div>
                     
                   </div>
@@ -220,11 +212,11 @@
                     <div class="desc font-light flex flex-col gap-6">
                       <p>Khai thác chế biến đá ốp lát, đá xây dựng, cát xây</p>
                       <cardTextIcon :cards="ctyThanhVien" />
-                      <buttonComp
+                      <!-- <buttonComp
                         title="Xem chi tiết"
                         changeColor="white"
                         class="rounded-none font-medium lg:w-1/2"
-                      />
+                      /> -->
                     </div>
                     
                   </div>
@@ -254,11 +246,11 @@
                     <div class="desc font-light flex flex-col gap-6">
                       <p>Khai thác chế biến đá ốp lát, đá xây dựng, cát xây</p>
                       <cardTextIcon :cards="ctyThanhVien" />
-                      <buttonComp
+                      <!-- <buttonComp
                         title="Xem chi tiết"
                         changeColor="white"
                         class="rounded-none font-medium lg:w-1/2"
-                      />
+                      /> -->
                     </div>
                     
                   </div>
@@ -633,7 +625,7 @@ const ctyThanhVien = ref([
 .BtnSlider{
   
   z-index: 20;
-  right: 5%;
-  bottom: 45px;
+  right: 343px;
+  bottom: 12px;
 }
 </style>

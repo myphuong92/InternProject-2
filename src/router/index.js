@@ -1,7 +1,6 @@
 import {
   createRouter,
   createWebHistory,
-  createMemoryHistory,
   createWebHashHistory,
 } from "vue-router";
 import Home from "../views/home.vue";
