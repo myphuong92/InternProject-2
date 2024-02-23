@@ -12,7 +12,7 @@
           <div class="flex flex-col gap-6 md:gap-10 lg:gap-14">
             <div class="flex flex-row gap-x-4 items-center">
               <img src="/assets/img/da-op-lat.png" alt="" />
-              <p class="title text-xl md:text-[30px]">Đá ốp lát</p>
+              <p class="title text-xl md:text-[30px] font-semibold">Đá ốp lát</p>
             </div>
             <div class="content flex flex-col gap-8">
               <div>
@@ -28,7 +28,7 @@
           <div class="flex flex-col gap-6 md:gap-10 lg:gap-14">
             <div class="flex flex-row gap-4 items-center">
               <img src="/assets/img/da-thu-cong.png" alt="" />
-              <p class="title text-xl md:text-[30px]">Đá thủ công</p>
+              <p class="title text-xl md:text-[30px] font-semibold">Đá thủ công</p>
             </div>
             <div class="content flex flex-col gap-8">
               <div>
@@ -44,7 +44,7 @@
           <div class="flex flex-col gap-6 md:gap-10 lg:gap-14">
             <div class="flex flex-row gap-4 items-center">
               <img src="/assets/img/da-nghien-sang.png" alt="" />
-              <p class="title text-xl md:text-[30px]">Đá nghiền sàng</p>
+              <p class="title text-xl md:text-[30px] font-semibold">Đá nghiền sàng</p>
             </div>
             <div class="content flex flex-col gap-8">
               <div>
@@ -68,16 +68,13 @@
         >
           MỎ ĐÁ NGUYÊN LIỆU
         </p>
-        <div class="relative divide-y-2 md:divide-y flex flex-col gap-10 md:block">
-          <div class="flex justify-center">
-            <div class="map-location">
-              <img src="/assets/img/map-location.png" alt="" />
-            </div>
-          </div>
-          <div class="flex flex-col pt-5 md:pt-0 md:w-1/3 lg:w-full md:gap-10 lg:gap-14 md:absolute top-52 left-0">
-            <div>
+        <div ref="moDa" class="relative divide-y-2 md:divide-y grid grid-cols-1 md:grid-cols-3 md:items-end">
+          <div class="flex flex-col pt-5 md:pt-0 w-full md:gap-10 lg:gap-14 ">
+            <div ref="yenBai" class="relative">
               <p
-                class="uppercase cursor-pointer text-[#003366] text-[20px] font-bold hover:text-[#F16336]"
+              @click="toggleLocation('yenbai')"
+              :class="{'active' : isYenBaiClicked}"
+                class="location uppercase cursor-pointer text-[#003366] text-[20px] font-bold hover:text-[#F16336]"
                 style="font-family: 'Big Shoulders Display', sans-serif"
               >
                 yên bái
@@ -89,6 +86,7 @@
             </div>
             <div>
               <p
+              
                 class="uppercase cursor-pointer text-[#003366] text-[20px] font-bold hover:text-[#F16336]"
                 style="font-family: 'Big Shoulders Display', sans-serif"
               >
@@ -123,11 +121,28 @@
               </div>
             </div>
           </div>
+          <div class="flex justify-center">
+            <div class="map-location relative">
+              <img src="/assets/img/map-location.png" alt="" />
+              <div :class="{'active' : isYenBaiClicked}"  class="yenbai location-circle"></div>
+
+              <div class="phuyen location-circle"></div>
+              <div class="daknong location-circle"></div>
+              <div :class="{'active': isHungYenClicked}" class="hungyen location-circle"></div>
+
+              <div class="binhdinh location-circle"></div>
+              <div class="khanhhoa location-circle"></div>
+
+            </div>
+          </div>
+          
           <div class="flex flex-col pt-5 md:pt-0 -0 md:w-1/3 md:gap-10 lg:gap-14 md:absolute top-0 right-0">
-            <div>
+            <div class="relative">
               <p
-                class="uppercase cursor-pointer text-[#003366] text-[20px] font-bold hover:text-[#F16336]"
+              :class="{'active' : isHungYenClicked}"
+                class="location uppercase cursor-pointer text-[#003366] text-[20px] font-bold"
                 style="font-family: 'Big Shoulders Display', sans-serif"
+                @click="toggleLocation('hungyen')"
               >
                 Hưng yên
               </p>
@@ -180,9 +195,7 @@
               </div>
             </div>
           </div>
-          <div class="">
-            <div class="hidden md:block dot-line md:right-[30rem] lg:right-[44rem]"></div>
-          </div>
+          
         </div>
       </div>
     </section>
@@ -203,7 +216,7 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 
 import cardBranch from "../components/cardBranch.vue";
 const card = ref([
@@ -268,6 +281,41 @@ const card = ref([
       "Lorem ipsum dolor sit amet consectetur. Neque vestibulum mauris aliquam enim nulla at orci. Turpis sollicitudin elementum in donec.",
   },
 ]);
+const moDa = ref(null);
+const yenBai = ref(null);
+const isHungYenClicked = ref(false);
+const isYenBaiClicked = ref(false);
+
+function toggleLocation(location){
+  if(location==='hungyen'){
+    isHungYenClicked.value=!isHungYenClicked.value
+  }
+  if(location==='yenbai'){
+    isYenBaiClicked.value=!isYenBaiClicked.value
+
+  }
+}
+onMounted(() =>{
+  // Mỏ đá
+  let width=moDa.value.offsetWidth;
+  let height = moDa.value.offsetHeight;
+
+  document.documentElement.style.setProperty('--moda-width', `${width}px`);
+  document.documentElement.style.setProperty('--moda-height', `${height}px`);
+
+  console.log('Width:', width);
+  console.log('Height:', height);
+
+  // Yên bái
+  width = yenBai.value.offsetWidth;
+  height = yenBai.value.offsetHeight;
+  document.documentElement.style.setProperty('--yenbai-width', `${width}px`);
+  document.documentElement.style.setProperty('--yenbai-height', `${height}px`);
+
+  console.log('Width:', width);
+  console.log('Height:', height);
+
+}) 
 </script>
 
 <style scoped>
@@ -287,26 +335,74 @@ const card = ref([
   color: #3399ff;
   font-weight: 700;
 }
-.dot-line {
-  padding: 3rem;
+/* Yên bái */
+/* .dot-line-yenbai {
+  padding: 4rem;
   border-top: 3px dotted #003366;
   border-left: 3px dotted #003366;
   position: absolute;
-  top: 6.5rem;
+  top: calc(var(--yenbai-height) - calc(var(--moda-height) * 0.5));
   left: 1rem;
-}
+  right: calc(var(--yenbai-width) - calc(var(--moda-width) * 0.44));
+} */
+
+/* Hưng Yên */
+/* .dot-line-hungyen{
+  padding: 4rem;
+  border-top: 3px dotted #003366;
+  border-left: 3px dotted #003366;
+  position: absolute;
+  
+} */
+
 .map-location {
   position: relative;
 }
-.map-location::before {
-  content: "";
+.location-circle{
   position: absolute;
-  top: 6rem;
-  left: 6rem;
   width: 12px;
   height: 12px;
-  background-color: #f16336;
+  /* background-color: #f16336; */
+  background-color: gray;
   border-radius: 50%;
   border: 2px white solid;
+}
+.location-circle.active{
+  background-color: #f16336;
+}
+.location.active{
+  color: #f16336;
+}
+.yenbai{
+  top: 4rem;
+  left: 7rem;
+}
+.phuyen{
+  bottom: 11rem;
+  right: 5rem;
+}
+.daknong{
+  bottom: 10rem;
+  left: 13rem;
+}
+.hungyen{
+  top: 118px;
+  right: 183px;
+}
+.binhdinh{
+  right: 5rem;
+  bottom: 13rem;
+}
+.khanhhoa{
+  bottom: 150px;
+  right: 5rem;
+}
+@media screen and (max-width: 767px) {
+  
+}
+@media (min-width: 768px) and (max-width: 1025px) {
+ .dot-line-yenbai{
+ }
+ 
 }
 </style>

@@ -18,7 +18,7 @@
             </transition>
             <span @click="toggleSearch()" class="material-symbols-outlined">search</span>
         </div>
-        <span @click="toggleMenu()" class="material-symbols-outlined cursor-pointer">menu</span>
+        <span @click="toggleMenu()" :class="{'active' : isMenuClicked}" class="material-symbols-outlined cursor-pointer menu">{{menuText}}</span>
 
     </div>  
 </div>
@@ -30,9 +30,9 @@
                 <div  class="flex items-center gap-2 hover:color-[#003366]" 
                 :style="{'color' : link.isHover.value ? '#003366': ''}"
                 @click="closeMenu(false, link)">
-                        <div class="star material-symbols-outlined">star</div>
+                <i class="star fa-solid fa-star" :class="{'hidden' : !link.isHover.value}"></i>
                         <router-link 
-                        class="text-xl md:text-2xl lg:text-4xl"
+                        class="big-shoulder-display text-xl md:text-2xl lg:text-4xl font-semibold"
                         :to="link.link" 
                         @mouseover="setHover(link)" 
                         @mouseout="clearHover(link)"
@@ -43,15 +43,14 @@
                 </div>
             </div>
             
-            <ul class="mt-6 md:mt-0 ml-[60px] md:ml-10 lg:ml-24 sub-title flex flex-col gap-[2rem] whitespace-nowrap" v-if="link.sublinks.length>0" :class="{'hidden' : !link.isHover.value}">
+            <ul class="mt-6 md:mt-0 ml-[60px] md:ml-10 lg:ml-12 sub-title flex flex-col gap-[2rem] whitespace-nowrap" v-if="link.sublinks.length>0" :class="{'hidden' : !link.isHover.value}">
                 <li v-for="sublink in link.sublinks" :key="sublink.name">
                     <div>
-                        <div class="md:flex items-center"
+                        <div class="md:flex items-center gap-4"
                         @click="closeMenu(false, sublink)">
-                            <span class="material-symbols-outlined text-base md:text-lg" 
+                            <i class="fa-solid fa-arrow-right-long text-base md:text-lg" 
                             :class="{'hidden' : !sublink.isHover.value}">
-                                arrow_forward_ios
-                            </span>
+                            </i>
                             <router-link class="text-xl md:text-3xl hover:text-[#003366]" 
                             :to="sublink.link" 
                             @mouseover="setHover(sublink)" 
@@ -73,7 +72,7 @@
 </template>
 
 <script setup>
-    import { ref } from 'vue'
+    import { ref, computed } from 'vue'
     let links=[
         {name: "Trang chủ", link: "/", sublinks:[], isHover : ref(false)},
         {name: "Giới thiệu", link: "/about", sublinks:[], isHover : ref(false)},
@@ -87,10 +86,14 @@
     const isMenuClicked = ref(false);
     const isSearchClicked = ref(false);
     const isLanguageClicked = ref(false);
+    
     function toggleMenu(){
         isMenuClicked.value=!isMenuClicked.value;
         // console.log(isMenuClicked.value)
     }
+    const menuText= computed(()=>{
+        return isMenuClicked.value ? 'close' : 'menu';
+    })
     const closeMenuOnClickOutside = (event) => {
         if (!event.target.closest('li')) {
             isMenuClicked.value = false;
@@ -215,6 +218,13 @@
     }
     .hide-in-mobile-flex{
         display: flex;
+    }
+    .menu{
+        transition: transform 0.3s ease; 
+
+    }
+    .menu.active{
+        transform: rotate(90deg);
     }
     @media screen and (max-width: 767px) {
         .hide-in-mobile-block{

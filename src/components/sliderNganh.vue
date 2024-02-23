@@ -1,7 +1,7 @@
 <template>
   <!-- Computer -->
   <li class=" computer slide items-end bg-[url('/assets/img/slider-nganh.png')] bg-no-repeat bg-cover" v-for="content in contents" :key="content.id" :class="{active: content.id === activeSlideId, 'w-[67px]': content.id ===1, 'w-[72px]':content.id !==1}" @click="setActiveSlideId(content.id)">
-                <div style="font-family: 'Big Shoulders Display', sans-serif;" class="title bg-[#003366] text-white font-bold text-4xl">
+                <div class="title bg-[#003366] text-white font-bold text-4xl big-shoulder-display">
                     <div class="flex items-end h-full pb-3"><p>0{{ content.id }}</p></div>
                     <span class="text uppercase">{{ content.title }}</span>
                 </div>
@@ -19,7 +19,7 @@
             </li>
     <!-- Desktop -->
     <li class=" desktop slide items-end bg-[url('/assets/img/slider-nganh.png')] bg-no-repeat bg-cover" v-for="content in contents" :key="content.id" :class="{active: content.id === activeSlideId, 'w-[69px]': content.id ===1, 'w-[70px]':content.id ===2, 'w-[77px]':content.id ===3,'w-[77px]':content.id ===4}" @click="setActiveSlideId(content.id)">
-                <div style="font-family: 'Big Shoulders Display', sans-serif;" class="title bg-[#003366] text-white font-bold text-4xl">
+                <div class="title bg-[#003366] text-white font-bold text-4xl big-shoulder-display">
                     <div class="flex items-end h-full pb-3"><p>0{{ content.id }}</p></div>
                     <span class="text uppercase">{{ content.title }}</span>
                 </div>

@@ -14,7 +14,7 @@
                     <img class="full-img h-full" :src="card.img" alt="">
                 </div>
                 <div class="card-content flex flex-col gap-3 px-5 pb-5 justify-between h-[10rem]">
-                    <div class="flex flex-col gap-3" style="font-family: 'Big Shoulders Display', sans-serif;">
+                    <div class="flex flex-col gap-3 big-shoulder-display">
                         <p class="hover:text-[#F16336] cursor-pointer  line-clamp-2  text-2xl min-h-16">{{ card.title }}</p>
                         <p>{{ card.date }}</p>
                     </div>
@@ -40,7 +40,7 @@
                     <img class="full-img h-full" :src="card.img" alt="">
                 </div>
                 <div class="card-content flex flex-col gap-3 px-5 pb-5 justify-between h-[10rem]">
-                    <div class="flex flex-col gap-3" style="font-family: 'Big Shoulders Display', sans-serif;">
+                    <div class="flex flex-col gap-3 big-shoulder-display">
                         <p class="hover:text-[#F16336] cursor-pointer  line-clamp-2  text-2xl min-h-16">{{ card.title }}</p>
                         <p>{{ card.date }}</p>
                     </div>

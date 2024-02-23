@@ -17,6 +17,9 @@
       </div>
         
     </div>
+    <div class="py-4 bg-[#F0F0F0]">
+      <p class="text-[#003366] flex justify-center big-shoulder-display text-xl font-semibold">&copy; 2023 Phú Tài Design</p>
+    </div>
   </footer>
 </template>
 
