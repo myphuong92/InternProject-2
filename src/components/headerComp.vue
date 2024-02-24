@@ -8,13 +8,16 @@
     <div class="flex items-center gap-5">
         <div class="items-center hide-in-mobile-flex">
             <p class="language text-lg"><span class="text-[#989898]">EN</span> | <span @click="toggleLanguage()" :class="isLanguageClicked ? 'text-[#003366]' : 'text-[#989898]'">VN</span></p>
-            <div class="searchBox mx-2">
-                <input type="text">
+            <div class="searchBox mx-2 relative">
+                <input type="text"/>
+                
+                <span class="search-icon cursor-pointer material-symbols-outlined absolute top-[7px] right-[11px] text-[#A0A0A0]">search</span>
+                
             </div>
         </div>
         <div class="flex items-center searchBoxMobile md:hidden">
             <transition name="fade">
-                <input v-show="isSearchClicked" type="text">
+                <input v-show="isSearchClicked" type="text"/>
             </transition>
             <span @click="toggleSearch()" class="material-symbols-outlined">search</span>
         </div>
@@ -226,6 +229,7 @@
     .menu.active{
         transform: rotate(90deg);
     }
+    
     @media screen and (max-width: 767px) {
         .hide-in-mobile-block{
             display: none;
@@ -233,6 +237,9 @@
         .hide-in-mobile-flex{
             display: none;
         }
+        .search-icon{
+        display: none !important;
+    }
  }
  @media (min-width: 768px) and (max-width: 1025px) {
  }
