@@ -74,7 +74,7 @@
               <p
               @click="toggleLocation('yenbai')"
               :class="{'active' : isYenBaiClicked}"
-                class="location uppercase cursor-pointer text-[#003366] text-[20px] font-bold hover:text-[#F16336]"
+                class="location uppercase cursor-pointer text-[#003366] text-[20px] font-bold"
                 style="font-family: 'Big Shoulders Display', sans-serif"
               >
                 yên bái
@@ -86,8 +86,9 @@
             </div>
             <div>
               <p
-              
-                class="uppercase cursor-pointer text-[#003366] text-[20px] font-bold hover:text-[#F16336]"
+              @click="toggleLocation('phuyen')"
+              :class="{'active' : isPhuYenClicked}"
+                class="location uppercase cursor-pointer text-[#003366] text-[20px] font-bold"
                 style="font-family: 'Big Shoulders Display', sans-serif"
               >
                 PHÚ YÊN
@@ -106,7 +107,9 @@
             </div>
             <div>
               <p
-                class="uppercase cursor-pointer text-[#003366] text-[20px] font-bold hover:text-[#F16336]"
+              @click="toggleLocation('daknong')"
+              :class="{'active' : isDakNongClicked}"
+                class="location uppercase cursor-pointer text-[#003366] text-[20px] font-bold"
                 style="font-family: 'Big Shoulders Display', sans-serif"
               >
                 Đăk Nông
@@ -126,12 +129,12 @@
               <img src="/assets/img/map-location.png" alt="" />
               <div :class="{'active' : isYenBaiClicked}"  class="yenbai location-circle"></div>
 
-              <div class="phuyen location-circle"></div>
-              <div class="daknong location-circle"></div>
+              <div :class="{'active': isPhuYenClicked}" class="phuyen location-circle"></div>
+              <div  :class="{'active': isDakNongClicked}"  class="daknong location-circle"></div>
               <div :class="{'active': isHungYenClicked}" class="hungyen location-circle"></div>
 
-              <div class="binhdinh location-circle"></div>
-              <div class="khanhhoa location-circle"></div>
+              <div :class="{'active': isBinhDinhClicked}" class="binhdinh location-circle"></div>
+              <div :class="{'active': isKhanhHoaClicked}" class="khanhhoa location-circle"></div>
 
             </div>
           </div>
@@ -153,7 +156,9 @@
             </div>
             <div>
               <p
-                class="uppercase cursor-pointer text-[#003366] text-[20px] font-bold hover:text-[#F16336]"
+              @click="toggleLocation('binhdinh')"
+              :class="{'active' : isBinhDinhClicked}"
+                class="location uppercase cursor-pointer text-[#003366] text-[20px] font-bold"
                 style="font-family: 'Big Shoulders Display', sans-serif"
               >
                 BÌNH ĐỊNH
@@ -169,7 +174,9 @@
             </div>
             <div>
               <p
-                class="uppercase cursor-pointer text-[#003366] text-[20px] font-bold hover:text-[#F16336]"
+              @click="toggleLocation('khanhhoa')"
+              :class="{'active' : isKhanhHoaClicked}"
+                class="location uppercase cursor-pointer text-[#003366] text-[20px] font-bold"
                 style="font-family: 'Big Shoulders Display', sans-serif"
               >
                 khánh hòa
@@ -184,7 +191,9 @@
             </div>
             <div>
               <p
-                class="uppercase cursor-pointer text-[#003366] text-[20px] font-bold hover:text-[#F16336]"
+              @click="toggleLocation('daknong')"
+              :class="{'active' : isDakNongClicked}"
+                class="location uppercase cursor-pointer text-[#003366] text-[20px] font-bold"
                 style="font-family: 'Big Shoulders Display', sans-serif"
               >
                 Đăk Nông
@@ -285,13 +294,38 @@ const moDa = ref(null);
 const yenBai = ref(null);
 const isHungYenClicked = ref(false);
 const isYenBaiClicked = ref(false);
-
+const isDakNongClicked = ref(false);
+const isBinhDinhClicked = ref(false);
+const isPhuYenClicked = ref(false);
+const isKhanhHoaClicked = ref(false);
 function toggleLocation(location){
+  isHungYenClicked.value = false;
+  isYenBaiClicked.value = false;
+  isDakNongClicked.value = false;
+  isBinhDinhClicked.value = false;
+  isPhuYenClicked.value = false;
+  isKhanhHoaClicked.value = false;  
   if(location==='hungyen'){
     isHungYenClicked.value=!isHungYenClicked.value
   }
-  if(location==='yenbai'){
+  else if(location==='yenbai'){
     isYenBaiClicked.value=!isYenBaiClicked.value
+
+  }
+  else if(location==='daknong'){
+    isDakNongClicked.value=!isDakNongClicked.value
+
+  }
+  else if(location==='binhdinh'){
+    isBinhDinhClicked.value=!isBinhDinhClicked.value
+
+  }
+  else if(location==='phuyen'){
+    isPhuYenClicked.value=!isPhuYenClicked.value
+
+  }
+  else if(location==='khanhhoa'){
+    isKhanhHoaClicked.value=!isKhanhHoaClicked.value
 
   }
 }
@@ -371,7 +405,8 @@ onMounted(() =>{
   background-color: #f16336;
 }
 .location.active{
-  color: #f16336;
+  color: #f16336 !important;
+  font-weight:800 !important;
 }
 .yenbai{
   top: 4rem;
