@@ -299,34 +299,56 @@ const isBinhDinhClicked = ref(false);
 const isPhuYenClicked = ref(false);
 const isKhanhHoaClicked = ref(false);
 function toggleLocation(location){
-  isHungYenClicked.value = false;
+  
+  if(location==='hungyen'){
+    isHungYenClicked.value=!isHungYenClicked.value
   isYenBaiClicked.value = false;
   isDakNongClicked.value = false;
   isBinhDinhClicked.value = false;
   isPhuYenClicked.value = false;
   isKhanhHoaClicked.value = false;  
-  if(location==='hungyen'){
-    isHungYenClicked.value=!isHungYenClicked.value
   }
   else if(location==='yenbai'){
     isYenBaiClicked.value=!isYenBaiClicked.value
+    isHungYenClicked.value = false;
+    isDakNongClicked.value = false;
+    isBinhDinhClicked.value = false;
+    isPhuYenClicked.value = false;
+    isKhanhHoaClicked.value = false;  
 
   }
   else if(location==='daknong'){
     isDakNongClicked.value=!isDakNongClicked.value
-
+    isHungYenClicked.value = false;
+  isYenBaiClicked.value = false;
+  isBinhDinhClicked.value = false;
+  isPhuYenClicked.value = false;
+  isKhanhHoaClicked.value = false;  
   }
   else if(location==='binhdinh'){
     isBinhDinhClicked.value=!isBinhDinhClicked.value
-
+    isHungYenClicked.value = false;
+  isYenBaiClicked.value = false;
+  isDakNongClicked.value = false;
+  isPhuYenClicked.value = false;
+  isKhanhHoaClicked.value = false;  
   }
   else if(location==='phuyen'){
     isPhuYenClicked.value=!isPhuYenClicked.value
+    isHungYenClicked.value = false;
+  isYenBaiClicked.value = false;
+  isDakNongClicked.value = false;
+  isBinhDinhClicked.value = false;
+  isKhanhHoaClicked.value = false;  
 
   }
   else if(location==='khanhhoa'){
     isKhanhHoaClicked.value=!isKhanhHoaClicked.value
-
+    isHungYenClicked.value = false;
+  isYenBaiClicked.value = false;
+  isDakNongClicked.value = false;
+  isBinhDinhClicked.value = false;
+  isPhuYenClicked.value = false;
   }
 }
 onMounted(() =>{
@@ -433,11 +455,23 @@ onMounted(() =>{
   right: 5rem;
 }
 @media screen and (max-width: 767px) {
-  
+  .location-circle{
+    display: none;
+  }
 }
 @media (min-width: 768px) and (max-width: 1025px) {
  .dot-line-yenbai{
  }
+ .hungyen{
+  top: 112px;
+  right: 167px;
+  }
+  .yenbai{
+    left: 6rem;
+  }
+  .daknong{
+    left: 12rem;
+  }
  
 }
 </style>
