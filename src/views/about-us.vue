@@ -17,7 +17,7 @@
     <section>
       <div class="relative bg-[#CCE6FF] ">
         <div class="flex flex-col md:flex-row justify-between responsive-section md:h-[120rem] gap-6 md:gap-0">
-          <p class="md:w-1/2 text-heading text-7xl text-[#F16336] uppercase">GIỚI THIỆU</p>
+          <p class="md:w-1/2 text-heading text-5xl md:text-7xl text-[#F16336] uppercase">GIỚI THIỆU</p>
           <p class="md:w-1/2 text-desc text-lg text-[#003366]">
             Tiền thân của Công ty cổ phần Phú Tài (Phu Tai SJC) là Công ty sản
             xuất vật liệu xây dựng Phú Tài gọi tắt là Công ty Phú Tài (Quyết
@@ -68,9 +68,8 @@
     <section>
       <div class="responsive-section mt-8">
         <p
-          class="uppercase text-title text-4xl text-[#003366] mb-10 md:mb-20"
+          class="uppercase text-title text-5xl md:text-6xl text-[#003366] mb-10 md:mb-20"
           style="
-            font-size: 60px;
             font-family: 'Big Shoulders Display', sans-serif;
           "
         >
@@ -87,9 +86,8 @@
     <section>
       <div class="responsive-section bg-white">
         <p
-          class="uppercase text-title text-4xl text-[#003366] mb-20 pt-5"
+          class="uppercase text-title text-5xl md:text-6xl text-[#003366] mb-20 pt-5"
           style="
-            font-size: 60px;
             font-family: 'Big Shoulders Display', sans-serif;
           "
         >
@@ -122,10 +120,9 @@
       <div class="responsive-section">
         <div class="ctyTv flex flex-col gap-10 pt-5">
           <p
-            class="uppercase text-title text-4xl text-[#003366]"
+            class="uppercase text-title text-5xl md:text-6xl text-[#003366]"
             style="
               
-              font-size: 60px;         
               font-family: 'Big Shoulders Display', sans-serif;
             "
           >
@@ -283,78 +280,27 @@
         </div>
       </div>
     </section>
-    <section>
-      <div class="target grid grid-cols-1 lg:grid-cols-2 pt-[100px]">
-        <div class="lg:col-span-2 employee relative">
-          <div class="content bg-[#003366] p-5 md:p-10 lg:absolute lg:w-[45%] lg:py-12 lg:px-32">
-            <p
-              class="text-heading text-7xl mb-4 uppercase"
-              style="
-                color: white;
-                font-family: 'Big Shoulders Display', sans-serif;
-              "
-            >
-              ĐỘI NGŨ NHÂN VIÊN
-            </p>
-            <p class="text-desc text-lg" style="color: white">
-              Lorem ipsum dolor sit amet consectetur. Dolor interdum ipsum donec
-              aliquet rhoncus pellentesque scelerisque. Habitant turpis commodo
-              facilisis tellus at facilisis vitae et. Sem commodo adipiscing
-              vestibulum massa sit porta. Quam rhoncus a risus mauris amet
-              faucibus.
-            </p>
-          </div>
-          <img
-            class="w-full"
-            src="/assets/img/business-meeting.png"
-            alt=""
-          />
+    <section class="responsive-section">
+      <div class="target grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-16">
+        <div class="flex flex-col gap-5">
+          <p class="uppercase text-title text-5xl md:text-6xl text-[#003366]"
+            style="
+              
+              font-family: 'Big Shoulders Display', sans-serif;
+            ">Nhiệm vụ của chúng tôi</p>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna</p>
         </div>
-        <div class="col-span-1 relative">
-          <div class="content top-[17%] md:top-[30%] md:left-[8%] md:w-[80%] lg:top-[50%] lg:left-[50%] 	lg:translate-x-[-50%] lg:translate-y-[-50%]	lg:w-[60%] absolute">
-            <p
-              class="text-heading text-7xl mb-4 uppercase"
-              style="
-                color: white;
-                font-family: 'Big Shoulders Display', sans-serif;
-              "
-            >
-              TẦM NHÌN
-            </p>
-            <p class="text-desc text-lg" style="color: white">
-              Lorem ipsum dolor sit amet consectetur. Dolor interdum ipsum donec
-              aliquet rhoncus pellentesque scelerisque. Habitant turpis commodo
-              facilisis tellus at facilisis vitae et. Sem commodo adipiscing
-              vestibulum massa sit porta. Quam rhoncus a risus mauris amet
-              faucibus.
-            </p>
-          </div>
-          <img class="w-full" src="/assets/img/vision.png" alt="" />
-          <div class="blue-shade"></div>
+        <div>
+          <img class="full-img" src="/assets/img/about-1.png" alt="">
         </div>
-        <div class="col-span-1 relative">
-          <div class="content absolute top-[17%] md:top-[30%] md:left-[8%] md:w-[80%] lg:top-[50%] lg:left-[50%] 	lg:translate-x-[-50%] lg:translate-y-[-50%]	lg:w-[60%] ">
-            <p
-              class="text-heading text-7xl mb-4 uppercase"
-              style="
-                color: white;
-                font-family: 'Big Shoulders Display', sans-serif;
-              "
-            >
-              GIÁ TRỊ CỐT LÕI
-            </p>
-            <p class="text-desc text-lg" style="color: white">
-              Lorem ipsum dolor sit amet consectetur. Dolor interdum ipsum donec
-              aliquet rhoncus pellentesque scelerisque. Habitant turpis commodo
-              facilisis tellus at facilisis vitae et. Sem commodo adipiscing
-              vestibulum massa sit porta. Quam rhoncus a risus mauris amet
-              faucibus.
-            </p>
-          </div>
-          <img class="w-full" src="/assets/img/core-value.png" alt="" />
-          <div class="dark-blue-shade"></div>
+        <div>
+          <img class="full-img" src="/assets/img/about-2.png" alt="">
+
         </div>
-        <div></div>
+        <div>
+          <img class="full-img" src="/assets/img/about-3.png" alt="">
+
+        </div>        
       </div>
     </section>
   </main>
@@ -606,18 +552,8 @@ const ctyThanhVien = ref([
   bottom: 0;
   opacity: 0.7;
 }
-.target .col-span-1 .content {
-  /* top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 60%; */
-  text-align: center;
-  z-index: 1;
-}
-.target .employee .content {
-  top: -8rem;
-  left: 0;
-}
+
+
 .swiper{
   margin-left:0%;
   margin-right: 0;

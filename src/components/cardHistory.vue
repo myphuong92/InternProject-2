@@ -158,8 +158,9 @@ order: 2;
 }
 @media screen and (max-width: 767px) {
 .connect{
-    display: hidden;
+    display: none;
 }
+
 .box:not(:last-child):before{
     content:none
 }

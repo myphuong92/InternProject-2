@@ -455,9 +455,9 @@ onMounted(() =>{
   right: 5rem;
 }
 @media screen and (max-width: 767px) {
-  .location-circle{
+  /* .location-circle{
     display: none;
-  }
+  } */
 }
 @media (min-width: 768px) and (max-width: 1025px) {
  .dot-line-yenbai{
