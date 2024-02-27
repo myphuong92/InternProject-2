@@ -330,6 +330,9 @@ button.beforeMobile, button.nextMobile{
 .desktop{
   display: none;
 }
+.set-img-text p.text {
+  font-size: 24px;
+}
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   button.before span, button.next span{

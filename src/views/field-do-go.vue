@@ -104,7 +104,7 @@
     <section>
         <div class="flex flex-col responsive-section gap-10">
             <p class="text-sub-heading text-5xl text-[#003366] uppercase">Công ty con ngành gỗ</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-10">
                 <cardBranch :cards="ctycon" />
 
             </div>
@@ -113,7 +113,7 @@
     <section>
         <div class="flex flex-col responsive-section gap-10">
             <p class="text-sub-heading text-5xl text-[#003366] uppercase">Công ty con ngành gỗ</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-10">
                 <cardBranch :cards="donvi" />
 
             </div>
