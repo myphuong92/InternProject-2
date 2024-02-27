@@ -79,7 +79,7 @@
             <p class="text-sub-heading text-5xl text-[#003366] uppercase">công suất hiện hữu</p>
             <div class="relative nhamay-bg lg:bg-none bg-no-repeat bg-cover">
                 <img class="hidden lg:block" src="/assets/img/scott-webb.png" alt="">
-                <div class="bg-black lg:bg-transparent opacity-80 lg:opacity-100	p-10 lg:p-0 grid grid-cols-1 gap-10 lg:gap-5 rounded-lg">
+                <div class="bg-black h-full lg:bg-transparent opacity-80 lg:opacity-100	p-10 lg:p-0 grid grid-cols-1 gap-10 lg:gap-5 rounded-lg">
                   <div class="flex flex-col gap-3 text-white lg:absolute lg:top-[115px] lg:left-16">
                     <p class="text-3xl font-medium">Nhà Máy Thắng lợi</p>
                     <cardTextIcon class="font-light" :cards="thangloi"/>

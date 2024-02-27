@@ -60,8 +60,8 @@
         </div>
       </div>
     </section>
-    <section>
-      <div class="responsive-section flex flex-col gap-14">
+    <section class="responsive-section">
+      <div class="flex flex-col gap-14">
         <p
           style="font-family: 'Big Shoulders Display', sans-serif"
           class="text-3xl md:text-5xl font-bold text-[#003366] uppercase"
@@ -216,7 +216,7 @@
         >
           Mạng lưới nhà máy và chi nhánh công ty
         </p>
-        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           <cardBranch :cards="card" />
         </div>
       </div>

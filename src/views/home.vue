@@ -183,7 +183,7 @@ const newsData = ref([
             QUAN HỆ <span class="text-[#F16336]">CỔ ĐÔNG</span>
           </p>
         </div>
-        <div class="set-img-text grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="set-img-text grid grid-cols-2 md:grid-cols-3 gap-4">
           <div class="md:col-span-2">
             <p class="text uppercase">BÁO CÁO TÀI CHÍNH</p>
             <div class="img">
