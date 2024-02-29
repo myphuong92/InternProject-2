@@ -295,7 +295,7 @@
           <img class="logo" src="/assets/img/about-rocket.png" alt="">
           <p class="text text-sub-heading">Tầm nhìn</p>
           <div class="content">
-            <p class="">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna</p>
+            <p class="text-right">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna</p>
           </div>
           
         </div>
@@ -304,7 +304,7 @@
           <img class="logo" src="/assets/img/about-science.png" alt="">
           <p class="text text-sub-heading">Giá trị cốt lõi</p>
           <div class="content">
-            <p class="">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna</p>
+            <p class="text-right">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna</p>
           </div>
           
 
@@ -313,8 +313,8 @@
           <img class="full-img" src="/assets/img/about-bg.png" alt="">
           <img class="logo" src="/assets/img/about-team.png" alt="">
           <p class="text text-sub-heading">Đội ngũ</p>
-          <div class="content flex justify-end">
-            <p class="">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna</p>
+          <div class="content">
+            <p class="text-right">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna</p>
           </div>
           
         </div>        
@@ -593,11 +593,11 @@ const ctyThanhVien = ref([
   right: 0;
 }
 .about-mission .content{
-  /* position: absolute;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  justify-content: end; */
+  position: absolute;
+    width: 50%;
+    right: 20px;
+    bottom: 30px;
+    font-size: 12px;
 }
 @media screen and (max-width: 767px) {
   .about-mission .text{
@@ -606,6 +606,9 @@ const ctyThanhVien = ref([
   .about-mission .logo{
     width: 60px;
    
+}
+.about-mission .content{
+  bottom: 20px;
 }
 }
 @media (min-width: 768px) and (max-width: 1025px) {

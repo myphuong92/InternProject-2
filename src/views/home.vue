@@ -253,7 +253,7 @@ const newsData = ref([
   font-family: "Big Shoulders Display", sans-serif;
 }
 .set-img-text > div {
-  max-height: 376px;
+  height: 376px;
   overflow: hidden;
 }
 .set-img-text .img img {
@@ -332,6 +332,9 @@ button.beforeMobile, button.nextMobile{
 }
 .set-img-text p.text {
   font-size: 24px;
+}
+.set-img-text > div {
+  height: 230px;
 }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
