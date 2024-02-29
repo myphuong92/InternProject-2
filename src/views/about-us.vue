@@ -68,7 +68,7 @@
     <section>
       <div class="responsive-section mt-8">
         <p
-          class="uppercase text-title text-5xl md:text-6xl text-[#003366] mb-10 md:mb-20"
+          class="uppercase text-title text-5xl md:text-4xl lg:text-6xl text-[#003366] mb-10 md:mb-20"
           style="
             font-family: 'Big Shoulders Display', sans-serif;
           "
@@ -86,7 +86,7 @@
     <section>
       <div class="responsive-section bg-white">
         <p
-          class="uppercase text-title text-5xl md:text-6xl text-[#003366] mb-20 pt-5"
+          class="uppercase text-title text-5xl md:text-4xl lg:text-6xl text-[#003366] mb-6 md:mb-20 pt-5"
           style="
             font-family: 'Big Shoulders Display', sans-serif;
           "
@@ -97,8 +97,8 @@
           <div class="img">
             <img class="full-img" src="/assets/img/map.png" alt="" />
           </div>
-          <div class="flex flex-col gap-10">
-            <p class="text-[#F16336] text-title text-4xl" style="font-weight: 500">
+          <div class="flex flex-col gap-4 md:gap-10">
+            <p class="text-[#F16336] text-title text-3xl lg:text-4xl" style="font-weight: 500">
               Bình Định
             </p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-0 md:divide-y-0 md:divide-x-2 divide-cyan-950">
@@ -120,7 +120,7 @@
       <div class="responsive-section">
         <div class="ctyTv flex flex-col gap-10 pt-5">
           <p
-            class="uppercase text-title text-5xl md:text-6xl text-[#003366]"
+            class="uppercase text-title text-5xl md:text-4xl lg:text-6xl text-[#003366]"
             style="
               
               font-family: 'Big Shoulders Display', sans-serif;
@@ -281,25 +281,42 @@
       </div>
     </section>
     <section class="responsive-section">
-      <div class="target grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-16">
+      <div class="target grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-20 lg:gap-16">
         <div class="flex flex-col gap-5">
-          <p class="uppercase text-title text-5xl md:text-6xl text-[#003366]"
+          <p class="uppercase text-title text-5xl md:text-4xl lg:text-6xl text-[#003366]"
             style="
               
               font-family: 'Big Shoulders Display', sans-serif;
             ">Nhiệm vụ của chúng tôi</p>
           <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna</p>
         </div>
-        <div>
-          <img class="full-img" src="/assets/img/about-1.png" alt="">
+        <div class="relative about-mission">
+          <img class="full-img" src="/assets/img/about-bg.png" alt="">
+          <img class="logo" src="/assets/img/about-rocket.png" alt="">
+          <p class="text text-sub-heading">Tầm nhìn</p>
+          <div class="content">
+            <p class="">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna</p>
+          </div>
+          
         </div>
-        <div>
-          <img class="full-img" src="/assets/img/about-2.png" alt="">
+        <div class="relative about-mission">
+          <img class="full-img" src="/assets/img/about-bg.png" alt="">
+          <img class="logo" src="/assets/img/about-science.png" alt="">
+          <p class="text text-sub-heading">Giá trị cốt lõi</p>
+          <div class="content">
+            <p class="">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna</p>
+          </div>
+          
 
         </div>
-        <div>
-          <img class="full-img" src="/assets/img/about-3.png" alt="">
-
+        <div class="relative about-mission">
+          <img class="full-img" src="/assets/img/about-bg.png" alt="">
+          <img class="logo" src="/assets/img/about-team.png" alt="">
+          <p class="text text-sub-heading">Đội ngũ</p>
+          <div class="content flex justify-end">
+            <p class="">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna</p>
+          </div>
+          
         </div>        
       </div>
     </section>
@@ -563,5 +580,41 @@ const ctyThanhVien = ref([
   z-index: 20;
   right: 385px;
   bottom: 12px;
+}
+.about-mission .logo{
+  position: absolute;
+  top:-40px;
+  right:0;
+}
+.about-mission .text{
+  font-size: 32px;
+  position: absolute;
+  top: 40px;
+  right: 0;
+}
+.about-mission .content{
+  /* position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: end; */
+}
+@media screen and (max-width: 767px) {
+  .about-mission .text{
+    top: 20px;
+  }
+  .about-mission .logo{
+    width: 60px;
+   
+}
+}
+@media (min-width: 768px) and (max-width: 1025px) {
+  .about-mission .text{
+    font-size: 26px;
+  }
+  .about-mission .logo{
+    width: 65px;
+    top: -30px;
+}
 }
 </style>

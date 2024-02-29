@@ -26,38 +26,42 @@
     </div>  
 </div>
 <Transition :duration="550" name="nested">
-    <div class="h-screen outer navigation bg-[#E4ECFA] px-2 py-6 md:p-10 lg:py-8 lg:px-24" v-if="isMenuClicked" :class="{'active' : isMenuClicked}" @click="closeMenuOnClickOutside">
+    <div class="h-screen outer navigation bg-[#E4ECFA] px-2 py-6 md:p-10 lg:py-8 lg:px-24" v-show="isMenuClicked" :class="{'active' : isMenuClicked}" @click="closeMenuOnClickOutside">
         <ul class="inner relative flex flex-col gap-6 md:gap-[2rem] h-full">
         <li class="md:flex lg:w-[60%]" :key="link.name" v-for="link in links"  @mouseover="handleMouseOver(link)" @mouseout="handleMouseOut(link)">
-            <div class=" nav-title whitespace-nowrap	" :class="{'pl-[20px]': link.isHover.value}">
-                <div  class="flex items-center gap-2 hover:color-[#003366]" 
+            <div class=" nav-title whitespace-nowrap	" :class="{'pl-[20px]': link.isHover.value && isComputer.value}">
+                <router-link  
+                class="flex items-center gap-2 hover:color-[#003366]" 
                 :style="{'color' : link.isHover.value ? '#003366': ''}"
-                @click="closeMenu(false, link)">
-                <i class="star fa-solid fa-star" :class="{'hidden' : !link.isHover.value}"></i>
-                        <router-link 
+                @click="closeMenu(false, link)"
+                @mouseover="setHover(link)" 
+                @mouseout="clearHover(link)"
+                :to="link.link" >
+                <i class="star fa-solid fa-star" :class="{'hidden' : !link.isHover.value && !isComputer.value}"></i>
+                        <p 
                         class="big-shoulder-display text-xl md:text-2xl lg:text-4xl font-semibold"
-                        :to="link.link" 
-                        @mouseover="setHover(link)" 
-                        @mouseout="clearHover(link)"
+                        
+                       
                           >
                          {{ link.name }}
-                        </router-link>
+                        </p>
                     
-                </div>
+                </router-link>
             </div>
             
-            <ul class="mt-6 md:mt-0 ml-[60px] md:ml-10 lg:ml-12 sub-title flex flex-col gap-[2rem] whitespace-nowrap" v-if="link.sublinks.length>0" :class="{'hidden' : !link.isHover.value}">
+            <ul class="mt-4 md:mt-0 ml-[60px] md:ml-10 lg:ml-12 sub-title flex flex-col gap-4 md:gap-[2rem] whitespace-nowrap" v-if="link.sublinks.length>0" :class="{'hidden' : !link.isHover.value}">
                 <li v-for="sublink in link.sublinks" :key="sublink.name">
                     <div>
                         <div class="md:flex items-center gap-4"
-                        @click="closeMenu(false, sublink)">
+                        @click="closeMenu(false, sublink)"
+                        @mouseover="setHover(sublink)" 
+                        @mouseout="clearHover(sublink)">
                             <i class="fa-solid fa-arrow-right-long text-base md:text-lg" 
                             :class="{'hidden' : !sublink.isHover.value}">
                             </i>
                             <router-link class="text-xl md:text-3xl hover:text-[#003366]" 
                             :to="sublink.link" 
-                            @mouseover="setHover(sublink)" 
-                            @mouseout="clearHover(sublink)">
+                            >
                                 {{ sublink.name }}
                             </router-link>
                         </div>
@@ -75,7 +79,7 @@
 </template>
 
 <script setup>
-    import { ref, computed } from 'vue'
+    import { ref, computed,  onMounted, onBeforeUnmount } from 'vue'
     let links=[
         {name: "Trang chủ", link: "/", sublinks:[], isHover : ref(false)},
         {name: "Giới thiệu", link: "/about", sublinks:[], isHover : ref(false)},
@@ -89,18 +93,19 @@
     const isMenuClicked = ref(false);
     const isSearchClicked = ref(false);
     const isLanguageClicked = ref(false);
-    
+    const isComputer = ref(false);
+
     function toggleMenu(){
         isMenuClicked.value=!isMenuClicked.value;
-        // console.log(isMenuClicked.value)
+        console.log(isMenuClicked.value)
     }
     const menuText= computed(()=>{
         return isMenuClicked.value ? 'close' : 'menu';
     })
     const closeMenuOnClickOutside = (event) => {
-        if (!event.target.closest('li')) {
+         if (!event.target.closest('li')) {
             isMenuClicked.value = false;
-        }
+         }
     };
     function closeMenu(state, link){
         // link có mảng sublinks là rỗng
@@ -114,7 +119,11 @@
             isMenuClicked.value=state;
             // reset the hover state to false
             link.isHover.value=false;
+        }else if('sublinks' in link && isMenuClicked.value ===false){
+            // reset the hover state to false
+            link.isHover.value=false;
         }
+
     }
     
     function toggleSearch(){
@@ -125,7 +134,8 @@
     }
     function setHover(link){
         link.isHover.value=true;
-        console.log(link.isHover.value)
+        console.log(link.isHover.value);
+        checkWidth();
     };
     function clearHover(link){
         link.isHover.value=false;
@@ -140,6 +150,15 @@
     function handleMouseOut(link){
         if(link.sublinks.length>0){
             link.isHover.value=false;
+        }
+    }
+    function checkWidth(){
+        if(window.innerWidth >= 1026){
+            isComputer.value=true;
+        }
+        else{
+            isComputer.value=false;
+
         }
     }
 </script>
