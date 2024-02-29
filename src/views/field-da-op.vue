@@ -72,7 +72,8 @@
           <div class="flex flex-col pt-5 md:pt-0 w-full md:gap-10 lg:gap-14 ">
             <div ref="yenBai" class="relative">
               <p
-              @click="toggleLocation('yenbai')"
+              @mouseover="toggleLocation('yenbai', true)"
+              @mouseout="toggleLocation('yenbai', false)"
               :class="{'active' : isYenBaiClicked}"
                 class="location uppercase cursor-pointer text-[#003366] text-[20px] font-bold"
                 style="font-family: 'Big Shoulders Display', sans-serif"
@@ -86,7 +87,8 @@
             </div>
             <div>
               <p
-              @click="toggleLocation('phuyen')"
+              @mouseover="toggleLocation('phuyen', true)"
+              @mouseout="toggleLocation('phuyen', false)"
               :class="{'active' : isPhuYenClicked}"
                 class="location uppercase cursor-pointer text-[#003366] text-[20px] font-bold"
                 style="font-family: 'Big Shoulders Display', sans-serif"
@@ -107,7 +109,8 @@
             </div>
             <div>
               <p
-              @click="toggleLocation('daknong')"
+              @mouseover="toggleLocation('daknong', true)"
+              @mouseout="toggleLocation('daknong', false)"
               :class="{'active' : isDakNongClicked}"
                 class="location uppercase cursor-pointer text-[#003366] text-[20px] font-bold"
                 style="font-family: 'Big Shoulders Display', sans-serif"
@@ -145,7 +148,8 @@
               :class="{'active' : isHungYenClicked}"
                 class="location uppercase cursor-pointer text-[#003366] text-[20px] font-bold"
                 style="font-family: 'Big Shoulders Display', sans-serif"
-                @click="toggleLocation('hungyen')"
+                @mouseover="toggleLocation('hungyen', true)"
+              @mouseout="toggleLocation('hungyen', false)"
               >
                 Hưng yên
               </p>
@@ -156,7 +160,8 @@
             </div>
             <div>
               <p
-              @click="toggleLocation('binhdinh')"
+              @mouseover="toggleLocation('binhdinh', true)"
+              @mouseout="toggleLocation('binhdinh', false)"
               :class="{'active' : isBinhDinhClicked}"
                 class="location uppercase cursor-pointer text-[#003366] text-[20px] font-bold"
                 style="font-family: 'Big Shoulders Display', sans-serif"
@@ -174,7 +179,8 @@
             </div>
             <div>
               <p
-              @click="toggleLocation('khanhhoa')"
+              @mouseover="toggleLocation('khanhhoa', true)"
+              @mouseout="toggleLocation('khanhhoa', false)"
               :class="{'active' : isKhanhHoaClicked}"
                 class="location uppercase cursor-pointer text-[#003366] text-[20px] font-bold"
                 style="font-family: 'Big Shoulders Display', sans-serif"
@@ -191,7 +197,8 @@
             </div>
             <div>
               <p
-              @click="toggleLocation('daknong')"
+              @mouseover="toggleLocation('daknong', true)"
+              @mouseout="toggleLocation('daknong', false)"
               :class="{'active' : isDakNongClicked}"
                 class="location uppercase cursor-pointer text-[#003366] text-[20px] font-bold"
                 style="font-family: 'Big Shoulders Display', sans-serif"
@@ -298,10 +305,10 @@ const isDakNongClicked = ref(false);
 const isBinhDinhClicked = ref(false);
 const isPhuYenClicked = ref(false);
 const isKhanhHoaClicked = ref(false);
-function toggleLocation(location){
+function toggleLocation(location, state){
   
   if(location==='hungyen'){
-    isHungYenClicked.value=!isHungYenClicked.value
+    isHungYenClicked.value=state
   isYenBaiClicked.value = false;
   isDakNongClicked.value = false;
   isBinhDinhClicked.value = false;
@@ -309,7 +316,7 @@ function toggleLocation(location){
   isKhanhHoaClicked.value = false;  
   }
   else if(location==='yenbai'){
-    isYenBaiClicked.value=!isYenBaiClicked.value
+    isYenBaiClicked.value=state
     isHungYenClicked.value = false;
     isDakNongClicked.value = false;
     isBinhDinhClicked.value = false;
@@ -318,7 +325,7 @@ function toggleLocation(location){
 
   }
   else if(location==='daknong'){
-    isDakNongClicked.value=!isDakNongClicked.value
+    isDakNongClicked.value=state
     isHungYenClicked.value = false;
   isYenBaiClicked.value = false;
   isBinhDinhClicked.value = false;
@@ -326,7 +333,7 @@ function toggleLocation(location){
   isKhanhHoaClicked.value = false;  
   }
   else if(location==='binhdinh'){
-    isBinhDinhClicked.value=!isBinhDinhClicked.value
+    isBinhDinhClicked.value=state
     isHungYenClicked.value = false;
   isYenBaiClicked.value = false;
   isDakNongClicked.value = false;
@@ -334,7 +341,7 @@ function toggleLocation(location){
   isKhanhHoaClicked.value = false;  
   }
   else if(location==='phuyen'){
-    isPhuYenClicked.value=!isPhuYenClicked.value
+    isPhuYenClicked.value=state
     isHungYenClicked.value = false;
   isYenBaiClicked.value = false;
   isDakNongClicked.value = false;
@@ -343,7 +350,7 @@ function toggleLocation(location){
 
   }
   else if(location==='khanhhoa'){
-    isKhanhHoaClicked.value=!isKhanhHoaClicked.value
+    isKhanhHoaClicked.value=state
     isHungYenClicked.value = false;
   isYenBaiClicked.value = false;
   isDakNongClicked.value = false;
