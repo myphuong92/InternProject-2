@@ -26,7 +26,7 @@
     </div>  
 </div>
 <Transition :duration="550" name="nested">
-    <div class="h-screen outer navigation bg-[#E4ECFA] px-2 py-6 md:p-10 lg:py-8 lg:px-24" v-show="isMenuClicked" :class="{'active' : isMenuClicked}" @click="closeMenuOnClickOutside">
+    <div class="h-screen outer navigation bg-[#E4ECFA] px-6 py-6 md:p-10 lg:py-8 lg:px-24" v-show="isMenuClicked" :class="{'active' : isMenuClicked}" @click="closeMenuOnClickOutside">
         <ul class="inner relative flex flex-col gap-6 md:gap-[2rem] h-full">
         <li class="md:flex lg:w-[60%]" :key="link.name" v-for="link in links"  @mouseover="handleMouseOver(link)" @mouseout="handleMouseOut(link)">
             <div class=" nav-title whitespace-nowrap	" :class="{'pl-[20px]': link.isHover.value && isComputer.value}">
