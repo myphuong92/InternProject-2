@@ -327,35 +327,35 @@ function toggleLocation(location, state){
   else if(location==='daknong'){
     isDakNongClicked.value=state
     isHungYenClicked.value = false;
-  isYenBaiClicked.value = false;
-  isBinhDinhClicked.value = false;
-  isPhuYenClicked.value = false;
-  isKhanhHoaClicked.value = false;  
+    isYenBaiClicked.value = false;
+    isBinhDinhClicked.value = false;
+    isPhuYenClicked.value = false;
+    isKhanhHoaClicked.value = false;  
   }
   else if(location==='binhdinh'){
     isBinhDinhClicked.value=state
     isHungYenClicked.value = false;
-  isYenBaiClicked.value = false;
-  isDakNongClicked.value = false;
-  isPhuYenClicked.value = false;
-  isKhanhHoaClicked.value = false;  
+    isYenBaiClicked.value = false;
+    isDakNongClicked.value = false;
+    isPhuYenClicked.value = false;
+    isKhanhHoaClicked.value = false;  
   }
   else if(location==='phuyen'){
     isPhuYenClicked.value=state
     isHungYenClicked.value = false;
-  isYenBaiClicked.value = false;
-  isDakNongClicked.value = false;
-  isBinhDinhClicked.value = false;
-  isKhanhHoaClicked.value = false;  
+    isYenBaiClicked.value = false;
+    isDakNongClicked.value = false;
+    isBinhDinhClicked.value = false;
+    isKhanhHoaClicked.value = false;  
 
   }
   else if(location==='khanhhoa'){
     isKhanhHoaClicked.value=state
     isHungYenClicked.value = false;
-  isYenBaiClicked.value = false;
-  isDakNongClicked.value = false;
-  isBinhDinhClicked.value = false;
-  isPhuYenClicked.value = false;
+    isYenBaiClicked.value = false;
+    isDakNongClicked.value = false;
+    isBinhDinhClicked.value = false;
+    isPhuYenClicked.value = false;
   }
 }
 onMounted(() =>{

@@ -7,10 +7,14 @@ import footerComp from "../components/footerComp.vue";
 import newscard from "../components/newsCard.vue";
 const iconArrow = "arrow_forward";
 import { Swiper, SwiperSlide } from 'swiper/vue';
-import { useSwiper } from 'swiper/vue';
-
-
+import { Autoplay,Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { useSwiper } from 'swiper/vue'
+import 'swiper/css/navigation';
+  import 'swiper/css/pagination';
+  import 'swiper/css/scrollbar';
   import 'swiper/css';
+  const modules = [Navigation, Pagination, Scrollbar, A11y, Autoplay];
+
 // NEWS CARD
 const newsData = ref([
   {
@@ -48,19 +52,33 @@ const newsData = ref([
 <template>
   <main class="container flex flex-col">
     <section>
-      <div class="home-intro relative">
-        <div class="w-full home-img-shade relative">
-          <div class="w-full">
+      <swiper
+      :modules="modules"
+        :slides-per-view="1"
+        :centeredSlides="true"
+        :autoplay="{
+          delay: 3500,
+          disableOnInteraction: false,
+        }"
+        :loop="true"
+ 
+      class="home-intro relative">
+        <swiper-slide>
+          <div
+        
+        class="w-full home-img-shade relative h-full">
+          <div class="w-full h-full">
             <img
-              class="full-img"
+              class="full-img h-full"
               src="/assets/img/home-banner.png"
               alt=""
             />
           </div>
+          
+          
           <div class="shade"></div>
         </div>
-
-        <div class="content text-center flex flex-col gap-4 items-center">
+        <div class="content text-center flex flex-col gap-4 items-center z-10">
           <p class="text-heading text-7xl text-white">Khám Phá Vẻ Đẹp Và Bền Vững:</p>
           <p class="text-heading text-7xl text-[#F16336]">
             Nội Thất Đá Tự Nhiên Và Gỗ Cao Cấp
@@ -71,7 +89,64 @@ const newsData = ref([
 
           <buttonComp title="Xem thêm" :icon="iconArrow" changeColor="orange" />
         </div>
-      </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div
+        
+        class="w-full home-img-shade relative h-full">
+          <div class="w-full h-full">
+            <img
+              class="full-img h-full"
+              src="/assets/img/da-op-banner.png"
+              alt=""
+            />
+          </div>
+          
+          
+          <div class="shade"></div>
+        </div>
+        <div class="content text-center flex flex-col gap-4 items-center z-10">
+          <p class="text-heading text-7xl text-white">Khám Phá Vẻ Đẹp Và Bền Vững:</p>
+          <p class="text-heading text-7xl text-[#F16336]">
+            Nội Thất Đá Tự Nhiên Và Gỗ Cao Cấp
+          </p>
+          <p class="md:text-xl text-white">
+            Xây dựng không gian sống và giá trị thẩm mỹ vượt thời gian
+          </p>
+
+          <buttonComp title="Xem thêm" :icon="iconArrow" changeColor="orange" />
+        </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div
+        
+        class="w-full home-img-shade relative h-full">
+          <div class="w-full h-full">
+            <img
+              class="full-img h-full"
+              src="/assets/img/home-banner.png"
+              alt=""
+            />
+          </div>
+          
+          
+          <div class="shade"></div>
+        </div>
+        <div class="content text-center flex flex-col gap-4 items-center z-10">
+          <p class="text-heading text-7xl text-white">Khám Phá Vẻ Đẹp Và Bền Vững:</p>
+          <p class="text-heading text-7xl text-[#F16336]">
+            Nội Thất Đá Tự Nhiên Và Gỗ Cao Cấp
+          </p>
+          <p class="md:text-xl text-white">
+            Xây dựng không gian sống và giá trị thẩm mỹ vượt thời gian
+          </p>
+
+          <buttonComp title="Xem thêm" :icon="iconArrow" changeColor="orange" />
+        </div>
+        </swiper-slide>
+
+        
+      </swiper>
     </section>
     <section>
       <div class="px-[20px] md:px-[40px] lg:px-[80px]">
@@ -314,6 +389,9 @@ button.beforeMobile, button.nextMobile{
 }
 .set-img-text p.text:hover{
   color: #F16336
+}
+.swiper-slide {
+  height: auto;
 }
 @media screen and (max-width: 767px) {
   .has-border{
